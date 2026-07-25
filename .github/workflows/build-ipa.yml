@@ -2,12 +2,12 @@ name: Build Flutter iOS IPA
 
 on:
   push:
-    branches: [ "main" ]  # Chạy tự động khi bạn push code lên branch main
-  workflow_dispatch:      # Bật nút bấm thủ công trên GitHub
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build-ios:
-    runs-on: macos-14    # Dùng máy chủ Mac ảo của GitHub
+    runs-on: macos-latest
 
     steps:
       - name: Checkout Repository
