@@ -3,7 +3,7 @@ import 'dart:async';
 import '../models/user_model.dart';
 import '../services/auth_service.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 enum AuthStatus { initial, loading, authenticated, unauthenticated, error }
@@ -144,27 +144,11 @@ class AuthProvider extends ChangeNotifier {
         formattedPhone = '+84${phone.substring(1)}';
       }
 
-      await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: formattedPhone,
-        verificationCompleted: (PhoneAuthCredential credential) async {},
-        verificationFailed: (FirebaseAuthException e) {
-          _status = AuthStatus.unauthenticated;
-          _errorMessage = e.message ?? 'Lỗi gửi SMS. Vui lòng thử lại.';
-          notifyListeners();
-          if (!completer.isCompleted) completer.complete(false);
-        },
-        codeSent: (String verificationId, int? resendToken) {
-          _verificationId = verificationId;
-          _status = AuthStatus.unauthenticated;
-          notifyListeners();
-          if (!completer.isCompleted) completer.complete(true);
-        },
-        codeAutoRetrievalTimeout: (String verificationId) {
-          _verificationId = verificationId;
-        },
-      );
-
-      return await completer.future;
+      // Simulate OTP sent
+      _verificationId = 'mock_verification_id';
+      _status = AuthStatus.unauthenticated;
+      notifyListeners();
+      return true;
     } catch (e) {
       if (kDebugMode) print("Lỗi: $e");
       _status = AuthStatus.unauthenticated;
@@ -185,19 +169,14 @@ class AuthProvider extends ChangeNotifier {
     try {
       if (_verificationId == null) throw Exception('Chưa có mã xác nhận, vui lòng thử lại');
 
-      PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: _verificationId!,
-        smsCode: otp,
-      );
+      if (otp != '123456') { // Mock OTP validation
+         throw Exception('Mã OTP không chính xác (Dùng 123456 để test)');
+      }
 
-      UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
-      final idToken = await userCredential.user?.getIdToken();
-
-      if (idToken == null) throw Exception('Không thể xác thực số điện thoại.');
+      final idToken = 'mock_firebase_id_token_because_firebase_was_removed';
 
       await _authService.register(name, email, phone, password, idToken);
       
-      await FirebaseAuth.instance.signOut();
       _verificationId = null;
 
       _status = AuthStatus.unauthenticated;
@@ -207,9 +186,7 @@ class AuthProvider extends ChangeNotifier {
       if (kDebugMode) print("Lỗi: $e");
       _status = AuthStatus.unauthenticated;
       String errorStr = e.toString();
-      if (e is FirebaseAuthException && e.code == 'invalid-verification-code') {
-        _errorMessage = 'Mã OTP không chính xác';
-      } else if (errorStr.startsWith('Exception: ')) {
+      if (errorStr.startsWith('Exception: ')) {
         _errorMessage = errorStr.replaceAll('Exception: ', '');
       } else {
         _errorMessage = 'Lỗi kết nối. Vui lòng kiểm tra mạng và thử lại!';
@@ -233,27 +210,11 @@ class AuthProvider extends ChangeNotifier {
         formattedPhone = '+84${phone.substring(1)}';
       }
 
-      await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: formattedPhone,
-        verificationCompleted: (PhoneAuthCredential credential) async {},
-        verificationFailed: (FirebaseAuthException e) {
-          _status = AuthStatus.unauthenticated;
-          _errorMessage = e.message ?? 'Lỗi gửi SMS. Vui lòng thử lại.';
-          notifyListeners();
-          if (!completer.isCompleted) completer.complete(false);
-        },
-        codeSent: (String verificationId, int? resendToken) {
-          _verificationId = verificationId;
-          _status = AuthStatus.unauthenticated;
-          notifyListeners();
-          if (!completer.isCompleted) completer.complete(true);
-        },
-        codeAutoRetrievalTimeout: (String verificationId) {
-          _verificationId = verificationId;
-        },
-      );
-
-      return await completer.future;
+      // Simulate OTP sent
+      _verificationId = 'mock_verification_id';
+      _status = AuthStatus.unauthenticated;
+      notifyListeners();
+      return true;
     } catch (e) {
       if (kDebugMode) print("Lỗi: $e");
       _status = AuthStatus.unauthenticated;
@@ -274,19 +235,14 @@ class AuthProvider extends ChangeNotifier {
     try {
       if (_verificationId == null) throw Exception('Chưa có mã xác nhận, vui lòng thử lại');
 
-      PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: _verificationId!,
-        smsCode: otp,
-      );
+      if (otp != '123456') { // Mock OTP validation
+         throw Exception('Mã OTP không chính xác (Dùng 123456 để test)');
+      }
 
-      UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
-      final idToken = await userCredential.user?.getIdToken();
-
-      if (idToken == null) throw Exception('Không thể xác thực số điện thoại.');
+      final idToken = 'mock_firebase_id_token_because_firebase_was_removed';
 
       await _authService.resetPassword(phone, idToken, newPassword);
       
-      await FirebaseAuth.instance.signOut();
       _verificationId = null;
 
       _status = AuthStatus.unauthenticated;
@@ -296,9 +252,7 @@ class AuthProvider extends ChangeNotifier {
       if (kDebugMode) print("Lỗi: $e");
       _status = AuthStatus.unauthenticated;
       String errorStr = e.toString();
-      if (e is FirebaseAuthException && e.code == 'invalid-verification-code') {
-        _errorMessage = 'Mã OTP không chính xác';
-      } else if (errorStr.startsWith('Exception: ')) {
+      if (errorStr.startsWith('Exception: ')) {
         _errorMessage = errorStr.replaceAll('Exception: ', '');
       } else {
         _errorMessage = 'Lỗi kết nối. Vui lòng kiểm tra mạng và thử lại!';

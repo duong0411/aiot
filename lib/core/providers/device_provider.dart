@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+
 import '../models/node_model.dart';
 import '../services/mqtt_service.dart';
 import '../services/node_service.dart';
@@ -34,11 +34,11 @@ class DeviceProvider extends ChangeNotifier {
       _mqttService.subscribeNodes(_nodes);
     }
     // Subscribe FCM cho tất cả các thiết bị lấy về
-    for (var node in _nodes) {
-      if (node.chipId.isNotEmpty) {
-        FirebaseMessaging.instance.subscribeToTopic('alert_${node.chipId}');
-      }
-    }
+    // for (var node in _nodes) {
+    //   if (node.chipId.isNotEmpty) {
+    //     FirebaseMessaging.instance.subscribeToTopic('alert_${node.chipId}');
+    //   }
+    // }
     notifyListeners();
   }
 
@@ -61,9 +61,9 @@ class DeviceProvider extends ChangeNotifier {
       _mqttService.subscribeNodes(_nodes);
       
       // Bắt đầu nhận Push Notification từ Node mới
-      if (newNode.chipId.isNotEmpty) {
-        FirebaseMessaging.instance.subscribeToTopic('alert_${newNode.chipId}');
-      }
+      // if (newNode.chipId.isNotEmpty) {
+      //   FirebaseMessaging.instance.subscribeToTopic('alert_${newNode.chipId}');
+      // }
       
       notifyListeners();
     }
@@ -75,7 +75,7 @@ class DeviceProvider extends ChangeNotifier {
     if (success) {
       if (nodeToRemove != null && nodeToRemove.chipId.isNotEmpty) {
         // Ngừng nhận Push Notification từ Node đã xóa
-        FirebaseMessaging.instance.unsubscribeFromTopic('alert_${nodeToRemove.chipId}');
+        // FirebaseMessaging.instance.unsubscribeFromTopic('alert_${nodeToRemove.chipId}');
       }
       _nodes.removeWhere((n) => n.id == id);
       _watchdogs[id]?.cancel();
