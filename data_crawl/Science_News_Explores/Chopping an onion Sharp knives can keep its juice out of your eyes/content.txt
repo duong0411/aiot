@@ -1,0 +1,90 @@
+Tiêu đề: Chopping an onion? Sharp knives can keep its juice out of your eyes
+Đường dẫn: https://www.snexplores.org/article/slow-sharp-cuts-onion-crying
+--------------------------------------------------
+
+This is especially true when you also slice that veggie slowly and steadily
+
+A chemical in flying onion juice is the culprit for a cook’s stinging tears. Changing how the onion is chopped can eliminate those tears.
+
+chiinka/Creatas Video+/Getty Images Plus
+
+By Carly Kay
+
+January 14, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+Crying over chopped onions could be a thing of the past. Slicing with sharper blades and slower cuts can eliminate those painful tears, a new study finds.
+
+A chemical formed from onion juice (propanethial S-oxide) triggers those tears. Slicing the onion ruptures its cells, triggering a chemical reaction that forms this compound. Chopping can fling tiny droplets of it into the air. If they bind to sensory nerves in a cook’s eyes, they’ll cause that well-known stinging — and tears.
+
+But slicing onions slowly with a sharpened knife cuts the number of tear-inducing droplets that were spewed. This technique could offer serious relief to everyday cooks. It also could shed light on how pathogens spread.
+
+The researchers shared their findings on Oct. 21 in Proceedings of the National Academy of Sciences.
+
+“This is something everybody’s dealing with,” says physicist Navid Hooshanginejad. He now works at SharkNinja, a product-design company in Needham, Mass. “Now we can also explain and understand it better fundamentally.”
+
+Onions were the focus of Hooshanginejad’s research at Cornell University in Ithaca, N.Y. He sliced up onions for a salad, one day, while brainstorming about his project with his advisor. Drops from the juicy onions landed on his hand. He thought, “What if these drops flew high enough to make me cry?”
+
+The next day, he lugged a 10-pound (4.5-kilogram) bag of onions to the lab. Then he set up a high-speed camera, grabbed a knife and started slicing.
+
+He and his coworkers wanted to find out what about the cutting action matters most in determining how far onion-juice droplets fly. So they built a miniature guillotine, which allowed them to insert blades of varying sharpness. Then they attached sensors to measure the force and speed of each cut. The high-speed camera captured the spray of flying droplets emitted with each slice of a blade.
+
+Fluid-containing cells sit in each layer of an onion’s skin. Every pass of the knife slices open these cells. Released juices then pool and press against the onion’s skin. This pressure causes the juices to fly once the blade breaks through that skin.
+
+A blunt blade requires more force to break an onion’s skin than a sharp one. That extra force squashes a greater number of cells, releasing more fluid. And it makes a difference: Rapid cuts made with dull knives can shoot onion droplets at nearly 40 meters per second, they found. That’s almost 90 miles per hour!
+
+Slow and steady chopping with a sharp blade, however, kept the droplets from even reaching eye level, Hooshanginejad now reports.
+
+“It’s just like the idea of a water balloon,” says physicist Jim Wilking. He works at the Mayo Clinic in Rochester, Minn., and did not take part in the new study.
+
+“If you pop a water balloon by using a needle, you don’t need to apply much pressure,” he says. But try using just your finger. Then, he says, “you’re essentially pressurizing the elastic shell in order to pop it.”
+
+Additional pressure applied to the surface will spray the water (or juice, in the case of the onion) farther.
+
+The team’s videos of spurting onion juice show how droplets break apart in the air and gain distance. Says Hooshanginejad, these new data may help scientists better understand how infectious microbes disperse through the air.
+
+Editor’s note: This article was updated on March 5 to indicate the measured speed, not distance, of droplet movement.
+
+bacteria: (singular: bacterium) Single-celled organisms. These dwell nearly everywhere on Earth, from the bottom of the sea to inside other living organisms (such as plants and animals). Bacteria are one of the three domains of life on Earth.
+
+cell: (in biology) The smallest structural and functional unit of an organism. Typically too small to see with the unaided eye, it consists of a watery fluid surrounded by a membrane or wall.
+
+colleague: Someone who works with another; a co-worker or team member.
+
+compound: (often used as a synonym for chemical) A compound is a substance formed when two or more chemical elements unite (bond) in fixed proportions. For example, water is a compound made of two hydrogen atoms bonded to one oxygen atom. Its chemical symbol is H2O.
+
+disperse: To spread, often widely. Plants, for example, disperse their seeds to far off sites by allowing them to ride the winds or survive being eaten by animals that travel great distances.
+
+focus: (in behavior) To look or concentrate intently on some particular point or thing.
+
+force: Some outside influence that can change the motion of an object, hold objects close to one another, or produce motion or stress in a stationary object.
+
+infectious: An adjective that describes a type of microbe or virus that can be transmitted to people, animals or other living things.
+
+nerve: A long, delicate fiber that transmits signals across the body of an animal. An animal’s backbone contains many nerves, some of which control the movement of its legs or fins, and some of which convey sensations such as hot, cold or pain.
+
+pathogen: Short for microorganism. A living thing that is too small to see with the unaided eye, including bacteria, some fungi and many other organisms such as amoebas. Most consist of a single cell.
+
+physicist: A scientist who studies the nature and properties of matter and energy.
+
+pressure: Force applied uniformly over a surface, measured as force per unit of area.
+
+Proceedings of the National Academy of Sciences: A prestigious journal publishing original scientific research, begun in 1914. The journal's content spans the biological, physical and social sciences. Each of the more than 3,000 papers it publishes each year, now, are not only peer reviewed but also approved by a member of the U.S. National Academy of Sciences.
+
+sensor: A device that picks up information on physical or chemical conditions — such as temperature, barometric pressure, salinity, humidity, pH, light intensity or radiation — and stores or broadcasts that information. Scientists and engineers often rely on sensors to inform them of conditions that may change over time or that exist far from where a researcher can measure them directly.
+
+virus: Tiny infectious particles consisting of genetic material (RNA or DNA) surrounded by protein. Viruses can reproduce only by injecting their genetic material into the cells of living creatures. Although scientists frequently refer to viruses as alive or dead, in fact many scientists agree that viruses are not truly alive. They don’t eat as animals do or make their own food as plants do. A virus must hijack the cellular machinery of a living cell to survive.
+
+A version of this article appears in the June 1, 2026 issue of Science News Explores.
+
+Journal:​ ​​Z. Wu et al. Droplet outburst from onion cutting. Proceedings of the National Academy of Sciences. Vol. 122, October 21, 2025, p. 42. doi: 10.1073/pnas.2512779122.
+
+Carly Kay is the Fall 2025 science writing intern at Science News. She holds a bachelor’s degree in communication from the University of California, Santa Barbara and a master’s degree in science communication from the University of California, Santa Cruz.
+
+Readability Score: 7.2
+
+HS-ETS1-2, HS-PS1-2, MS-ETS1-1, MS-ETS1-4, MS-PS1-2

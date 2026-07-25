@@ -1,0 +1,118 @@
+Tiêu đề: Hundreds of sea level studies have underestimated ocean rise
+Đường dẫn: https://www.snexplores.org/article/studies-underestimated-sea-level-rise
+--------------------------------------------------
+
+A common estimating method may be off by an average of 10 inches or more
+
+In late 2025, water flooded the streets in Ho Chi Minh City, Vietnam. This and other coastal areas in Southeast Asia face a far more exaggerated risk from rising sea levels than previously estimated by many important studies, a major new analysis finds.
+
+Thanh Hue/Getty Images News
+
+By Nikk Ogasa
+
+June 16, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+A warming climate has been helping drive a global rise in sea levels. A new analysis now finds that hundreds of major studies missed just how much sea levels have risen. Past estimates were too low, the new study shows. On average, true sea levels are 20 to 30 centimeters (8 to 12 inches) higher than what past studies reported.
+
+This means that the toll of future sea level rise is even greater than expected.
+
+Katharina Seeger and Philip Minderhoud did the research. They work at Wageningen University in the Netherlands. These physical geographers evaluated data from 385 global and regional studies. All had been published between 2009 and 2025.
+
+Some 99 percent of the studies had incorrectly estimated ocean height, they found. And 45 of the studies were used a few years ago in a major report. It was issued by a global panel of climate experts convened by the United Nations.
+
+Knowing the rate of ocean rise is crucial for coastal planners around the world. It helps them predict when sea water will start to flood — and permanently cover — large swaths of land. The errors in past studies, the researchers say, mean that coastal land may disappear faster than expected. In some places, it could vanish as much as a century sooner than thought.
+
+The team shared its findings in the April 16 Nature.
+
+A one-meter (39-inch) rise in sea level — which could happen within a century — could submerge an area more than 30 percent bigger than scientists thought. That would take away land from 77 to 132 million people. That’s 48 to 68 percent more people than previous estimates.
+
+Sea level rise is slow. But it’s also dangerous if you ignore it, says Anders Levermann. “That’s basically what we’ve done, unknowingly,” he says. “These estimates now tell us that we are much further in the future than we thought we were.” A climate scientist, Levermann works at the Potsdam Institute for Climate Research in Germany.
+
+Some of the analyzed studies had focused on sea level rise. Others had focused on storm surges, tsunamis or other coastal hazards. And a common mistake emerged in nine out of every 10 of the studies, the researchers say.
+
+It had to do with the type of data used.
+
+Researchers usually gauge coastal flood hazards by comparing a site’s land elevation to sea levels. Ideally, those sea levels come from actual measurements. Those can come from satellites. Or they could be from tidal gauges, ocean buoys or other tools.
+
+But few of the studies Seeger and Minderhoud reviewed had included such direct sea-level measurements. Instead, the studies had relied on wonky, digital shapes called geoids (GEE-oids).
+
+Geoids are imaginary shapes. They’re meant to approximate Earth’s sea level. They don’t show big ice sheets or giant mountain peaks. Instead, they show Earth as a sort of irregular ball of water with an undulating surface.
+
+But there are two key problems to using geoids to gauge sea level, Seeger and Minderhoud say. First, geoids can be off by several meters. Gravity data are key for making geoids. So geoids are less accurate where gravity data are poor. Those areas include the Global South.
+
+Second, geoids do not account for many other things that can affect sea level. These include ocean circulation and currents. Winds, tides and water temperatures also play roles.
+
+It’s possible to correct for these geoid problems, Minderhoud said at a March 3 news briefing. But the new research shows that few scientists studying coastal hazards make those fixes.
+
+Geoid assumptions led to errors in 90 percent of the reviewed studies. Another 9 percent did not align measurements of sea level and land elevation properly. Fewer than one percent of the studies properly aligned such data, Seeger said.
+
+To see how far off sea-level numbers had been in most studies, Seeger and Minderhoud turned to satellite data. These data measured sea-surface heights globally. Compared to these, geoid-based studies had underestimated coastal sea level by an average of 24 to 27 centimeters (about 10 inches).
+
+Errors were more than three times that size for some places. Among these were parts of Southeast Asia and the Indo-Pacific.
+
+For a few places, estimates of sea levels had actually been too high. These regions included the northern Mediterranean and Antarctica.  That was also true for some islands in the Atlantic and Pacific.
+
+Study estimates were closest for eastern North America and northern and western Europe. Overall, though, most measured sea levels were higher than what past studies had published.
+
+This means the advance of the oceans “is even worse than what’s been reported,” says Patrick Barnard. A coastal geologist, he works at the University of California, Santa Cruz. The new work, he says, is important for planners. It suggests they should be cautious when using findings from big-picture studies to guide local efforts to adapt to sea level rise.
+
+To help future studies, Seeger and Minderhoud have publicly shared coastal sea-level data. These include the most recent actual measurements.
+
+Antarctica: A continent mostly covered in ice, which sits in the southernmost part of the world.
+
+Atlantic: One of the world’s five oceans, it is second in size only to the Pacific. It separates Europe and Africa to the east from North and South America to the west.
+
+average: (in science) A term for the arithmetic mean, which is the sum of a group of numbers that is then divided by the size of the group.
+
+buoy: A floating device anchored to the bottom of a body of water. A buoy may mark channels, warn of dangers or carry instruments to measure the environment.
+
+circulation: (adj. circulatory) A term that refers to the pumping of some fluid repeatedly throughout a system of vessels. (in medicine) The pumping of blood through the arteries and smaller types of vessels (and from there into other organs and tissues).
+
+climate: The weather conditions that typically exist in one area, in general, or over a long period.
+
+current: A fluid — such as of water or air — that moves in a recognizable direction. (in electricity) The flow of electricity or the amount of charge moving through some material over a particular period of time.
+
+elevation: The height or altitude at which something exists.
+
+gauge: A device to measure the size or volume of something. For instance, tide gauges track the ever-changing height of coastal water levels throughout the day. Or any system or event that can be used to estimate the size or magnitude of something else. (v. to gauge) The act of measuring or estimating the size of something.
+
+geographer: A scientist who studies Earth’s features and how the living and nonliving parts of the planet affect one another.
+
+geoid: An imaginary depiction of Earth where its average surface coincides with the mean sea level. The result: This image looks like a ball of water.
+
+gravity: The force that attracts anything with mass, or bulk, toward any other thing with mass. The more mass that something has, the greater its gravity.
+
+Indo-Pacific: A merging of Indian and Pacific that refers to the tropical Indian Ocean and adjoining western and central parts of the Pacific Ocean.
+
+model: A simulation of a real-world event (usually using a computer) that has been developed to predict one or more likely outcomes. Or an individual that is meant to display how something would work in or look on others.
+
+oceanographer: Someone who works in the branch of science that deals with the physical and biological properties and phenomena of the oceans.
+
+Pacific: The largest of the world’s five oceans. It separates Asia and Australia to the west from North and South America to the east. The term can also refer to island nations that sit within the Pacific Ocean.
+
+physical: (adj.) A term for things that exist in the real world, as opposed to in memories or the imagination. It can also refer to properties of materials that are due to their size and non-chemical interactions (such as when one block slams with force into another).
+
+risk: The chance or mathematical likelihood that some bad thing might happen. For instance, exposure to radiation poses a risk of cancer. Or the hazard — or peril — itself. (For instance: Among cancer risks that the people faced were radiation and drinking water tainted with arsenic.)
+
+sea: An ocean (or region that is part of an ocean). Unlike lakes and streams, seawater — or ocean water — is salty.
+
+sea level: The overall level of the ocean over the entire globe when all tides and other short-term changes are averaged out.
+
+storm surge: A storm-generated rise in water above normal tidal level. In most cases, the largest cause of storm surge is strong onshore winds in a hurricane or tropical storm.
+
+tides: (adj. tidal) The alternate rising and falling of the sea, usually twice in each lunar day at a particular place, due to the attraction of the moon and sun.
+
+tsunami: One or many long, high sea waves caused by an earthquake, submarine landslide or other disturbance.
+
+Journal:​ K. Seeger and P.S.J. Minderhoud. Sea level much higher than assumed in most coastal hazard assessments. Nature. Vol. 652, April 16, 2026, p. 667. doi: 10.1038/s41586-026-10196-1.
+
+Nikk Ogasa is a staff writer who focuses on the physical sciences for Science News. He has a master's degree in geology from McGill University, and a master's degree in science communication from the University of California, Santa Cruz.
+
+Readability Score: 7.6
+
+HS-ESS3-5, MS-ESS3-2

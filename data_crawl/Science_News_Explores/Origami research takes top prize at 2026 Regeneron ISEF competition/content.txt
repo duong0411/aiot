@@ -1,0 +1,122 @@
+Tiêu đề: Origami research takes top prize at 2026 Regeneron ISEF competition
+Đường dẫn: https://www.snexplores.org/article/2026-regeneron-isef-winners-origami
+--------------------------------------------------
+
+A host of winners at this international science fair shared more than $7 million in prizes
+
+Hikaru Kuribayashi wears his origami hat while displaying his intricately folded paper ladybug wing, which opens and closes just like the real thing.
+
+K.G. Carpenter
+
+By Katie Grace Carpenter
+
+May 18, 2026 at 9:00 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+Phoenix, Ariz. — Origami is the Japanese art of paper-folding. But Mother Nature has developed her own examples of this art, says Hikaru Kuribayashi. To demonstrate, the 17-year-old picks up his model of a ladybug wing and opens it flat. This teen has just found a new way to model every possible motion such folded structures can make.
+
+For this discovery, Hikaru received the George D. Yancopoulos Innovator Award and $100,000 here on May 15. A student at Sapporo Kaisei Secondary School in Japan, Hikaru was a finalist in the 2026 Regeneron International Science and Engineering Fair, or ISEF. An annual competition since 1950, ISEF was created by and is still run by the Society for Science (which also publishes this magazine). Hikaru’s research also took first place in the physics category, which earned him another $6,000.
+
+The teen’s new understanding of origami can let engineers copy many of nature’s designs. Imagine a leaf unfolding. Those leaves, Hikaru says, represent a famous origami pattern called Miura-ori. This same pattern shows up in architecture and engineering.
+
+Currently, engineers use a math-heavy approach to model shapes and their movements, the teen says. They start by identifying all the shapes a structure could take and then calculate every arc and trajectory its moving parts could take.
+
+That “method only traces one motion passed at a time,” Hikaru explains. It doesn’t include all possible motions. To show what he means, the teen unfolds the ladybug wing again. This time, he twists it back and forth as he opens it. This temporarily warps the material.
+
+Current modeling techniques cannot account for all such warps in soft or hyper-flexible real-world materials, he says.
+
+But Hikaru’s “probability-based” approach can.
+
+He points to the creases and dotted indentations left behind by the folds of the insect-wing model. With just these dots and lines, the teen says he can model every possible motion possible this wing can make. And, he adds, he can apply the same technique to “analyzing the motion of birds or any mechanism … that can be expressed as dots and lines.”
+
+Why might anyone need Hikaru’s new tool? Imagine looking at a leaf with very obvious folds. Someone might wonder: Couldn’t you just copy those creases?
+
+Not easily, Hikaru says. Even something as relatively simple as a leaf has a lot going on. Unfold an actual ladybug wing and you’ll find it’s full of creases. Its numerous convolutions make many types of movement possible.
+
+Using his innovative approach, the teen says, could help engineers design powerful new nature-inspired tech.
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+Lakshmi Agrawal, 18, of Bellevue, Wash., and Nikola Veselinov, 17, of Sofia, Bulgaria, each took home Regeneron Young Scientist Awards and $75,000. These teens also placed first in their divisions at the fair, earning each another $6,000.
+
+Nikola came up with a new math theorem. That’s a kind of statement in math that is proven — through logic — to be true. Once proven, a theorem does not change. Nikola’s theorem outlines certain conditions that would make an equation unsolvable using elementary math functions.
+
+Lakshmi invented a sponge that sops up 6PPD-quinone from river water. This chemical is toxic to fish. Around Puget Sound in Washington state, it kills many adult salmon before they can lay their eggs. This poison may also pose a risk to people, according to the Washington State Department of Health.
+
+The pollutant comes from vehicle tires. As tires wear down, they release tiny particles of rubber that contain 6PPD. That chemical can then react with ozone and other air pollutants to produce the quinone form. Each time it rains, runoff will carry 6PPD-quinone into local waters.
+
+Lakshmi created biodegradable nanocellulose sponges to clean up the rivers. Her sponges remove up to 80 percent of the 6PPD-quinone, she reports. Using these sponges would cost 98 percent less than alternative cleanup techniques. She hopes her work will provide a quick, inexpensive way to clean the rivers and save wildlife.
+
+Lakshmi, Nikola and Hikaru were among 1,725 finalists — from 65 nations or territories — participating in this year’s 2026 Regeneron ISEF. A host of other winners took home prizes that this year totaled nearly $7 million.
+
+annual: Adjective for something that happens every year. (in botany) A plant that lives only one year, so it usually has a showy flower and produces many seeds.
+
+arc: A curve, often mapping out what appears to be part of a circle.
+
+biodegradable: Adjective for something that is able to break down into simpler materials, based on the activity of microbes. This usually occurs in the presence of water, sunlight or other conditions that help nurture those organisms.
+
+chemical: A substance formed from two or more atoms that unite (bond) in a fixed proportion and structure. For example, water is a chemical made when two hydrogen atoms bond to one oxygen atom. Its chemical formula is H2O. Chemical also can be an adjective to describe properties of materials that are the result of various reactions between different compounds.
+
+engineer: A person who uses science and math to solve problems. As a verb, to engineer means to design a device, material or process that will solve some problem or unmet need.
+
+equation: In mathematics, the statement that two quantities are equal. In geometry, equations are often used to determine the shape of a curve or surface.
+
+function: The specific role some structure or device plays. (in math) A relationship between two or more variables in which one variable (the dependent one) is exactly determined by the value of the other variables.
+
+host: (in biology and medicine) The organism (or environment) in which some other thing resides. Humans may be a temporary host for food-poisoning germs or other infective agents. (v.) The act of providing a home or environment for something. A website, for instance, could host photos, news or other types of information.
+
+logic: A branch of science that that deals with reasoning and how to test or demonstrate whether something is true, valid or just generally makes sense. It can investigate whether and how things occur (in time or as part of some sequence) or how they might be interrelated. (in computing) How circuitry has been arranged in computer chips, or a term for certain chips themselves.
+
+mechanism: The steps or process by which something happens or “works.” It may be the spring that pops something from one hole into another. It could be the squeezing of the heart muscle that pumps blood throughout the body. It could be the friction (with the road and air) that slows down the speed of a coasting car. Researchers often look for the mechanism behind actions and reactions to understand how something functions.
+
+model: A simulation of a real-world event (usually using a computer) that has been developed to predict one or more likely outcomes. Or an individual that is meant to display how something would work in or look on others.
+
+origami: The traditional Japanese art of paper folding. It starts with a flat sheet of paper. Through folding — and no cutting — the paper can be carefully folded into decorative 3-D structures, such as a bird in flight.
+
+ozone: A colorless gas made of molecules that contain three oxygen atoms. It can form high in the atmosphere or at ground level. When it forms at Earth’s surface, ozone is a pollutant that irritates eyes and lungs. It is also a major ingredient of smog.
+
+particle: A minute amount of something.
+
+physics: The scientific study of the nature and properties of matter and energy. Classical physics is an explanation of the nature and properties of matter and energy that relies on descriptions such as Newton’s laws of motion. Quantum physics, a field of study that emerged later, is a more accurate way of explaining the tiny motions and behavior of matter about the size of electrons. A scientist who works in such areas is known as a physicist.
+
+pollutant: A substance that taints something — such as the air, water, our bodies or products. Some pollutants are chemicals, such as pesticides. Others may be radiation, including excess heat or light. Even weeds and other invasive species can be considered a type of biological pollution.
+
+probability: The chance that some event or circumstance will occur, as in how likely it is. Probabilities also refers to a branch of math that deals with the study and computation of such chance events.
+
+reactive: (in chemistry) The tendency of a substance to take part in a chemical process, known as a reaction, that leads to new chemicals or changes in existing chemicals.
+
+Regeneron International Science and Engineering Fair: (Regeneron ISEF) Initially launched in 1950, this competition is one of three created (and still run) by the Society for Science. Each year now, approximately 2,000 high school students from up to 70 countries, regions, and territories are awarded the opportunity to showcase their independent research at Regeneron ISEF and to compete for an average of $9 million in prizes.
+
+risk: The chance or mathematical likelihood that some bad thing might happen. For instance, exposure to radiation poses a risk of cancer. Or the hazard — or peril — itself. (For instance: Among cancer risks that the people faced were radiation and drinking water tainted with arsenic.)
+
+salmon: A popular game fish that tends to live most of its life in the ocean, then enters coastal rivers (and freshwater) to breed and lay eggs.
+
+Society for Science: A nonprofit organization created in 1921 and based in Washington, D.C. Since its founding, the Society has been promoting not only public engagement in scientific research but also the public understanding of science. It created and continues to run two renowned high-school science competitions: the Regeneron Science Talent Search (begun in 1942) and the Regeneron International Science and Engineering Fair (created in 1950). A third, middle-school competition, launched in 2010, has since 2023 been known as the Thermo Fisher Scientific Junior Innovators Challenge. The Society also publishes award-winning journalism: in Science News (launched in 1922) and Science News Explores (created in 2003).
+
+sponge: Something that sops up liquids or other materials and holds them until squeezed out or removed in some other way. (in biology) A primitive aquatic animal with a soft, porous body.
+
+technology: The application of scientific knowledge for practical purposes, or the devices, processes and systems that result from those efforts.
+
+theorem: A mathematical or logic statement, formula or proposition that can be derived from other formulas or propositions. Or it’s some commonly accepted idea that’s offered as a demonstrable truth.
+
+toxic: Poisonous or able to harm or kill cells, tissues or whole organisms. The measure of risk posed by such a poison is its toxicity.
+
+trajectory: The path taken by a projectile moving through space and time, or the direction that a trend is taking over time.
+
+warp: A change in the shape, usually due to some twisting or curving in a normally flat surface or plane. A piece of wet lumber may warp as it dries unevenly, causing it to bow or show a slight twist.
+
+Meeting: ​​H. Kuribayashi. MCMC Sampling of Origami and Linkages. 2026 Regeneron International Science and Engineering Fair (ISEF).​ ​May​ ​10-15,​ ​2026.​ ​Phoenix, Arizona.​ ​Physics,​​ PHYS021,​ ​2026.
+
+Meeting: ​​N.​ Veselinov. Solvability of Equations in Elementary Functions. 2026 Regeneron International Science and Engineering Fair (ISEF).​ ​May​ ​10-15,​ ​2026.​ ​Phoenix, Arizona.​ ​Mathematics,​​ MATH006,​ ​2026.
+
+Meeting: ​​L.​ Agrawal. Nanocellulose Hydrosponges for 6PPD-Q Removal. 2026 Regeneron International Science and Engineering Fair (ISEF).​ ​May​ ​10-15,​ ​2026.​ ​Phoenix, Arizona.​ ​Chemistry,​​ CHEM047,​ ​2026.
+
+Katie Grace Carpenter is a science writer and curriculum developer, with degrees in biology and biogeochemistry. She also writes science fiction and creates science videos. Katie lives in the U.S. but also spends time in Sweden with her husband, who’s a chef.
+
+Readability Score: 8.5
+
+HS-ETS1-2, MS-ETS1-2

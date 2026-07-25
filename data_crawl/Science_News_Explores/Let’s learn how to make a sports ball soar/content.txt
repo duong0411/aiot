@@ -1,0 +1,63 @@
+Tiêu đề: Let’s learn how to make a sports ball soar
+Đường dẫn: https://www.snexplores.org/article/lets-learn-how-sports-ball-soar-physics
+--------------------------------------------------
+
+A nothing-but-net shot, a wicked curveball and the perfect spiral all depend on physics
+
+Understanding the physics of flying balls could help improve athletes’ game — and maybe inspire more fuel-efficient vehicles.
+
+Logist Tehnik/Getty Images
+
+By Maria Temming
+
+February 24, 2026 at 6:30 am
+
+A basketball player’s smooth, nothing-but-net shot. A softball pitcher’s wicked curveball. A football quarterback’s beautiful spiral toss. These aren’t just athletic spectacles. They’re feats of physics.
+
+Making a ball take a specific path through the air is difficult, no matter the sport. That’s because the tiny details of a ball’s shape and spin can have a big impact on how it interacts with the air — and therefore its motion.
+
+Some physicists study these nit-picky details to give athletes an edge in their game. For example, scientists are trying to use physics to help football players improve their spirals. Engineers, meanwhile, have gone different routes. Some have redesigned balls. While others have applied some of this knowledge to design better vehicles.
+
+For instance, a ball or other object flying through the air experiences a type of friction called drag. This force acts against an object’s motion, slowing it down. But adding dimples to the surface of an object — like those found on a golf ball — allows air to flow around the ball more smoothly and reduces drag. Engineers recently borrowed this concept to design dimpled surfaces that could help vehicles cut through air and water more easily.
+
+A ball’s path through the air also depends on how it spins. That’s because a ball’s spin causes air to flow differently around different sides of it. Softball and baseball players harness those effects to pitch balls that curve in various directions. These airflow affects also impact how other balls, including basketballs, arc through the air. Such effects could be used to improve the spinning cylinders that help power cargo ships.
+
+Precise tee placement can improve golf driving, teen finds This middle-school engineer built a golf-ball-hitting machine out of a clay-pigeon launcher. (2/10/2026) Readability: 6.0
+
+How to make a pitched ball curve to your will Pitchers have many tricks up their sleeves. Physics explains how they work. (9/18/2025) Readability: 6.1
+
+Holey basketballs! 3-D printing could be a game-changer An ‘airless’ design makes Wilson’s new basketball quieter and puncture-proof. (7/1/2024) Readability: 7.2
+
+Scientists Say: Force
+
+Explainer: What is friction?
+
+Pickleballs inspire a new way to reduce drag on vehicles
+
+Aerodynamics involved in shooting hoops can make vehicles greener
+
+Due to global warming, major league hitters are slugging more home runs
+
+Researchers reveal the secret to the perfect football throw
+
+These young researchers take aim at sports
+
+Word find
+
+Want an excuse to play around at the gym or outside while you do science? Check out our experiment from Science Buddies investigating where a basketball’s energy goes as it loses its bounce.
+
+drag: A slowing force exerted by air or other fluid surrounding a moving object. It involves friction. But unlike simple friction, it increases with an object’s speed.
+
+engineer: A person who uses science and math to solve problems. As a verb, to engineer means to design a device, material or process that will solve some problem or unmet need.
+
+force: Some outside influence that can change the motion of an object, hold objects close to one another, or produce motion or stress in a stationary object.
+
+friction: The resistance that one surface or object encounters when moving over or through another material (such as a fluid or a gas). Friction generally causes a heating, which can damage a surface of some material as it rubs against another.
+
+physics: The scientific study of the nature and properties of matter and energy. Classical physics is an explanation of the nature and properties of matter and energy that relies on descriptions such as Newton’s laws of motion. Quantum physics, a field of study that emerged later, is a more accurate way of explaining the motions and behavior of matter. A scientist who works in such areas is known as a physicist.
+
+Maria Temming is the Assistant Managing Editor at Science News Explores. She has bachelor's degrees in physics and English, and a master's in science writing.
+
+Readability Score: 7.3
+
+HS-PS2-1, MS-PS2-2

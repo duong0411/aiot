@@ -1,0 +1,86 @@
+Tiêu đề: Imagination is not just replaying what we’ve seen and heard
+Đường dẫn: https://www.snexplores.org/article/brain-imagination-see-hear
+--------------------------------------------------
+
+Picturing a scene or sound pings brain networks that respond to more than one sense
+
+How is imagining a sight or sound different from really experiencing it? New brain scans are offering clues.
+
+pocketlight/iStock/Getty Images Plus
+
+By Nora Bradford
+
+June 9, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+When you imagine a waterfall, what comes to mind? Maybe a misty cascade into a blue pool surrounded by trees. Perhaps the roar of water splashing down, as well. It’s a big mystery how brain activity differs when imagining a waterfall versus seeing or hearing one in real life. Brain scans now suggest some activity when you imagine something is similar to what happens when you see or hear the real thing.
+
+But that overlap did not appear in brain areas that deal with single senses. Instead, it showed up in high-level brain networks. These are ones that handle inputs from multiple types of senses.
+
+Researchers shared these findings March 31 in Neuron.
+
+Neuroscientist Rodrigo Braga led the research. “When I was a teenager,” he says, “I remember the first time realizing that there’s like a voice I can hear in my head.” This “internal monologue” narrates one’s own thoughts.
+
+“That’s really strange,” Braga recalls thinking. “Why is it that we experience those thoughts and sensations almost as if we’re perceiving them?”
+
+He’s spent years trying to answer that question. He now works at Northwestern University’s Feinberg School of Medicine. It’s in Chicago, Ill. In a new study, his team asked eight people to imagine scenes, faces, someone else speaking, their own internal monologues and other sounds. All the while, an MRI machine scanned their brains.
+
+Having hours of MRI data on all eight people allowed the team to create individualized brain maps for each. These showed how each person’s brain activity changed during imagination.
+
+The imagination prompts that people got were open-ended. One was: “Imagine a castle on a hill.” Another: “Imagine a rock song playing on the radio.” After each prompt, the scientists asked people what they saw and heard in their heads. The questions probed how vivid each imagined experience had been — how clear and realistic it felt.
+
+After completing the brain scans, Braga’s team asked follow-up questions. These explored what made some mental images more vivid than others.
+
+The researchers grouped their data into two buckets. In one, they put the data on imagined locations and events. In the other, they grouped the data on imagined speech and language.
+
+When people were thinking about locations or events, they reported highly vivid sights in their mind’s eye. Activity also went up in their brains’ “default network A.” This is a system of nerve cells in the brain — neurons — known to process real spatial information.
+
+When people thought about speech or language, they reported hearing highly vivid sounds in their heads. Activity also spiked in their brains’ language network. This system of neurons is usually involved when someone reads or listens to speech.
+
+In short, imaginary sights and sounds both enlisted parts of the brain used to process real experiences.
+
+But imagined sensations did not activate sight- and sound-specific parts of the brain. Rather, the default network A and language network respond to new information — no matter what sense it had entered through.
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+Other studies have found that when someone imagines a certain object they’ve just seen, vision-specific brain regions light up. In this study, prompts to imagine more general scenes did not do that.
+
+That might be because the basic visual areas of the brain respond to details like edges, colors and lines, says Nathan Anderson. Those fine details might matter when someone is asked to picture a real object they saw. But, he notes, “people don’t necessarily imagine fine details when they are imagining a [general] scene.” So the neurons that handle specific visual details aren’t needed. Anderson is a neuroscientist who took part in the study. He works at Brigham Young University in Provo, Utah.
+
+These findings don’t surprise Stephen Kosslyn. Since the prompts didn’t ask people to imagine detailed sights or sounds, he says it makes sense that the brain regions linked to those tasks didn’t light up. Kosslyn is a neuroscientist at Harvard University in Cambridge, Mass. He did not take part in the new work.
+
+Open-ended prompts are a strength of the study, says Alfredo Spagna. A psychologist, he works at John Cabot University in Rome, Italy, and did not take part in the study. Everyday mental imagery is likely closer to imagining a castle on a hill than it is to picturing the tiny details of something you just saw, he says. So the open-ended prompts used here probably closely mimic what’s happening in our brains day-to-day.
+
+But there’s still much to learn about how the brain conjures sights and sounds that feel so real. “This is one of the many papers that will come out in the next years that try to break down this obscure concept of vividness,” says Spagna.
+
+brain scan: A technique to view structures inside the brain, typically with X-rays or a magnetic resonance imaging (or MRI) machine. With MRI technology — especially the type known as functional MRI (or fMRI) — the activity of different brain regions can be viewed during an event, such as viewing pictures, computing sums or listening to music.
+
+component: Something that is part of something else (such as pieces that go on an electronic circuit board or ingredients that go into a cookie recipe).
+
+default mode: A network of brain regions — one which becomes active when people daydream or try to understand what motivates the actions of others.
+
+MRI: Short for magnetic resonance imaging. It's an imaging technique to visualize soft, internal organs, like the brain, muscles, heart and cancerous tumors. MRI uses strong magnetic fields to record the activity of individual atoms.
+
+network: A group of interconnected people or things.
+
+neuron: The main cell type of the nervous system — the brain, spinal column and nerves. These specialized cells transmit information by producing, receiving and conducting electrical signals. Neurons also can transmit signals to other cells with chemical messengers.
+
+neuroscientist: Someone who studies the structure or function of the brain and other parts of the nervous system.
+
+psychologist: A scientist or mental-health professional who studies the mind, especially in relation to actions and behaviors. Some work with people. Others may conduct experiments with animals (usually rodents) to test how their minds respond to different stimuli and conditions.
+
+recall: To remember.
+
+spatial: An adjective for things having to do with the space where something is located or the relationships in space between two or more objects.
+
+system: A network of parts that together work to achieve some function. For instance, the blood, vessels and heart are primary components of the human body's circulatory system. Similarly, trains, platforms, tracks, roadway signals and overpasses are among the potential components of a nation's railway system. System can even be applied to the processes or ideas that are part of some method or ordered set of procedures for getting a task done.
+
+Journal: N.L. Anderson et al. Mental imagery and perception overlap within transmodal association networks. Neuron. Published online March 31, 2026. doi: 10.1016/j.neuron.2026.03.013.
+
+Readability Score: 7.7
+
+HS-LS1-2, MS-LS1-8

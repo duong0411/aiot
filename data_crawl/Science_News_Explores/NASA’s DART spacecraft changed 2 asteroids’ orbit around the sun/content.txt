@@ -1,0 +1,82 @@
+Tiêu đề: NASA’s DART spacecraft changed 2 asteroids’ orbit around the sun
+Đường dẫn: https://www.snexplores.org/article/dart-changed-asteroid-orbit
+--------------------------------------------------
+
+Studying changes in the space rocks’ motion could help protect Earth from future asteroid hits
+
+NASA’s DART spacecraft took this picture of asteroid Didymos (bottom left) and its smaller companion Dimorphos some 2.5 minutes before crashing — on purpose — into Dimorphos. Now, scientists have shown that this collision changed the asteroid duo’s orbit around the sun.
+
+NASA/Johns Hopkins APL
+
+By Lisa Grossman
+
+June 8, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+For the first time, humankind has changed a space rock’s orbit around the sun.
+
+Four years ago, NASA rammed its DART spacecraft into the asteroid Dimorphos. The goal was to see if a space probe could change an asteroid’s motion. Why? It could be useful if a big rock were ever headed for Earth.
+
+Soon after the crash, it was clear that DART had knocked its asteroid closer to Didymos, an even bigger rock that it orbits. Now, NASA reports that the smashup had an even bigger impact. It changed the asteroid duo’s speed as they orbit the sun together.
+
+DART’s crash landing slowed the asteroid pair by 10 micrometers per second. That might not sound like much. But tweaking the motions of space rocks millions of kilometers (miles) from Earth is a huge deal. It could inform plans for shielding our planet from future asteroid strikes.
+
+Researchers shared the findings March 6 in Science Advances.
+
+DART is short for Double Asteroid Redirection Test. The initial goal had been to simply nudge Dimorphos into a tighter orbit around Didymos. Mission leaders aimed to cut 73 seconds off Dimorphos’ nearly 12-hour path around its partner. In reality, the crash shortened Dimorphos’ orbit around Didymos by 32 minutes.
+
+Most of that change came from the impact itself. Like giving the asteroid a big shove, the spacecraft pushed Dimorphos closer to Didymos. The crash also blasted rocks off Dimorphos’ surface. The motion of that flying debris gave the asteroid an extra kick.
+
+But some of the debris knocked off Dimorphos didn’t just leave that space rock. It escaped the gravity of the two-asteroid system altogether. That escaping debris took some momentum away from the duo. As a result, their joint motion around the sun changed, reports Rahil Makadia. He studies planetary defense at the University of Illinois in Urbana–Champaign.
+
+To figure out how much the asteroids’ motion changed, astronomers watched the rocks pass in front of distant stars. As the asteroids passed by, they dimmed some of the stars’ light — like tiny eclipses. These blinks can be seen only from specific locations, which can fall anywhere on Earth.
+
+Astronomers could predict when Dimorphos and Didymos should pass in front of stars, based on their old path around the sun. By comparing those predictions to observations, they could see how much the asteroids’ path changed after DART’s hit.
+
+Between October 2022 and March 2025, Makadia and the team gathered 22 such measurements. Amateur astronomers provided a lot of these data, Makadia says. “There was an observer who drove two days each way into the Australian outback to get these measurements.”
+
+The asteroids’ orbit around the sun was about 150 milliseconds longer than before the DART impact, the new data show.
+
+The European Space Agency’s Hera spacecraft will reach Didymos and Dimorphos later this year. When it does, the spacecraft could confirm the asteroids’ new orbit.
+
+Didymos and Dimorphos were not a threat to Earth before DART. They aren’t now, either. But knowing how an impact changes one asteroid’s orbit can help figure out how to defend Earth from a dangerously big incoming space rock. That’s crucial, Makadia says, “in case we need to [deflect an asteroid] for real.”
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+amateur: One who engages in a pursuit as a pastime, not as a profession.
+
+asteroid: A rocky object in orbit around the sun. Most asteroids orbit in a region that falls between the orbits of Mars and Jupiter. Astronomers refer to this region as the asteroid belt.
+
+astronomer: A scientist who works in the field of research that deals with celestial objects, space and the physical universe.
+
+debris: Scattered fragments, typically of trash or of something that has been destroyed. Space debris, for instance, includes the wreckage of defunct satellites and spacecraft.
+
+eclipse: This occurs when two celestial bodies line up in space so that one totally or partially obscures the other. In a solar eclipse, the sun, moon and Earth line up in that order. The moon casts its shadow on the Earth. From Earth, it looks like the moon is blocking out the sun. In a lunar eclipse, the three bodies line up in a different order — sun, Earth, moon — and the Earth casts its shadow on the moon, turning the moon a deep red.
+
+micrometer: (sometimes called a micron) One thousandth of a millimeter, or one millionth of a meter. It’s also equivalent to a few one-hundred-thousandths of an inch.
+
+millisecond: A thousandth of a second.
+
+momentum: A measure of the motion of something, made by multiplying its mass and velocity. Changing the speed or direction of an object will also alter its momentum.
+
+NASA: Short for the National Aeronautics and Space Administration. Created in 1958, this U.S. agency has become a leader in space research and in stimulating public interest in space exploration. It was through NASA that the United States sent people into orbit and ultimately to the moon. It also has sent research craft to study planets and other celestial objects in our solar system.
+
+occultation: A celestial eclipse-like event in which an object that appears large from Earth, such as the moon, obscures a smaller-seeming object, such as a distant star.
+
+orbit: The curved path of a celestial object or spacecraft around a galaxy, star, planet or moon. One complete circuit around a celestial body.
+
+Outback: A colloquial term for large, drought-prone regions of inland Australia, far from major sources of fresh water. As a result, farming has proven challenging throughout much of the affected areas.
+
+stellar: An adjective that means of or relating to stars.
+
+Journal:​ R. Makadia et al. Direct detection of an asteroid’s heliocentric deflection: The Didymos system after DART. Science Advances. Vol. 12, March 6, 2026. doi: 10.1126/sciadv.aea4259.
+
+Lisa Grossman is the astronomy writer at Science News. She has a degree in astronomy from Cornell University and a graduate certificate in science writing from University of California, Santa Cruz. She lives near Boston.
+
+Readability Score: 7.7
+
+HS-ESS1-4, MS-ESS1-3

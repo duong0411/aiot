@@ -1,0 +1,86 @@
+Tiêu đề: Thunderstorms can make trees twinkle with an electric glow
+Đường dẫn: https://www.snexplores.org/article/thunderstorm-trees-electric-glow
+--------------------------------------------------
+
+Tiny, storm-driven electrical zaps flash across pine needles and other leaves
+
+In the lab, electrical plates above a branch cause light and electrical charge to burst from the tips of spruce needles. Recently, these discharges have also been seen outdoors during a thunderstorm.
+
+William Brune
+
+By Lily Burton
+
+May 12, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+Thunderstorms bring a hidden glow to forests. The same forces that trigger lightning also make treetops sparkle like Christmas-tree toppers (even if this is barely visible to the human eye).
+
+For nearly a century, scientists have discussed a blue glow known as Saint Elmo’s fire. Thunderstorms create electric fields in the sky. Electric currents can flow from them to some objects below, such as ship masts, triggering them to glow. More recently, researchers wondered if lightning might do something similar to treetops.
+
+Initially triggered in the lab, these glows have now been spotted in nature.
+
+The idea of whether these glimmers might form at treetops first arose a few years ago, says Patrick McFarland. He’s a meteorologist at Pennsylvania State University in State College. He and William Brune were eating lunch at a picnic table under a tree. McFarland remembers Brune, an atmospheric chemist at the school, gazing up and musing: “Hmm, I wonder if those trees glow under thunderstorms.”
+
+“That afternoon, we grabbed a branch off of a tree,” McFarland recalls. In the lab, they placed a high-voltage plate above the branch. This created a negative charge in the air around the branch. Then they attached the branch to a positively charged electrical plate (to simulate the ground). This formed an electric field. “And sure enough,” McFarland says, “we saw it glow.”
+
+It was just barely visible. But it radiated a faint blue hue as well as some invisible ultraviolet (UV) light. Such glows are part of what’s called a corona. It develops when a strong electric field causes normally neutral air molecules to break and create ions (charged atoms or molecules). The air can now conduct electricity — and glow.
+
+Seeing this in the lab made the researchers even more curious. McFarland says they mused: “Do we see these glows under thunderstorms as well?”
+
+To find out, the group outfitted a 2013 Toyota Sienna van in the summer of 2024. They included all the instruments they would need to find a thunderstorm. They also added a special camera to record the distinct UV light that would be emitted by a corona. Then they hit the road in that van, McFarland says. They “drove it down to Florida for about a month.”
+
+Why Florida? This state records the most thunderstorms. With sea breezes that come in from both the Atlantic Ocean and the Gulf of Mexico, he notes, “You get thunderstorms almost every single day.”
+
+Still, finding a storm was not all it took to find coronas, he notes. “You have to find a public place to set up with trees that seem relatively tall.” You also have to get the instrument ready and aim it at a tree — all during a storm. “So it’s really, really challenging.”
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+Serendipity led them to their best corona-maker. A North Carolina storm “just so happened to form when we were driving back to Pennsylvania,” McFarland says. It was in the coastal plains town of Pembroke. Here, for 90 minutes they recorded video of a sweetgum tree and a loblolly pine.
+
+In all, they spotted 41 coronas. None lasted more than three seconds. And the flashes didn’t stick to one spot. They danced and darted like twinkle lights, jumping between leaves and along branches swaying in the wind.
+
+The scientists shared their findings in the Feb. 28 Geophysical Research Letters.
+
+The North Carolina storm provided most of their sightings. But they saw coronas in other storms in Florida and Pennsylvania. Each time, the sparkling proved short-lived.
+
+“These glows seem to be really, really widespread,” McFarland now concludes. “There may be many, many more … that we just don’t have the sensitivity to see.”
+
+Atlantic: One of the world’s five oceans, it is second in size only to the Pacific. It separates Europe and Africa to the east from North and South America to the west.
+
+current: (in electricity) The flow of electricity or the amount of charge moving through some material over a particular period of time.
+
+electric field: A region around a charged particle or object within which a force would be exerted on other charged particles or objects.
+
+electricity: A flow of charge, usually from the movement of negatively charged particles, called electrons.
+
+factor: Something that plays a role in a particular condition or event; a contributor.
+
+force: Some outside influence that can change the motion of an object, hold objects close to one another, or produce motion or stress in a stationary object.
+
+ion: (adj. ionized) An atom or molecule with an electric charge due to the loss or gain of one or more electrons. An ionized gas, or plasma, is where all of the electrons have been separated from their parent atoms.
+
+lightning: A flash of light triggered by the discharge of electricity that occurs between clouds or between a cloud and something on Earth’s surface. The electrical current can cause a flash heating of the air, which can create a sharp crack of thunder.
+
+meteorologist: Someone who studies weather and climate events.
+
+molecule: A group of atoms that represents the smallest possible amount of a chemical compound. Molecules can be made of single types of atoms or of different types. For example, the oxygen in air is made of two bound oxygen atoms (O2). Water is made of two hydrogen atoms and one oxygen atom (H2O).
+
+phenomenon: Something that is surprising or unusual.
+
+sea: An ocean (or region that is part of an ocean). Unlike lakes and streams, seawater — or ocean water — is salty.
+
+simulate: To deceive in some way by imitating the form or function of something. A simulated dietary fat, for instance, may deceive the mouth that it has tasted a real fat because it has the same feel on the tongue — without having any calories. A simulated sense of touch may fool the brain into thinking a finger has touched something even though a hand may no longer exists and has been replaced by a synthetic limb. (in computing) To try and imitate the conditions, functions or appearance of something. Computer programs that do this are referred to as simulations.
+
+ultraviolet: A portion of the light spectrum that is close to violet but invisible to the human eye.
+
+Journal:​ ​​P.J. McFarland et al. Corona discharges glow on trees under thunderstorms. Geophysical Research Letters. Vol. 53, February 28, 2026, e2025GL119591. doi: 10.1029/2025GL119591.
+
+Lily Burton was the Spring 2026 science writing intern at Science News. She holds a bachelor’s degree in Molecular and Cell Biology and Anthropology from UC Berkeley. She also has a Ph.D. in Biochemistry and Molecular Biophysics from the University of Chicago where she researched circadian rhythms in photosynthetic bacteria and the role they play in metabolism. She was a 2024 AAAS Mass Media Fellow where she reported on local science at WUNC – North Carolina Public Radio.
+
+Readability Score: 6.8
+
+HS-PS4-1, MS-PS4-2

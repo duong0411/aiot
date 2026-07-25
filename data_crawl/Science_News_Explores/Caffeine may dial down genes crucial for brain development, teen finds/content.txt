@@ -1,0 +1,108 @@
+Tiêu đề: Caffeine may dial down genes crucial for brain development, teen finds
+Đường dẫn: https://www.snexplores.org/article/caffeine-brain-development-genes
+--------------------------------------------------
+
+Animal studies hint that a caffeine habit may alter gene activity, leading to changes in brain development
+
+Kids might want to imitate their parents and drink caffeinated beverages. However, one teen’s research suggests that caffeine may affect a young person’s brain differently than it does an adult's.
+
+d3sign/Moment/Getty Images
+
+By Katie Grace Carpenter
+
+June 11, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+Readability Score: 7.9
+
+HS-LS3-2, MS-LS3-1
+
+PHOENIX, Ariz. — When someone says they’re “addicted to caffeine,” it might not seem that alarming. After all, many people rely on a morning coffee or an afternoon energy drink to get through the day. But Sophia Zeng, 16, says we might need to reconsider our attitudes about one of the most common drugs in the world.
+
+Her research hints that caffeine might impact genes involved in brain development. And it may affect kids and adults in different ways.
+
+The American Academy of Pediatrics advises that kids avoid caffeine. Yet many kids and teens consume caffeine in some form every day. Sophia is one of those caffeine drinkers. She first got curious about the effects of this drug when she noticed differences in how she and her mom reacted to caffeinated tea.
+
+Sophia’s mom is “really a tea lover,” she says. “After drinking tea, she would feel more focused.” But drinking tea didn’t always leave Sophia feeling good. “If I stopped drinking it, I’d receive headaches,” she says. To get rid of those headaches, she needed more caffeine. That got Sophia wondering: Why does caffeine make some people feel happy and helpful, while leaving others with increased stress and headaches?
+
+Sophia’s work earned this sophomore from Tsinghua International School in Beijing, China, a spot at the 2026 Regeneron International Science & Engineering Fair, or ISEF. This is a program run by the Society for Science (which also publishes this magazine). Sophia was among 1,725 students from 65 nations or territories who competed in 2026. Participants shared nearly $7 million in prizes.
+
+The first thing Sophia did was look at past data on caffeine. She analyzed published studies with the goal of identifying new patterns. This approach is called bioinformatics.
+
+Sophia focused on studies that had looked at how caffeine affected the brains of adult mice. Her analysis suggested that caffeine could alter which genes in a mouse’s DNA were active, or expressed.
+
+Next, Sophia took her work to a lab. She grew rat brain cells in petri dishes for six days, then exposed the cells to different levels of caffeine. Two days later, she compared the neurons under a microscope.
+
+To make the neurons show up clearly, Sophia used fluorescent dyes that bind to the cells. Dyes can highlight important features, such as how the cells are forming connections with one another. Those neuron-to-neuron connections are called synapses.
+
+Dishes exposed to more caffeine contained fewer neurons, Sophia found. What’s more, those neurons showed fewer connections. Caffeine seemed to make neuronal networks simpler and scarcer.
+
+In another set of experiments, Sophia studied young zebrafish that had been exposed to different levels of caffeine. She looked at how far the fish swam and where. More caffeinated fish swam more, she says. They also made erratic choices, spending time in regions of their tank that calm fish typically avoided. Both of these findings hinted that the fish that got more caffeine were more anxious.
+
+But Sophia didn’t stop there. She looked at what changes in the fishes’ brains might have led to this behavior. Sophia measured the activity of four genes involved in brain development. All four were less active in the caffeine-exposed fish, she found.
+
+Interestingly, some genes in the young zebrafish were turned down, or less active, in a way not seen in the neurons from adult rats. So, caffeine may affect the brain differently at different ages, Sophia says. But together, the mouse brain data, the rat neuron experiment and the fish studies all point to the same pattern. Caffeine seems to affect gene activity in neurons. And that in turn may impair brain development and behavior.
+
+“I feel that we really don’t talk about caffeine, even though we drink it,” Sophia says. It’s in so many everyday drinks, she adds. Between soda, tea and other beverages, young people may be consuming a lot more of it than they realize.
+
+Sophia suggests greater skepticism about using this drug. People tend to think about caffeine as a helpful tool for focus, she notes, and dismiss potential downsides. But her findings highlight that caffeine comes with trade-offs — and those trade-offs may harm young brains more than we know.
+
+anxious: (n. anxiety) A feeling of dread over some potential or upcoming situation, usually one over which someone feels they have little control.
+
+behavior: The way something (often a person or other organism) conducts itself or acts towards others.
+
+bioinformatics: A research field that uses computers in collecting, classifying, storing and analyzing biological information to better understand genes, their function and their activities on the molecular scale.
+
+caffeine: A natural, plant-based stimulant, which activates the nervous system and heart. The leaves, seeds and fruits of many plants contain caffeine. In coffee plants and tea bushes, caffeine acts as a natural pesticide. It will kill or harm insects that attempt to dine on the plant. Caffeine is also toxic to some types of plants, bacteria — even frogs and dogs.
+
+cell: (in biology) The smallest structural and functional unit of an organism. Typically too small to see with the unaided eye, it consists of a watery fluid surrounded by a membrane or wall. Depending on their size, animals are made of anywhere from thousands to trillions of cells. Most organisms, such as yeasts, molds, bacteria and some algae, are composed of only one cell.
+
+data: Facts and/or statistics collected together for analysis but not necessarily organized in a way that gives them meaning. For digital information (the type stored by computers), those data typically are numbers stored in a binary code, portrayed as strings of zeros and ones.
+
+development: (in biology) The growth of an organism from conception through adulthood, often undergoing changes in chemistry, size and sometimes even shape.
+
+DNA: (short for deoxyribonucleic acid) A long, double-stranded and spiral-shaped molecule inside most living cells that carries genetic instructions. It is built on a backbone of phosphorus, oxygen, and carbon atoms. In all living things, from plants and animals to microbes, these instructions tell cells which molecules to make.
+
+engineering: The field of research that uses math and science to solve practical problems. Someone who works in this field is known as an engineer.
+
+erratic: A pattern that appears irregular and unpredictable.
+
+fluorescent: (v. fluoresce) Adjective for something that is capable of absorbing and reemitting light. That reemitted light is known as fluorescence.
+
+focus: (in behavior) To look or concentrate intently on some particular point or thing.
+
+gene: (adj. genetic) A segment of DNA that codes, or holds instructions, for a cell’s production of a protein. Offspring inherit genes from their parents. Genes influence how an organism looks and behaves.
+
+impair: (n. impairment) To damage or weaken in some way.
+
+microscope: An instrument used to view objects — such as bacteria or the single cells of plants or animals — that are too small to be visible to the unaided eye.
+
+network: A group of interconnected people or things. (v.) The act of connecting with other people who work in a given area or do similar thing (such as artists, business leaders or medical-support groups), often by going to gatherings where such people would be expected, and then chatting them up. (n. networking)
+
+neuron: The main cell type of the nervous system — the brain, spinal column and nerves. These specialized cells transmit information by producing, receiving and conducting electrical signals. Neurons also can transmit signals to other cells with chemical messengers.
+
+pediatrics: A field of medicine that has to do with children and especially child health. A doctor who works in this field is known as a pediatrician.
+
+petri dish: A shallow, circular dish used to grow bacteria or other microorganisms.
+
+protein: A compound made from one or more long chains of amino acids. Proteins are an essential part of all living organisms. They form the basis of living cells, muscle and tissues; they also do the work inside of cells. Antibodies, hemoglobin and enzymes are all examples of proteins. Medicines frequently work by latching onto proteins.
+
+society: An integrated group of people or animals that generally cooperate and support one another for the greater good of them all.
+
+Society for Science: A nonprofit organization created in 1921 and based in Washington, D.C. Since its founding, the Society has been promoting not only public engagement in scientific research but also the public understanding of science. It created and continues to run two renowned high-school science competitions: the Regeneron Science Talent Search (begun in 1942) and the Regeneron International Science and Engineering Fair (created in 1950). A third, middle-school competition, launched in 2010, has since 2023 been known as the Thermo Fisher Scientific Junior Innovators Challenge. The Society also publishes award-winning journalism: in Science News (launched in 1922) and Science News Explores (created in 2003).
+
+stress: (in biology) A factor — such as unusual temperatures, movements, moisture or pollution — that affects the health of a species or ecosystem. (in psychology) A mental, physical, emotional or behavioral reaction to an event or circumstance (stressor) that disturbs a person or animal’s usual state of being or places increased demands on a person or animal; psychological stress can be either positive or negative.
+
+synapse: The junction between neurons that transmits chemical and electrical signals.
+
+tool: An object that a person or other animal makes or obtains and then uses to carry out some purpose such as reaching food, defending itself or grooming.
+
+zebrafish: A small tropical freshwater fish belonging to the minnow family. Zebrafish are used frequently in scientific research because they grow quickly and their genetic makeup is well understood.
+
+Meeting: ​​ S. Zeng. Impact of high-caffeine intake on adolescent brain development: epigenetic and behavioral perspectives. 2026 Regeneron International Science and Engineering Fair (ISEF).​ ​May​ ​10-15,​ ​2026.​ ​Phoenix, Ariz.​ Behavioral and Social Sciences,​​ BEHA026,​ ​2026. Journal: A.M. Branum et al. Trends in caffeine intake among US children and adolescents. Pediatrics. Vol. 3, March 2014, p. 386. doi: 10.1542/peds.2013-2877.
+
+Katie Grace Carpenter is a science writer and curriculum developer, with degrees in biology and biogeochemistry. She also writes science fiction and creates science videos. Katie lives in the U.S. but also spends time in Sweden with her husband, who’s a chef.

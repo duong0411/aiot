@@ -1,0 +1,198 @@
+Tiêu đề: Perfect pitch? Scientists lay new grounds for World Cup ‘26
+Đường dẫn: https://www.snexplores.org/article/turfgrass-soccer-pitch-world-cup-science
+--------------------------------------------------
+
+High-tech turfgrass carpets will be unrolled in 16 stadiums across North America
+
+Soccer fields for international tournaments must be in peak condition — and consistent from city to city. It’s a big task for the groundskeepers charged with preparing fields across North America for FIFA 2026 championship play this June and July. Get it wrong, and some teams won’t compete on a “level playing field.” Here’s some new sod being rolled out atop a prepared base level of sand as grounds crews at SoFi Stadium in Los Angeles County, Calif., prepare to host World Cup matches.
+
+Kjell Gerber/SoFi Stadium
+
+By Laura Allen and Janet Raloff
+
+May 13, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+Readability Score: 6
+
+HS-ETS1-3, MS-ETS1-2
+
+When soccer star Kylian Mbappé steps onto a field in the 2026 World Cup games, he won’t be thinking about the grass beneath his feet. Hopefully. Players and fans alike will be focusing on the game.
+
+But not turf specialists, especially those at the University of Tennessee (UT) and Michigan State University (MSU). They’ve been working for the past few years with FIFA. That’s the governing body for World Cup Soccer. For these researchers, the goal is to ensure the playing fields — or pitches — support the upcoming games. And what they’ve learned may pay off in better grass athletic fields everywhere.
+
+World Cup matches always take place on natural grass.
+
+Groundskeepers usually start working on the pitches six to eight months before the games. The 2022 games took place in Qatar, the 2018 games in Russia. Both times, all fields (and their stadiums) had been designed and built specifically for those tournaments.
+
+This year, none were.
+
+The games this June and July will be held at 16 existing stadiums in the United States, Mexico and Canada. Some fields are outdoors, or largely outdoors. At least eight were built with artificial turf. But all will have to grow and sustain natural grass, at least for the 40 days they’ll be hosting the World Cup.
+
+How do you keep fully indoor fields green and healthy through more than a month of punishing play? This is “literally what made me wake up at 1, 2, 3, 4 o’clock in the morning every night for the last two years,” says John Sorochan. With no natural sunlight, “what do you do to keep [their grass] alive for 10 weeks?” Sorochan heads the turfgrass program at UT-Knoxville.
+
+FIFA’s charge to him: Make sure the balls will roll and bounce the same on all 16 fields — and that all feel the same underfoot to every player. Consistent conditions impact how athletes perform and the outcomes of the games.
+
+To ensure this, Sorochan says, “We’ve done over 150 projects between the University of Tennessee and Michigan State since 2023.” Some lasted only a few weeks, others many months.
+
+The groups helped work out which grasses should do best throughout the range of climates in which this year’s games will be played. They also had to figure out how best to grow, transport and install new fields quickly — and keep them consistent throughout the 104 matches in this year’s tournament.
+
+Soccer isn’t the only sport played on natural grass. Baseball and football often are, too. But their needs are different.
+
+For baseball, most of the action takes place on base lines. They’re bare dirt. And football’s lemon-shaped balls don’t need to roll on the ground. The athletes in these two sports just need fields firm enough to run on safely and give good traction.
+
+Soccer is different. Its balls roll and bounce on the pitch. And this year, Sorochan says, they must do so the same way on fields that are up to 5,000 kilometers (3,100 miles) apart. That’s a big challenge: The farthest span between the eight World Cup stadiums in Qatar, he notes, was 48 miles. So the climatic conditions last time varied nowhere near as much as they will this year.
+
+Getting soccer fields right is hard, says John Rogers at MSU in East Lansing. They’re like the well-manicured putting greens in golf. Everyone is expecting uniform grass across each field and between each field. The grass must be dense with no gaps. If some spot is too soft, the ball won’t bounce as far. Grass that’s too long will slow or alter the ball’s roll.
+
+Elite players know just how a ball should bounce when it comes off their kick. If it doesn’t, they’ll blame the field.
+
+Also, Rogers notes, athletes need to know that wherever they step, their feet will land on stable ground. They’re “looking for confidence they can cut, stop [or] turn with no fear that the grass is going to give out.” If the field isn’t right, he’s learned, the athletes may not play as hard because they’ll be trying to avoid injury.
+
+The turf uniformity this calls for is “quite astounding,” says Rogers, “but a nice challenge.”
+
+To test that turf uniformity, UT and MSU researchers turn to a machine known as fLEX. It models the ground-striking motion of the shoe on an average 168-pound (76.2-kilogram) soccer player.
+
+“I came up with the idea to design and build [it] in 2018,” Sorochan recalls. He was doing work for the National Football League Players Association, after they had to move an international game to Los Angeles. It was supposed to be played on a field in Mexico City. But the intended field was deemed unsafe.
+
+Field testing methods back then couldn’t gauge how the surface would feel and respond to a player. After analyzing the situation, Sorochan decided “we need something that hits the ground like a foot does.” He and a coworker, Kyley Dickson, came up with fLEX.
+
+Its 3-D printed faux ankle and foot — fitted with cleats — are surrounded by sensors. They measure how much energy each step transfers back to a player. The researchers also look at how much traction feet will get on the turf. If a running athlete suddenly stops or plants a foot for a quick turn, they don’t want wet or unstable turf to pull out (which was the potential risk in Mexico City) or lock the cleats to the ground and trigger a foot or leg injury.
+
+Since the fLEX system’s development, Sorochan says, “we’ve tested over 100 fields with it all over Canada, the U.S. and Europe.” At this year’s World Cup, it will be used to test 77 locations on a field to assess how uniformly hard the soil is. Grounds managers will also use heat maps to see how compact soil has become.
+
+Often, he says, the grass won’t show wear, but these data will reveal places where the ground is getting firmer. You can then treat those parts of a field. If a lot of the field is affected, the solution might be “to put different cleats on,” Sorochan says, to give an athlete better traction.
+
+One thing fLEX doesn’t measure is how the ball bounces, says Jackie Guevara. For this, researchers turn to sound-analyzing software. “We use an audio recording of the bounce,” says this MSU turfgrass scientist.
+
+Researchers drop a ball from a set height and record the sound as it hits the ground, bounces and hits a second time. Software developed at UT measures the time difference between the two hits. It then translates this into how high the ball must have bounced up between those two hits.
+
+Over the past 60 years, breeders have created grasses that look nicer, need less water and resist disease. The 2026 World Cup will be held across a range of very different climates. So the same grass won’t work well at all sites. Some places will need a cool-season variety. Others will turn to ones bred to thrive in blistering heat.
+
+These grasses, which cover the ground like a carpet, are called sod. It’s grown at special farms. Most World Cup sod was planted between March and June of last year. It’ll be transported to the stadiums right before the games.
+
+Some pitches may be less than two weeks old when the games begin. Players will be running atop grass that may have been grown 1,600 kilometers (1,000 miles) away, then shipped and installed in just a few days. And it must quickly root itself in place so that it stays put throughout punishing play.
+
+The goal, says Rogers, is that when players step onto a field, they won’t know that a month earlier the grass had been on a sod farm in another state. The field should look and feel like it’s been there forever.
+
+Take the stadium in Houston, Texas. It was hosting a rodeo through mid-April, just eight weeks before tournament play. Even “God,” Rogers says, “couldn’t get [the stadium owners] to give up the rodeo.”
+
+Sod growers plant seeds into a special soil mix. Once the grass is dense enough to move, they typically cut through the lower roots. It’s a bit like slicing the icing off a cake. Cutting those roots shocks the plants. They normally have to recover before they can grow new roots and anchor themselves at a new site.
+
+But this year, there’s no time for that. The solution: Sow grass seed in soil laid atop plastic, says Guevara. Once roots hit the plastic, they begin growing sideways and intertwine, she says. This creates an extremely strong sod. It’s a game changer for “instant fields.”
+
+Shortly before the World Cup, the sod gets rolled up. No roots are damaged. “You’re literally peeling the plant up off the plastic, like you would peel pizza off a plate,” says Rogers. The roots are intact. No shock to the plant. Once installed at a new site, this turf can quickly send its roots down to anchor itself.
+
+Sod rolls are huge — 1.1 meters (3.5 feet) wide and 10.7 meters (35 feet) long. Each weighs 1,600 kilograms (3,500 pounds), says Rogers. That helps them stay put. Growers have also been adding synthetic fibers into the grass to make it stronger. FIFA soccer fields in Europe and Russia have used such plastic-reinforced sod for several years, including in the last two World Cups.
+
+Rogers doesn’t think his team’s strong sod needs the plastic bits. But they’ll use them anyway, since FIFA asked for it.
+
+Below the sod, whether it’s laid indoors or out, will be a vacuum-ventilation system. It sends a flow of oxygen out to the roots of the grass. But it also hooks up to a line that drains water from under the field.
+
+“If it’s raining really heavily, you can reverse [the flow] and create suction,” Sorochan says. That pulls water out through the bottom of the soil. In this way, he says, “you don’t get any standing water on the pitch.”
+
+Even perfect installation won’t guarantee a tip-top field. The new turf will need daily care to survive 40 days of whatever the weather and players throw at it.
+
+Grounds crews will have to water, fertilize, mow — and groom it. “It’s a little bit like getting dirt out from under your fingernails,” says Rogers. Look at a normal field, and you’ll see dead plants or weeds between blades of grass.
+
+Those intruders are a problem. As dead plants break down, they get slimy and affect how the ball rolls.
+
+In a field used for pro soccer, says Rogers, grooming allows you to see the soil between each blade of grass.
+
+Grounds managers tend to use data, such as on moisture, to guide their care, says Frank Rossi. He’s a turf scientist at Cornell University in Ithaca, N.Y. To be healthy and strong, the soil around the roots needs to stay moist. If allowed to dry, it will turn powdery and weak and risk blowing away.
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+Indoor stadiums, Rossi says, have an additional responsibility: prescribed light. If the light isn’t right, natural grass won’t thrive. So these stadiums will regularly roll out banks of lamps that imitate sunlight.
+
+This LED lighting appears pink, though it’s a mix of hues. Sorochan says it’s 90 to 95 percent red light and 5 to 10 percent blue. The blue light is a bigger drain on electricity, he says. So a mostly red light is “the most economical, efficient way to grow grass.” But color also affects how grasses grow. Red “creates more of an elongated growth.” Blue leads to a shorter, sturdier plant — one that better tolerates foot traffic.
+
+Turf science has been evolving, says Rossi. Today’s fields use less water and fewer resources. But to keep a natural field looking good, it’ll need plenty of upkeep. That includes mowing.
+
+Frequent mowing keeps the grass dense and short, often around 3.8 centimeters (1.5 inches). The best mowing height differs for cool-season versus warm-season grasses, new research by the UT-MSU team finds. Mowing to the right height, Sorochan says, should ensure balls will bounce the same off of each type of grass and hold up to pounding foot traffic.
+
+Paying grounds crews to mow can be costly, something many schools and communities find hard to afford. Seeing poorly maintained fields can make some people think artificial turf would be better.
+
+However, those who switched to plastic turf, Rossi says, often “realized that the grass isn’t always greener on the other side.” Landing on artificial turf hurts more. It can be hard on a player’s legs. After hours in the sun, it also can get dangerously hot. Plus, it sheds plastic bits that pollute the environment.
+
+To make natural grass more manageable, Rossi points to robotic mowing as an important innovation. These machines — the lawn equivalent of robotic home vacuums — now trim the grass on many athletic fields. Their benefit is huge for school districts and groups with lots of fields at different sites. The time saved by human mowers frees staff to do other maintenance, such as reseeding or even replacing sod in high-traffic areas.
+
+Robotic mowing is just starting to take off, says Rossi. Frequent cutting with these small mowers makes turf healthier, one May 2025 study showed. And being lightweight, these devices don’t squish the soil as much as conventional mowers. Managers in Norman, Okla., are now using them on some university and community baseball fields. It helps keep their fields looking clean and green.
+
+And yes, appearance matters — even at the World Cup. Once the players are happy, FIFA’s top priority for these fields is: How will it look on TV?
+
+Rossi can’t wait for game day. And hopefully, everyone’s attention will be on the players and the games. All the effort and work that went into the grass will stay behind the scenes. If all goes well, he says, the fields are “never part of the story.”
+
+audio: Having to do with sound.
+
+climate: The weather conditions that typically exist in one area, in general, or over a long period.
+
+environment: The sum of all of the things that exist around some organism or the process and the condition those things create. Environment may refer to the weather and ecosystem in which some animal lives, or, perhaps, the temperature and humidity (or even the placement of things in the vicinity of an item of interest).
+
+faux: Meaning false or fake. Faux fur, for instance, would not be made from animal products but from some manufactured fibers.
+
+fertilize: (in biology) The merging of a male and a female reproductive cell (egg and sperm) to set in create a new, independent organism. (in agriculture and horticulture) To provide basic chemical nutrients for growth.
+
+fiber: Something whose shape resembles a thread or filament. (in nutrition) Components of many fibrous plant-based foods. These so-called non-digestible fibers tend to come from cellulose, lignin, and pectin — all plant constituents that resist breakdown by the body’s digestive enzymes.
+
+focus: (in behavior) To look or concentrate intently on some particular point or thing.
+
+gauge: A device to measure the size or volume of something. For instance, tide gauges track the ever-changing height of coastal water levels throughout the day. Or any system or event that can be used to estimate the size or magnitude of something else. (v. to gauge) The act of measuring or estimating the size of something.
+
+innovation: (v. to innovate; adj. innovative) An adaptation or improvement to an existing idea, process or product that is new, clever, more effective or more practical.
+
+irrigation: Water delivered by artificial means (such as pipes, channels or sprinklers) to help the growth of plants during dry periods.
+
+literally: An adjective indicating that the phrase it modifies is precisely true. For instance, to say: "It's so cold that I'm literally dying," means that this person actually expects to soon be dead, the result of getting too cold.
+
+moisture: Small amounts of water present in the air, as vapor. It can also be present as a liquid, such as water droplets condensed on the inside of a window, or dampness present in clothing or soil.
+
+plastic: Any of a series of materials that are easily deformable; or synthetic materials that have been made from polymers (long strings of some building-block molecule) that tend to be lightweight, inexpensive and resistant to degradation. (adj.) A material that is able to adapt by changing shape or possibly even changing its function.
+
+range: The full extent or distribution of something. For instance, a plant or animal’s range is the area over which it naturally exists. (in math or for measurements) The extent to which values can vary (such as the highest to lowest temperatures). Also, the distance within which something can be reached or perceived.
+
+robot: A machine that can sense its environment, process information and respond with specific actions. Some robots can act without any human input, while others are guided by a human.
+
+sensor: A device that picks up information on physical or chemical conditions — such as temperature, barometric pressure, salinity, humidity, pH, light intensity or radiation — and stores or broadcasts that information. Scientists and engineers often rely on sensors to inform them of conditions that may change over time or that exist far from where a researcher can measure them directly. (in biology) The structure that an organism uses to sense attributes of its environment, such as heat, winds, chemicals, moisture, trauma or an attack by predators.
+
+shock: (in biology) A potentially fatal bodily reaction to a variety of conditions, including illness, injury, blood loss and lack of adequate water.
+
+simulate: To deceive in some way by imitating the form or function of something. A simulated dietary fat, for instance, may deceive the mouth that it has tasted a real fat because it has the same feel on the tongue — without having any calories. A simulated sense of touch may fool the brain into thinking a finger has touched something even though a hand may no longer exists and has been replaced by a synthetic limb. (in computing) To try and imitate the conditions, functions or appearance of something. Computer programs that do this are referred to as simulations.
+
+sod: A layer of soil onto which a dense layer of grass has been grown. It’s usually sold in rolls. Once unrolled atop bare soil and stomped down, the grass roots can begin anchoring themselves into place.
+
+sow: (in agriculture) The planting of seeds, usually by scattering them over the soil.
+
+synthetic: An adjective that describes something that did not arise naturally, but was instead created by people. Many synthetic materials have been developed to stand in for natural materials, such as synthetic rubber, synthetic diamond or a synthetic hormone. Some may even have a chemical makeup and structure identical to the original.
+
+system: A network of parts that together work to achieve some function. For instance, the blood, vessels and heart are primary components of the human body's circulatory system. Similarly, trains, platforms, tracks, roadway signals and overpasses are among the potential components of a nation's railway system. System can even be applied to the processes or ideas that are part of some method or ordered set of procedures for getting a task done.
+
+traction: (in physics) The force created as something pulls across a surface or the glue-like effect of friction created as something moves along a surface. It's the ability of something to resist sliding, such as a tire on a road or a sock-covered foot along a wood floor. It is not the same as friction but is related to friction.
+
+turf: An area of soil covered by grass.
+
+wavelength: The distance between one peak and the next in a series of waves, or the distance between one trough and the next. It’s also one of the “yardsticks” used to measure radiation. Visible light — which, like all electromagnetic radiation, travels in waves — includes wavelengths between about 380 nanometers (violet) and about 740 nanometers (red). Radiation with wavelengths shorter than visible light includes gamma rays, X-rays and ultraviolet light. Longer-wavelength radiation includes infrared light, microwaves and radio waves.
+
+Journal: J.L.A. Guevara et al. Evaluating Kentucky bluegrass and perennial ryegrass seeding ratios for sod grown on plastic production. Crop, Forage & Turfgrass Management. Vol. 12, June 2026, p. e70112. doi: 10.1002/cft2.70112.
+
+Thesis: A.J. Veith. Quantifying field variability effects on surface performance and athletes. Masters Thesis for Virginia Tech. January 8, 2026.
+
+Journal: R. Bearss et al. Surface performance characteristics of carpet-mat stabilized cool-season sod over drainage cells for temporary stadium installation. International Turfgrass Society Research Journal. Vol. 15, July 2025, p. 121. doi: 10.1002/its2.158.
+
+Journal: J. McElroy et al. Robotic mowing technology in turfgrass management: Past, present, and future. Crop Science. Vol. 65, May/June 2025. doi:10.1002/csc2.70081.
+
+Thesis: J.L.A. Guevara et al. Seeding practices for cool-season sod grown on plastic production and domed stadiums. PhD Thesis for Michigan State University #31767449. 2025.
+
+Journal: J. Kilby et al. Variations in surface hardness in response to simulated traffic between stabilized cool-season turf systems. Proceeding of the 15th International Conference on the Engineering of Sport. September 26, 2024.
+
+News story: E. Pintor. Tormenta stadium joins elite sports venues utilizing the prestigious SubAir Sport System. USL Network (online), March 12, 2023.
+
+Journal: W. Strunk et al. Effects of mowing height and Cynodon spp. cultivar on traffic tolerance. International Turfgrass Society Research Journal. Vol. 14, June 2022, p. 412. doi: 10.1002/its2.74.
+
+Journal: A.W. Thoms et al. An evaluation of mat hybrid turfgrass systems under simulated traffic. International Turfgrass Society Research Journal. Vol. 14, June 2022, p. 385. doi: 10.1002/its2.58.
+
+Janet Raloff is the Editor, Digital of Science News Explores. Prior to this, she was an environmental reporter for Science News, specializing in toxicology. To her never-ending surprise, her daughter became a toxicologist.

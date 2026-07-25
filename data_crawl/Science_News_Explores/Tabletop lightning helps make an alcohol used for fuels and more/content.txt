@@ -1,0 +1,146 @@
+Tiêu đề: Tabletop lightning helps make an alcohol used for fuels and more
+Đường dẫn: https://www.snexplores.org/article/tabletop-lightning-plasma-methanol
+--------------------------------------------------
+
+High-energy plasma can help make this methanol from methane, a type of natural gas
+
+The plasma “lightning” is seen as purplish arcs in the upper half of this underwater cylinder. This same process that causes lightning in the sky can be harnessed here to make methanol for use as a fuel and more.
+
+D. Swearer/Northwestern University
+
+By Stephen Ornes
+
+May 26, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+You may not know methanol by name, but this alcohol plays a big role in making a lot of the things in our lives. It’s an ingredient in plastics and paints, for instance. And being highly flammable, it can be used as a liquid fuel. But making it has typically required multiple steps and high heat. It also produced lots of wastes. Now scientists have found an easy way to make methanol that avoids many of those drawbacks.
+
+Their trick: Add lightning.
+
+Lightning is a form of plasma — what many scientists call the fourth state of matter. It forms from a high-voltage electrical pulse.
+
+Researchers have now shown plasma can quickly convert methane — the main component of natural gas — into methanol. All it takes is adding electricity, they explain in the April 15 Journal of the American Chemical Society.
+
+“Lightning” in a bottle makes methanol in a simple, one-step process, notes Dayne Swearer. A physical chemist and chemical engineer, he led the team at Northwestern University in Evanston, Ill., that developed the technique.
+
+Each year, companies around the world make up to 110 million metric tons (36.6 billion gallons) of methanol. “If we can offset a small fraction of that using … a simple process like this one,” Swearer says, “I think there’s a lot of cool opportunities.”
+
+Chemists have been looking into using plasma in chemical reactions for more than a century. For Swearer, it’s a recent interest. He studies electromagnetic energy. “That’s the type of energy found in light or in electric fields, or that runs through wires,” he explains.
+
+Working with that type of energy means understanding electrons — negatively charged subatomic particles. His team is studying ways to use electrons to transfer power.
+
+“The electron really gives chemistry its flare,” he says. “It’s a really, really important part of chemical reactions.” He likens electrons to hooks that hold atoms together to make molecules. If you can unhook those electrons, he says, it’s possible to rearrange a molecule’s atoms.
+
+The team used bottled lightning to remodel methane molecules. The change happens quickly. First, they pump methane gas into a cylinder immersed in water. The cylinder has tiny holes, or pores, on its sides. Then the device is electrified using a much higher voltage than comes from the outlets found in a home. “Our system compresses the electricity into pulses that turn off and on really fast,” Swearer says. “These short bursts help control the chemistry.”
+
+As the gas moves through the cylinder and out the tiny holes, an electrical pulse rips through it. That pulse lights up like tiny bolts of lightning.
+
+This process tears electrons from the methane molecules. These glowing, high-energy electrons form a plasma that smashes into other nearby molecules. Methane molecules have one carbon atom and four hydrogens. Water molecules have one oxygen and two hydrogens. The plasma breaks one hydrogen off of each molecule.
+
+Those broken water and methane molecules find each other and snap together like puzzle pieces, says Swearer. “We click them together.” And when they do, they become methanol. The orphaned hydrogen atoms snap together to form hydrogen molecules.
+
+Along with the methane gas, the porous cylinder contains a type of material called a catalyst. It helps the chemicals react correctly.
+
+Chemists knew electricity could be used to remodel the molecules in a gas. But figuring out how to harness that knowledge in a useful way proved hard, Swearer says. One challenge was “really understanding what’s going on inside the plasma,” he says. He credits a graduate student, James Ho, with figuring out how the plasma was behaving.
+
+Another challenge: Not all the methane will turn into methanol. Swearer’s team is currently investigating how to improve that conversion rate.
+
+Using lightning in a bottle to make methanol is exciting, he says. But he cautions that his team’s process is experimental. It’s not ready to replace conventional ways of making methanol. Doing that will take years, Swearer says. One obstacle, he notes, is “just the cost of electricity” needed.
+
+Still, the new findings suggest using plasma to make fuels could have a smaller climate impact than today’s standard methods, says P.J. Cullen. He’s a chemical engineer at the University of Sydney in Australia. Why? “No need for high temperature” to make them, he says. The high heat normally needed to make methanol comes from burning fossil fuels. The electricity used for the plasma could instead come from solar, wind or nuclear sources — sources that don’t add greenhouse gases to the atmosphere.
+
+Cullen’s group in Australia developed the plasma-making device that Swearer’s group uses. In the same journal as Swearer’s work, Cullen’s team describes a second way to convert methane to methanol with a plasma. (It, too, uses a catalyst, but one separated from the plasma.)
+
+“Both papers point to the same main advantage,” Cullen says. Both make methanol without high heat.
+
+These approaches both show the power of plasma, he says. They also point to how researchers could use this technology for cleaner, greener chemistry.
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+atom: The basic unit of a chemical element. Atoms are made up of a dense nucleus that contains positively charged protons and uncharged neutrons. The nucleus is orbited by a cloud of negatively charged electrons.
+
+carbon: A chemical element that is the physical basis of all life on Earth. Carbon exists freely as graphite and diamond. It is an important part of coal, limestone and petroleum, and is capable of self-bonding, chemically, to form an enormous number of chemically, biologically and commercially important molecules.
+
+catalyst: (v. catalyze) A substance that helps a chemical reaction to proceed faster. Examples include enzymes and elements such as platinum and iridium.
+
+chemical: A substance formed from two or more atoms that unite (bond) in a fixed proportion and structure. For example, water is a chemical made when two hydrogen atoms bond to one oxygen atom. Its chemical formula is H2O. Chemical also can be an adjective to describe properties of materials that are the result of various reactions between different compounds.
+
+chemical engineer: A researcher who uses chemistry to solve problems related to the production of food, fuel, medicines and many other products.
+
+chemical reaction: A process that involves the rearrangement of the molecules or structure of a substance, as opposed to a change in physical form (as from a solid to a gas).
+
+chemistry: The field of science that deals with the composition, structure and properties of substances and how they interact. Scientists use this knowledge to study unfamiliar substances, to reproduce large quantities of useful substances or to design and create new and useful substances.
+
+climate: The weather conditions that typically exist in one area, in general, or over a long period.
+
+component: Something that is part of something else (such as pieces that go on an electronic circuit board or ingredients that go into a cookie recipe).
+
+electric field: A region around a charged particle or object within which a force would be exerted on other charged particles or objects.
+
+electricity: A flow of charge, usually from the movement of negatively charged particles, called electrons.
+
+electromagnetic: An adjective referring to light radiation, to magnetism or to both.
+
+electron: A negatively charged particle, usually found orbiting the outer regions of an atom; also, the carrier of electricity within solids.
+
+engineer: A person who uses science and math to solve problems. As a verb, to engineer means to design a device, material or process that will solve some problem or unmet need.
+
+field: (in physics) A region in space where certain physical effects operate, such as magnetism (created by a magnetic field), gravity (by a gravitational field), mass (by a Higgs field) or electricity (by an electrical field).
+
+flammable: Something that can burn (go up in flames) easily.
+
+fossil fuel: Any fuel — such as coal, petroleum (crude oil) or natural gas — that has developed within the Earth over millions of years from the decayed remains of bacteria, plants or animals.
+
+graduate student: Someone working toward an advanced degree by taking classes and performing research. This work is done after the student has already graduated from college (usually with a four-year degree).
+
+hydrogen: The lightest element in the universe. As a gas, it is colorless, odorless and highly flammable. It’s an integral part of many fuels, fats and chemicals that make up living tissues. It’s made of a single proton (which serves as its nucleus) orbited by a single electron.
+
+laser: A device that generates an intense beam of coherent light of a single color. Lasers are used in drilling and cutting, alignment and guidance, in data storage and in surgery.
+
+lightning: A flash of light triggered by the discharge of electricity that occurs between clouds or between a cloud and something on Earth’s surface. The electrical current can cause a flash heating of the air, which can create a sharp crack of thunder.
+
+methane: A hydrocarbon with the chemical formula CH4 (meaning there are four hydrogen atoms bound to one carbon atom). It’s a natural constituent of what’s known as natural gas. It’s also emitted by decomposing plant material in wetlands and is belched out by cows and other ruminant livestock. From a climate perspective, methane is 80 times more potent than carbon dioxide is in trapping heat in Earth’s atmosphere, making it a very important greenhouse gas.
+
+methanol: A colorless, toxic, flammable alcohol, sometimes referred to as wood alcohol or methyl alcohol. Each molecule of it contains one carbon atom, four hydrogen atoms and an oxygen atom. It is often used to dissolve things or as a fuel.
+
+molecule: A group of atoms that represents the smallest possible amount of a chemical compound. Molecules can be made of single types of atoms or of different types. For example, the oxygen in air is made of two bound oxygen atoms (O2). Water is made of two hydrogen atoms and one oxygen atom (H2O).
+
+natural gas: A mix of gases that developed underground over millions of years (often in association with crude oil). Most natural gas starts out as 50 to 90 percent methane, along with small amounts of heavier hydrocarbons, such as propane and butane.
+
+oxygen: A gas that makes up about 21 percent of Earth's atmosphere. All animals and many microorganisms need oxygen to fuel their growth (and metabolism).
+
+particle: A minute amount of something.
+
+plasma: (in chemistry and physics) A gaseous state of matter in which electrons separate from the atom. A plasma includes both positively and negatively charged particles. (in medicine) The colorless fluid part of blood.
+
+plastic: Any of a series of materials that are easily deformable; or synthetic materials that have been made from polymers (long strings of some building-block molecule) that tend to be lightweight, inexpensive and resistant to degradation. (adj.) A material that is able to adapt by changing shape or possibly even changing its function.
+
+pore: A tiny hole in a surface. On the skin, substances such as oil, water and sweat pass through these openings.
+
+porous: The description of a substance that contains tiny holes, called pores, through which a liquid or gas can pass. (in biology) The minute openings in the skin or in the outer layer of plants.
+
+renewable: An adjective for resources that can be endlessly replaced (such as water, green plants, sunlight and wind). This is in contrast to non-renewable resources, for which there is a finite supply -- one that can essentially be used up. These include petroleum (and other fossil fuels) or relatively rare elements and minerals.
+
+solar: Having to do with the sun or the radiation it emits. It comes from sol, Latin for sun.
+
+subatomic: Anything smaller than an atom, which is the smallest bit of matter that has all the properties of whatever chemical element it is (like hydrogen, iron or calcium).
+
+system: A network of parts that together work to achieve some function. For instance, the blood, vessels and heart are primary components of the human body's circulatory system. Similarly, trains, platforms, tracks, roadway signals and overpasses are among the potential components of a nation's railway system. System can even be applied to the processes or ideas that are part of some method or ordered set of procedures for getting a task done.
+
+technology: The application of scientific knowledge for practical purposes, or the devices, processes and systems that result from those efforts.
+
+voltage: A force associated with an electric current that is measured in units known as volts. Power companies use high-voltage to move electric power over long distances.
+
+Journal:​ ​Q. Song et al. Plasma electrocatalytic oxidation of methane to methanol. Journal of the American Chemical Society. Published online May 4, 2026. doi: 10.1021/jacs.6c02305.
+
+Journal:​ J. Ho et al. Direct partial oxidation of methane at plasma-catalyst-liquid interfaces. Journal of the American Chemical Society. Vol. 148, April 15, 2026, p. 17508. doi: 10.1021/jacs.6c04425.
+
+Stephen Ornes lives in Nashville, Tenn., and his family has two rabbits, six chickens and a cat. He has written for Science News Explores since 2008 on topics including lightning, feral pigs, big bubbles and space junk.
+
+Readability Score: 7.8
+
+HS-ETS1-3, MS-ETS1-2

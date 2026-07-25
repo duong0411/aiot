@@ -1,0 +1,39 @@
+Tiêu đề: Fahrenheit, Celsius and a STEM Challenge
+Đường dẫn: https://www.science-sparks.com/fahrenheit-celsius-and-a-stem-challenge/
+--------------------------------------------------
+
+When checking what to pack for a holiday, you need to know whether the temperature is in Celsius or Fahrenheit. 40°F is winter coat weather, but 40 °C is a very hot day!
+
+Celsius and Fahrenheit are both temperature scales, it’s a bit like measuring the same thing with two rulers, but starting with one at 0 and one at 32. You’d get a completely different measurement.
+
+The difference between the two is down to the people who invented the scales. Anders Celsius based his scale on pure water ( 0-100 ), and Daniel Fahrenheit based his on the coldest temperature he could create in his lab and human body temperature.
+
+The same number in Celsius and Fahrenheit varies a lot, until you get to the magic -40°, which is the same in both!
+
+The Celsius temperature scale was invented by Anders Celsius, a Swedish astronomer, in 1742. Although his version is actually the opposite of what we use today. He set 100° as the freezing point of water and 0° as the boiling point, which avoided the use of negative numbers for very cold temperatures.  After Anders Celsius passed away, Carl Linnaeus switched it to make 0° the freezing point of water, which is the Celsius scale we use today!
+
+The Fahrenheit scale was invented in 1724 by a German physicist called Daniel Gabriel Fahrenheit.
+
+Daniel Fahrenheit was the first person to use mercury in a thermometer. He realised that mercury was better than water or alcohol, which had previously been used, because it didn’t freeze as easily and expanded smoothly.
+
+Fahrenheit wanted zero degrees to be the coldest temperature he could create in his lab. He mixed water, ice, and ammonium chloride (a type of salt) and set the point on his thermometer where the mercury dropped to zero. He decided the freezing point of water should be 32°F, then took the temperature of his wife’s armpit and rounded it to 96° (this was later changed to 98.6°F, which is human body temperature).
+
+The formula for converting Celsius to Fahrenheit is:
+
+Fahrenheit = ( Celsius x 1.8 ) + 32
+
+Or, use our handy calculator!
+
+Daniel Fahrenheit used ammonium chloride, water and ice to create very cold slushy water in his lab. When ammonium chloride is dissolved in water, it absorbs heat from its surroundings, which makes the water colder than before it was added. This is an endothermic process.
+
+The ammonium chloride particles also get in the way of water molecules, making it harder for them to bond and form ice. This further lowers the freezing point of water. Lowering the freezing point forces the ice to melt. To melt, it must draw heat from its surroundings, which further lowers the water temperature, pushing it well below its normal freezing point without turning into ice.
+
+You can recreate this at home using normal cooking salt instead of ammonium chloride.
+
+Instructions
+
+This time, use a smaller container that you can insulate to keep it as cold as possible. Can you get the liquid to reach a lower temperature than without insulation?
+
+Another fun ( and tasty) way to demonstrate freezing point depression is to make ice cream in a bag.
+
+Last Updated on May 19, 2026 by Emma Vanstone

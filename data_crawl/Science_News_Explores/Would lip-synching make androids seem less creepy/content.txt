@@ -1,0 +1,136 @@
+Tiêu đề: Would lip-synching make androids seem less creepy?
+Đường dẫn: https://www.snexplores.org/article/lip-synching-android-robots-uncanny
+--------------------------------------------------
+
+Lifelike lip motion might overcome the ‘Uncanny Valley’ effect triggered by some robots
+
+This new robot can synch its lip motions with its speech pretty convincingly. Would that make you more comfortable interacting with it?
+
+Jane Nisselson/Columbia Engineering
+
+By Elizabeth Fernandez
+
+May 11, 2026 at 6:30 am
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+I smiled when I first saw the robot Pepper. Its small mouth and big black eyes gave it a bit of that cute puppy look. But the more humanlike androids Sophia and Ameca struck me quite differently. Though impressively realistic, they creeped me out. This kind of unease is a common reaction to robots that look too close to human. But one team of engineers may have found a way to overcome it: Make humanoids that lip-synch.
+
+The discomfort triggered by some humanlike robots is called the “Uncanny Valley.” The name refers to the fact that we tend to become more comfortable with robots as they become more humanlike — but only up to a point. Get too close to the real thing, and our comfort with androids sharply drops off. We may suddenly feel unsettled or even repulsed by them instead.
+
+For instance, Pepper, which looks like a cross between a Powerpuff Girl and a marshmallow, may be charming. But Sophia and Ameca, designed to resemble real people, look just a bit off — putting them in the Uncanny Valley.
+
+Roboticists have been trying to make their machines more humanlike. A problem emerges when robots get very lifelike, but not perfectly so. Suddenly, they become creepier.
+
+Roboticist Masahiro Mori first proposed the Uncanny Valley back in 1970. This effect doesn’t only show up with robots. It also happens with other artificial depictions of people, such as AI-generated art or some animations (as in the movie The Polar Express).
+
+Alexander Diel is a neuroscientist at LVR University Hospital Essen in Germany. He wasn’t involved in the new work. But he does study social robots. “Research suggests that the Uncanny Valley is associated with ‘prediction error’ responses,” he says. It’s the “brain’s reaction to a stimulus that does not fit an expected pattern.” Humans have evolved to be very sensitive to facial expressions and cues. When we see a face that doesn’t fit this expected pattern, we are clued in that something is “wrong.”
+
+Many aspects of a robot can contribute to the Uncanny Valley, but some more than others. Hod Lipson has given a lot of thought to what makes this effect show up the most. A roboticist, he works at Columbia University in New York City. “Is it the skin? Is it the eyes?” he wonders. In the end, he concludes: “It’s the lips.”
+
+When you see someone talking, about half the time you watch their lips. Focusing on the mouth helps you understand what’s being said, even amid noise. “When a robot does not move their lips, or moves them in a kind of Muppet way, it is very noticeable,” Lipson says.
+
+Giving a robot realistic lip motion is hard. People use a lot of facial muscles to express themselves. In contrast, humanoid robots typically only have a few stiff, mechanized motors to move their faces.
+
+Even making a robot smile is quite challenging. It may seem like just a matter of “lift the two tips of the lips,” Lipson says, “and there you go. You smile.” In reality, if only the corners of a robot’s mouth move, he says, “it looks really weird and off.”
+
+Lipson and his group realized that their robot’s lip movements needed to be delicate or subtle to look realistic. “There’s the arts and crafts of it,” he says. So the team created a robot with 26 motors to drive its facial movements. Its soft, silicone lips can move in 10 different ways, like a rubber band distorting into various shapes. Those motor-driven movements can now faithfully recreate the shapes our lips make as we talk.
+
+The team designed the lips to move in multiple ways, but they didn’t tell the robot how to move its lips. Instead, the robot learned by watching videos of people talking. In other words, it watched YouTube. Lots and lots and lots of YouTube.
+
+As it watched, the robot used machine learning to study the shapes lips make as we speak. Later, it practiced in front of a mirror, matching the facial expressions its motors created to the human expressions linked with the voices it had heard in videos.
+
+“People, for decades now, have been trying to program robots to do things,” says Lipson. “We underestimate how complicated it is.” Machine learning is more robust, he says. It allows robots to adapt to the many complexities of talking. For example, the robot only watched YouTube videos in English. Yet it was able to adapt to move its lips in line with French, Japanese, Korean, Spanish, Italian, German, Russian, Chinese, Hebrew and Arabic voices.
+
+Lipson’s team described its new android on January 14 in Science Robotics.
+
+The results are very convincing. The robot’s head and eye movements are still a bit jerky, but the lips move in very lifelike ways, synching to its voice. When I watched the team’s robot sing, it didn’t trigger that creepy feeling.
+
+“The Columbia Engineering team’s work on robotic lip motion is very impressive,” says Martina Mara. At Johannes Kepler University Linz in Austria, she studies how people feel about humanlike robots.
+
+Still, she adds, while lips are a huge source of social cues, the whole face is important. When listening to a voice, “people usually do not respond to one isolated feature, but to the overall consistency of the face.”
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+Why make a humanlike robot in the first place?
+
+“If you needed to ‘talk’ to a computer in the old days, there were punch cards,” says Lipson. Then there were screens that displayed numbers and letters — and nothing else. Later, graphics could create almost photo-quality images. After that, screens emerged that respond to touch. As computers have changed over time, so do the ways we interact with them.
+
+“A very humanlike robot can make interaction more intuitive, even for non-technical users,” says Mara.
+
+But making robots more humanlike could go too far, Mara adds. “A highly humanlike design may fuel people’s tendency to anthropomorphize the machine,” she says. This could lead people to form emotional attachments with a device or to “even begin to care about the robot’s ‘well being.’” This would blur the line between robots and humans, she says. As a society, we have to consider carefully if that’s what we want.
+
+“People have emotions towards their puppies or their teddy bears, but at least they don’t mistake it to be a human,” says Lipson. We don’t want to cross the line and mistake a machine for another human. Doing so, he says, risks people choosing to connect emotionally with a machine instead of with other people.
+
+For now, Lipson’s team gives its robot slightly blue-tinged skin so it can’t be mistaken for a person.
+
+There’s another option, points out Diel. Robots don’t have to look precisely human. “Rather than recreating the mechanics of human facial motion, simple facial expressions can be expressed as smileys on a screen, for instance. This makes the robot likable … without risking an Uncanny Valley.”
+
+Keeping those challenges in mind, Lipson believes in a future full of robotics. “For kids in high school, it means that most of their life — certainly their career — is going to be dominated coexisting with intelligent machines that are human-shaped,” he says. “This is real. And it’s going to come very fast.”
+
+android: An engineered device (usually a robot) that has been designed to look and behave like a human.
+
+anthropomorphize:  (adj. anthropomorphic) To attribute human traits or behaviors to some animal or object.
+
+engineering: The field of research that uses math and science to solve practical problems. Someone who works in this field is known as an engineer.
+
+graphics: (in computing) Images or video displayed on a computer screen or other digital media.
+
+high school: A designation for grades nine through 12 in the U.S. system of compulsory public education. High-school graduates may apply to colleges for further, advanced education.
+
+humanoid: Something that appears human-like, but isn’t (perhaps a robot). It’s frequently a character in science fiction.
+
+interface: (in computing) A term for the technology people use to interact with a computer to input data and instructions or to receive its outputs. Long ago, people input data and instructions using punched cards or by typing and receiving data onto a screen. More recently, interfaces can range from joysticks, headsticks and trackballs to voice commands, touch screens, haptic (skin-sensitive) sensations and holographic imagery.
+
+machine learning: A technique in computer science that allows computers to learn from examples or experience. Machine learning is the basis of some forms of artificial intelligence (AI). For instance, a machine-learning system might compare X-rays of lung tissue in people with cancer and then compare these to whether and how long a patient survived after being given a particular treatment. In the future, that AI system might be able to look at a new patient’s lung scans and predict how well they will respond to a treatment.
+
+mechanical engineer: Someone trained in a research field that uses physics to study motion and the properties of materials to design, build and/or test devices.
+
+media: A term for the ways information is delivered and shared within a society. It encompasses not only the traditional media — newspapers, magazines, radio and television — but also digital outlets, such as Twitter, Facebook, Instagram, TikTok and WhatsApp. The newer, digital media are sometimes referred to as social media. The singular form of this term is medium.
+
+motor: A device that converts electricity into mechanical motion. (in biology) A term referring to movement.
+
+muscle: A type of tissue used to produce movement by contracting its cells, known as muscle fibers. Muscle is rich in protein, which is why predatory species seek prey containing lots of this tissue.
+
+neuroscientist: Someone who studies the structure or function of the brain and other parts of the nervous system.
+
+psychologist: A scientist or mental-health professional who studies the mind, especially in relation to actions and behaviors. Some work with people. Others may conduct experiments with animals (usually rodents) to test how their minds respond to different stimuli and conditions.
+
+risk: The chance or mathematical likelihood that some bad thing might happen. For instance, exposure to radiation poses a risk of cancer. Or the hazard — or peril — itself. (For instance: Among cancer risks that the people faced were radiation and drinking water tainted with arsenic.)
+
+robot: A machine that can sense its environment, process information and respond with specific actions. Some robots can act without any human input, while others are guided by a human.
+
+roboticist: Someone who designs or builds robots.
+
+silicone: Heat-resistant substances that can be used in many different ways, including the rubber-like materials that provide a waterproof seal around windows and in aquariums. Some silicones serve as grease-like lubricants in cars and trucks. Most silicones, a type of molecule known as a polymer, are built around long chains of silicon and oxygen atoms.
+
+social: (adj.) Relating to gatherings of people; a term for animals (or people) that prefer to exist in groups. (noun) A gathering of people, for instance those who belong to a club or other organization, for the purpose of enjoying each other’s company.
+
+stimulus: (plural: stimuli) Something that prompts a response in a living organism or in a controlled environment (including a chemical or physical test system).
+
+subtle: Adjective for something that may be important, but can be hard to see or describe. For instance, the first cellular changes that signal the start of a cancer may be only subtly different — as in small and hard to distinguish from nearby healthy tissues.
+
+system: A network of parts that together work to achieve some function. For instance, the blood, vessels and heart are primary components of the human body's circulatory system. Similarly, trains, platforms, tracks, roadway signals and overpasses are among the potential components of a nation's railway system. System can even be applied to the processes or ideas that are part of some method or ordered set of procedures for getting a task done.
+
+technology: The application of scientific knowledge for practical purposes, or the devices, processes and systems that result from those efforts.
+
+tune: (in engineering) Adjust to the right level.
+
+Uncanny Valley: An unsettling feeling that something isn’t right, created by the depiction — usually in film or robotics — of a character that appears very human-like, but not totally so. That subtle mismatch can make it seem creepy.
+
+​​Journal: Y. Hu ​et​ ​al.​ ​Learning realistic lip motions for humanoid face robots.​ ​​Science Robotics. Vol.​ ​11, January 14, 2026. doi: 10.1126/scirobotics.adx3017.
+
+News explainer: R.D. Caballar. What Is the Uncanny Valley? IEEE Spectrum. Updated November 11, 2024.
+
+News article: L. Papadopoulos. Video: Humanoid robot Ameca can express all kinds of creepy human emotions. Interesting Engineering. August 25, 2022.
+
+Journal: S. Hisanaga et al. Language/culture modulates brain and gaze processes in audiovisual speech perception. Scientific Reports. Vol. 6, October 13, 2016. doi: 10.1038/srep35265.
+
+Journal: E Vatikiotis-Bateson et al. Eye movement of perceivers during audiovisual speech perception. Perception & Psychophysics. Vol. 60, September 1998, p. 926. doi: 10.3758/bf03211929.
+
+Readability Score: 7.2
+
+HS-LS1-2, MS-LS1-8

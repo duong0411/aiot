@@ -1,0 +1,147 @@
+Tiêu đề: Why do objects shatter the same way? Math solves the mystery
+Đường dẫn: https://www.snexplores.org/article/how-objects-shatter-math-mystery
+--------------------------------------------------
+
+Theory explains why most collisions show the same trend in piece sizes
+
+Strange similarities show up in smashups of all kinds — from broken dinner plates (here) to asteroid collisions. Math at last explains why.
+
+slowmotiongli/Creatas Video+/Getty Images Plus
+
+By Wendy Orlando
+
+March 13, 2026 at 6:30 am
+
+When an object shatters, something strange happens. It doesn’t matter whether the object is a dropped glass or plate. Or the nucleus of one atom smashing into another. Or even two asteroids colliding. When something splinters, the size of its fragments will follow the same trend. Math at last is able to explain why.
+
+Scientists have been fascinated with fragmentation for a century. “It’s a kind of magic,” says Ferenc Kun. A physicist at the University of Debrecen in Hungary, Kun is an expert in fragmentation.
+
+When you plot the number of fragments against their sizes, using logarithmic axes, you always get a straight, downward-sloping line. In other words, there are many more small pieces of debris than big ones. In math, this line is called a “power law.” Here, power refers to the slope of the line — or how tilted it is.
+
+The same straight line somehow emerges when graphing the smithereens of widely different things. If you froze a potato in liquid nitrogen and dropped it, Kun says, you’d get the same spread of remnant sizes as if you exploded coal in a coal mine.
+
+A longstanding question has been: why?
+
+Emmanuel Villermaux has now come up with an explanation. His theory doesn’t just show why a graph of the fragment sizes is a straight line. It also predicts what the slope of that line should be for different objects. Villermaux is a physicist at Aix Marseille University in France and Institut Universitaire de France. He shared his new findings last November in Physical Review Letters.
+
+This theory does more than just solve a longstanding mystery, notes physicist Nicolas Vandenberghe. He, too, works at Aix Marseille University, but did not take part in the new research.
+
+Many industrial processes “need to have the right size of a fragment,” notes Vandenberghe. He points to coal. It doesn’t burn well if the chunks are the wrong size. Another example is sandpaper. Its grit, made of shattered mineral pieces, needs to have a very specific and uniform size. So Villermaux’s new theory could have plenty of uses in industry.
+
+Before something breaks apart, cracks appear and spread through it. In the past, scientists often studied how those cracks develop as a way to understand fragmentation. But those theories had always depended on some particular collision. Researchers needed to use details of that specific collision to explain the effects.
+
+Villermaux took a step back. He considered what would have to be true for all breakups.
+
+And his work, Kun says, “shows that actually, the mechanism [of shattering] is not important” to the outcome.
+
+Villermaux took two broad ideas. First was the concept of “maximal randomness.” It comes from thermodynamics. That’s a branch of physics that looks at how materials can have different forms of energy and how energy moves between these forms.
+
+Maximal randomness predicts that the most likely outcome of any process is the one with the most ways it could occur.
+
+Take the rolling of two dice. There are six ways you can throw the dice so that their numbers add up to seven: 1 and 6, 2 and 5, 3 and 4, 4 and 3, 5 and 2, and 6 and 1. But there is only one way you can roll dice that add up to two: 1 and 1. It’s more likely, therefore, that you’ll roll a seven.
+
+Scientists now use this thinking for the outcome of fragmentation. The spread of sizes when something shatters is likely to be the spread that has the most ways of occurring.
+
+Second, Villermaux knew that mass must be conserved. The mass of all fragments must equal the starting mass of the unbroken object. But he devised a simpler version. He showed that a form of density — mass per volume — must be approximately conserved, too, when something shatters.
+
+Villermaux then figured out, using math, what size distribution of rubble you’d get if both ideas were true. The answer turned out to be a power law!
+
+Villermaux’s formula also predicts the power law’s slope when graphing fragment sizes for different objects. His slope didn’t depend on how an object shattered, or its size, or its shape or what it was made of. It depended only on the object’s so-called dimension.
+
+Take objects that are shaped like a line — a pencil or a chopstick. A plot (or graph) of the fragment sizes for such roughly “one-dimensional” or “1-D” objects would have a slope of -1. In other words, as the size of the fragment increases, the number of fragments of that size decreases at about the same rate.
+
+Some things, such as dinner plates, have notable length and width but little height. The slope of these more or less two-dimensional (2-D) objects would be about -2.2. So as the size of the fragments increases, the number of fragments drops off a bit faster than for 1-D objects.
+
+And for truly 3-D objects — like bowling balls, with notable length, width and height — the slope would be -3.5.
+
+These slope values agree across a wide array of experiments by Villermaux and other scientists. For example, crushing uncooked spaghetti (which is roughly 1-D) creates debris whose size plot has a slope of -1.3. Thin packaging materials torn apart in the ocean (roughly 2-D) show a slope of -2.4. And 3-D air bubbles under breaking waves give a slope of -3.5.
+
+Some things do break these general rules. To account for them, Villermaux extended his theory in several ways.
+
+For instance, the distribution of the largest fragments often falls below the predicted straight line. So Villermaux derived a more complex version of his formula. It accounts for the conservation of energy in addition to conservation of mass. Then he re-graphed some 90-year-old data on logarithmic axes. His more complex prediction of fragment sizes could now more fully explain that old experiment.
+
+“It is very nice” to look at nearly century-old data with new thinking, he says. “When you look at them more carefully, you discover something new.”
+
+Villermaux could even explain the fragmentation pattern of soft objects. They break apart differently than brittle ones. A Frisbee, for instance, doesn’t shatter the same way as a ceramic dinner plate. That’s because tiny cracks in plastic can “heal” or essentially close up. Villermaux thus assumed that some portion of smaller plastic fragments would not form.
+
+He thus calculated an “effective” slope for plastics. It’s a flatter distribution, with fewer small fragments and more large ones. His extended theory predicts an effective slope for 3-D plastic objects of 1.5.
+
+Villermaux’s work agrees well with the results of a 2010 study by Kun and others. In that experiment, they’d looked at the debris shed by plastic balls thrown against a wall and calculated an effective slope of 1.6.
+
+Kun is thrilled that Villermaux’s theory can explain what they saw. “In this very general mathematics, he can incorporate the effect of plasticity,” Kun says. “This is amazing!”
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+2-D: Short for two-dimensional. This term is an adjective for something in a flat world, meaning it has features that can be described in only two dimensions — width and length.
+
+3-D: Short for three-dimensional. This term is an adjective for something that has features that can be described in three dimensions — height, width and length.
+
+array: A broad and organized group of objects. Sometimes they are instruments placed in a systematic fashion to collect information in a coordinated way. Other times, an array can refer to things laid out to make a broad range of related things, such as colors, visible at once. The term can even apply to a range of options or choices.
+
+asteroid: A rocky object in orbit around the sun. Most asteroids orbit in a region that falls between the orbits of Mars and Jupiter. Astronomers refer to this region as the asteroid belt.
+
+atom: The basic unit of a chemical element. Atoms are made up of a dense nucleus that contains positively charged protons and uncharged neutrons. The nucleus is orbited by a cloud of negatively charged electrons.
+
+axis: (plural axes) The line to the side or bottom of a graph. It is labeled to explain the graph’s meaning and the units of measurement.
+
+conservation: (v. conserve) The act of preserving or protecting something.
+
+debris: Scattered fragments, typically of trash or of something that has been destroyed. Space debris, for instance, includes the wreckage of defunct satellites and spacecraft.
+
+density: The measure of how condensed some object is, found by dividing its mass by its volume. For example, a bowling ball has a much higher density than the same size Styrofoam ball.
+
+dimension: Descriptive features of something that can be measured, such as length, width or time.
+
+glass: A hard, brittle substance made from silica, a mineral found in sand. Glass usually is transparent and fairly inert (chemically nonreactive). Aquatic organisms called diatoms build their shells of silica.
+
+grit: Tiny hard particles, such as sand or diamond dust, used as an abrasive.
+
+liquid nitrogen: A colorless, odorless, nonflammable refrigerant used in research to keep things amazingly cold or frozen. It can chill things down and hold them at temperatures as low as -196° Celsius (-320.8° Fahrenheit).
+
+mass: A number that shows how much an object resists speeding up or slowing down — basically a measure of how much matter that object is made from.
+
+mechanism: The steps or process by which something happens or “works.” It may be the spring that pops something from one hole into another. It could be the squeezing of the heart muscle that pumps blood throughout the body. It could be the friction (with the road and air) that slows down the speed of a coasting car. Researchers often look for the mechanism behind actions and reactions to understand how something functions.
+
+nitrogen: A colorless, odorless and nonreactive gaseous element that forms about 78 percent of Earth's atmosphere. Its scientific symbol is N. Nitrogen is released in the form of nitrogen oxides as fossil fuels burn. It comes in two stable forms. Both have 14 protons in the nucleus. But one has 14 neutrons in that nucleus; the other has 15. For that difference, they are known, respectively, as nitrogen-14 and nitrogen-15 (or 14N and 15N). Nitrogen is also an important nutrient for living things. It shows up as a primary component of many animal wastes and of farm fertilizers.
+
+nucleus: Plural is nuclei. (in physics) The central core of an atom, containing most of its mass.
+
+particle: A minute amount of something.
+
+physical: (adj.) A term for things that exist in the real world, as opposed to in memories or the imagination. It can also refer to properties of materials that are due to their size and non-chemical interactions (such as when one block slams with force into another). (in biology and medicine) The term can refer to the body, as in a physical exam or physical activity.
+
+physics: The scientific study of the nature and properties of matter and energy. Classical physics is an explanation of the nature and properties of matter and energy that relies on descriptions such as Newton’s laws of motion. Quantum physics, a field of study that emerged later, is a more accurate way of explaining the tiny motions and behavior of matter about the size of electrons. A scientist who works in such areas is known as a physicist.
+
+plastic: Any of a series of materials that are easily deformable; or synthetic materials that have been made from polymers (long strings of some building-block molecule) that tend to be lightweight, inexpensive and resistant to degradation. (adj.) A material that is able to adapt by changing shape or possibly even changing its function.
+
+remnant: Something that is leftover — from another piece of something, from another time or even some features from an earlier species.
+
+slope: (in mathematics) The degree to which some line rises or falls from a strictly horizontal direction. A line that appears to rise as it moves to the right has a positive slope. One that appears to fall as it runs to the right has a negative slope. Vertical lines have neither. Their slope is described as undefined. Horizontal lines have a slope of zero.
+
+theory: (in science) A description of some aspect of the natural world based on extensive observations, tests and reason. A theory can also be a way of organizing a broad body of knowledge that applies in a broad range of circumstances to explain what will happen. Unlike the common definition of theory, a theory in science is not just a hunch. Ideas or conclusions that are based on a theory — and not yet on firm data or observations — are referred to as theoretical. Scientists who use mathematics and/or existing data to project what might happen in new situations are known as theorists.
+
+thermodynamics: This branch of science deals with how heat is related to other forms of energy, such as chemical, electrical and mechanical energy, and how energy moves between these different forms.
+
+wave: A disturbance or variation that travels through space and matter in a regular, oscillating fashion.
+
+Journal: E. Villermaux. Fragmentation: principles versus mechanisms. Physical Review Letters, Vol. 135, November 26, 2025, p. 228201. doi: 10.1103/r7xz-5d9c.
+
+Journal: A. Vledouts, N. Vandenberghe and E. Villermaux. Fragmentation as an aggregation process: the role of defects. Proceedings of the Royal Society A. Vol. 472, January 31, 2016, p. 20150679. doi: 10.1098/rspa.2015.0679.
+
+Journal: Vledouts, N. Vandenberghe and E. Villermaux. Fragmentation as an aggregation process. Proceedings of the Royal Society A. Vol. 471, December 1, 2015, p. 20150678. doi: 10.1098/rspa.2015.0678.
+
+Journal: E. Blenkinsopp and J.R. Chaplin. Bubble size measurements in breaking waves using optical fiber phase detection probes. IEEE Journal of Oceanic Engineering. Vol. 35,  April, 2010, p. 388. doi: 10.1109/JOE.2010.2044940.
+
+Journal: G. Timár et al. New universality class for the fragmentation of plastic materials. Physical Review Letters. Vol. 104, March 3, 2010, p. 095502. doi: 10.1103/PhysRevLett.104.095502.
+
+Journal: F. Wittel et al. Fragmentation of shells. Physical Review Letters. Vol. 93, July 16, 2004, p. 035504. doi: 10.1103/PhysRevLett.93.035504.
+
+Journal: J.A. Åström et al. Universal dynamic fragmentation in D dimensions. Physical Review Letters. Vol. 92, June 18, 2004, p. 245506. doi: 10.1103/PhysRevLett.92.245506.
+
+Journal: L. Oddershede, P. Dimon and J. Bohr. Self-organized criticality in fragmenting. Physical Review Letters. Vol. 71, November 8, 1993, p. 3107. doi: 10.1103/PhysRevLett.71.3107.
+
+Journal: R. Englman. Fragments of matter from a maximum-entropy viewpoint. Journal of Physics: Condensed Matter. Vol.3, March 4, 1991, p. 1019. doi: 10.1088/0953-8984/3/9/001.
+
+Journal: C.C. Liennau. Random fracture of a brittle solid. Journal of the Franklin Institute. Vol. 221, June, 1936, p. 769. doi: 10.1016/S0016-0032(36)90526-4.
+
+Readability Score: 7

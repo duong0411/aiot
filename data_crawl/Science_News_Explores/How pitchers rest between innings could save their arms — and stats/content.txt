@@ -1,0 +1,124 @@
+Tiêu đề: How pitchers rest between innings could save their arms — and stats
+Đường dẫn: https://www.snexplores.org/article/baseball-pitcher-recovery-arm-health
+--------------------------------------------------
+
+Managing muscle recovery during games can keep pitching speeds high and limit injury
+
+Arnav Prathipati, shown here, couldn’t find much research about how teen pitchers can best protect their arms from injury. So he did his own. His work comparing different dugout-recovery methods brought him to the 2026 ISEF competition in Phoenix, Ariz.
+
+Christy Luzzo
+
+By Katie Grace Carpenter
+
+May 14, 2026 at 1:27 pm
+
+This is a human-written story voiced by AI. Got feedback?			
+				Take our survey			.
+			(See our AI policy 			
+				here			.)
+
+Phoenix, Ariz. — Batter up! For many teen athletes, performance is the top priority. Rest and recovery, not so much. But sliding some simple recovery techniques in between innings, a high-school junior now reports, might help baseball pitchers maintain their speed — and arm health.
+
+Arnav Prathipati, 17, pitches for his school’s baseball team at Carlmont High School in Belmont, Calif. “When I was in eighth grade, I had a pretty traumatic elbow injury,” he recalls. “I had a lot of minor tears in my elbow.” It took him out of play for about six months.
+
+And that’s not unusual. According to a 2018 study, three in every four high-school pitchers develop arm pain at some point.
+
+Arnav noticed a lack of recovery-focused training for teen pitchers. Typically, he says, they “just pitch, call it a day, go home and then don’t do anything else” in terms of recovery. But injuries can have big and lasting consequences. Two players at his school, Arnav says, “both hurt their arms pitching and lost their [college] scholarships.”
+
+Hoping to avoid such problems, Arnav looked for studies aimed at limiting pitching injuries in high-school students. He found little. Most research had focused on adults. And that’s a problem, Arnav says, because unlike adults, teens are still developing. They may not sustain or recover from injuries the same way adults do. Also, pro pitchers usually have a team of doctors and therapists to help monitor and treat them. High-school athletes don’t.
+
+Arnav couldn’t put together a big study, but he wanted to do “at least some preliminary testing [on] what recovery methods could be helpful for high-school students.”
+
+What he achieved won Arnav a spot here, this week, at the 2026 Regeneron International Science & Engineering Fair. It’s the 76th annual ISEF, a program created and run by the Society of Science (which also publishes this magazine). Arnav was among 1,725 finalists — from 65 nations or territories. A host of winners will share nearly $7 million in prizes.
+
+Arnav recruited four students for his study. These pitchers went through three testing days, each separated by four days off. That’s similar to a typical baseball schedule, the teen notes.
+
+Test days started much the same way real game days would. Pitchers warmed up and stretched. Then they tossed and caught a few balls to “get their arms loose.” Afterward, each pitched 15 balls during each of three “innings.” Between innings, the participants took a six-minute rest (what would be typical in a game).
+
+Arnav assigned the teens a different recovery method on each test day, randomizing their order.
+
+One day, it was active recovery: a light jog to keep up blood flow to their muscles. Another day, they’d just veg out in the dugout. The third option was EMS, short for electromuscular (Ee-LEK-troh-MUS-ku-lur) stimulation. Here, tiny electrodes applied to the pitching elbow and shoulder delivered a small electrical current. Physical therapists often use it to promote blood flow to target tissues.
+
+Focusing on in-game recovery — rather than post-game — was important, Arnav says. As a pitcher rests in the dugout, their arm goes “cold,” he says. There’s less “steady blood flow” to “replenish the muscles.” By keeping pitchers’ arms “warm” with increased blood flow during the game, Arnav hoped to reduce the risk of injury.
+
+Arnav assessed how well each technique worked four ways.
+
+One was speed. As the pitcher’s arm tired, Arnav expected their pitches would slow. He also measured lactate in a pitcher’s blood. As cells break down blood sugar for fuel, lactate can build up in the blood, especially after intense exercise. Its levels clear during recovery. So, higher blood-lactate levels should indicate greater stress and less recovery. Arnav tested blood lactate in a blood-prick test before pitching, to establish a baseline. He tested again during each between-inning break.
+
+The teen also asked the pitchers how intensely they felt they had pitched and to rate their sense of recovery at 24 and 48 hours after pitching. That’s because soreness often develops hours after exercise.
+
+Arnav had expected a jog between innings would help flush out blood lactate to improve recovery. In fact, he found the opposite. “Active recovery actually increased the blood lactate,” he reports. Blood lactate decreased — about equally — after the other two recovery treatments.
+
+Many studies had suggested active recovery can be really effective, Arnav says. But timing might be important. Mid-game may not be the best time to measure this, he now says.
+
+Pitch speed also dropped after a light jog. EMS led to a drop in pitch speed as well. Generally, Arnav finds, as average pitch speed decreased, so did a pitcher’s estimated pitch intensity. But on EMS days, the athletes rated their pitch intensity as lower than on the other days. Their average estimated pitch intensity on the EMS day began at 8.5 (on a 10-point scale). By the third inning, it dropped to 6.75.
+
+The teen published some of his data in the January American Journal of Student Research. In it, he suggests that a pitcher’s lower assessment of pitching intensity after EMS treatment helps explain their drop in pitch speed: They just weren’t throwing as hard.
+
+When asked to rank how effective pitchers felt their recovery had been on the different days, EMS came out on top. Its score averaged 7.5 (on a 10-point scale). The athletes scored sitting at 5.67 and jogging at 4.5.
+
+Because all pitchers went through the same routines, each had served as their own controls.
+
+Submit your question here, and we might answer it an upcoming issue of Science News Explores
+
+High-school “pitchers have been throwing at higher and higher intensities in order to get recruited,” says Arnav. This was reported in a 2024 study in the American Journal of Sports and Medicine. “We can’t prevent pitchers from throwing at high intensity,” the teen says. “They most likely won’t listen.” But Arnav says he and others can recommend better recovery techniques.
+
+Arnav’s data have led him to use EMS between innings now. “It is actually helping me a lot with my velocity,” he says. His pitch speed, he reports, “has been consistently staying in like the mid- to upper 80s [miles per hour] because I’m able to recover my muscles more.” He says it “has definitely been helpful.”
+
+And he’s not keeping his findings to himself. Besides publishing his data, he’s reached out to other teams. “Some high-school coaches have emailed me back,” he says. He hopes his work will inspire schools to reconsider between-inning sports-recovery measures.
+
+blood sugar: The body circulates glucose, a type of simple sugar, in blood to tissues of the body where it will be used as a fuel. The body extracts this simple sugar from breakdown of sugars and starches. However, some diseases, most notably diabetes, can allow an unhealthy concentration of this sugar to build up in blood.
+
+cell: (in biology) The smallest structural and functional unit of an organism. Typically too small to see with the unaided eye, it consists of a watery fluid surrounded by a membrane or wall. Depending on their size, animals are made of anywhere from thousands to trillions of cells.
+
+control: (n.) A part of an experiment where there is no change from normal conditions. The control is essential to scientific experiments. It shows that any new effect is likely due only to the part of the test that a researcher has altered. For example, if scientists were testing different types of fertilizer in a garden, they would want one section of it to remain unfertilized, as the control. Its area would show how plants in this garden grow under normal conditions. And that gives scientists something against which they can compare their experimental data.
+
+current: (in electricity) The flow of electricity or the amount of charge moving through some material over a particular period of time.
+
+develop: (in biology) To grow as an organism from conception through adulthood, often undergoing changes in chemistry, size, mental maturity or sometimes even shape.
+
+electrode: A device that conducts electricity and is used to make contact with the non-metal part of an electrical circuit, or that contacts something through which an electrical signal moves.
+
+engineering: The field of research that uses math and science to solve practical problems. Someone who works in this field is known as an engineer.
+
+fuel: Any material that will release energy during a controlled chemical or nuclear reaction.
+
+high school: A designation for grades nine through 12 in the U.S. system of compulsory public education. High-school graduates may apply to colleges for further, advanced education.
+
+lactate: A substance, also known as lactic acid, made by most tissues, especially muscle and red blood cells.
+
+molecule: A group of atoms that represents the smallest possible amount of a chemical compound. Molecules can be made of single types of atoms or of different types. For example, the oxygen in air is made of two bound oxygen atoms (O2). Water is made of two hydrogen atoms and one oxygen atom (H2O).
+
+monitor: To test, sample or watch something, especially on a regular or ongoing basis.
+
+muscle: A type of tissue used to produce movement by contracting its cells, known as muscle fibers. Muscle is rich in protein, which is why predatory species seek prey containing lots of this tissue.
+
+preliminary: An early step or stage that precedes something more important.
+
+prospect: (n.) The vista (as in what’s in view) or the future of something (such as whether it’s going to be successful).
+
+physical therapist: A person trained in the treatment of physical disability through the use of exercise, massage or other non-medical treatments.
+
+recall: To remember.
+
+risk: The chance or mathematical likelihood that some bad thing might happen. For instance, exposure to radiation poses a risk of cancer. Or the hazard — or peril — itself. (For instance: Among cancer risks that the people faced were radiation and drinking water tainted with arsenic.)
+
+stress: (in biology) A factor — such as unusual temperatures, movements, moisture or pollution — that affects the health of a species or ecosystem. (in psychology) A mental, physical, emotional or behavioral reaction to an event or circumstance (stressor) that disturbs a person or animal’s usual state of being or places increased demands on a person or animal; psychological stress can be either positive or negative. (in physics) Pressure or tension exerted on a material object.
+
+tissue: Made of cells, it is any of the distinct types of materials that make up animals, plants or fungi. Cells within a tissue work as a unit to perform a particular function in living organisms. Different organs of the human body, for instance, often are made from many different types of tissues.
+
+velocity: The speed of something in a given direction.
+
+Meeting:​​ ​A.​ Prathipati. Evaluating active, passive, and electromuscular recovery methods on pitching performance and fatigue in high school athletes. Project BMED023 in Biomedical and Health Sciences, 2026 Regeneron International Science and Engineering Fair (ISEF), ​May​ ​10-15,​ ​2026,​ ​Phoenix, Ariz.​ ​
+
+Journal: A. Prathipati. Evaluating active, passive, and electromuscular recovery methods on pitching performance and fatigue in high school athletes. The American Journal of Student Research. Vol. 12, January 2026, p. 592. doi: 10.70251/HYJR2348.41592600.
+
+Journal: J. Zaremski et al. Workload risk factors for pitching-related injuries in high school baseball pitchers. American Journal of Sports Medicine. Vol. 52, May 3, 2024, p. 1685. doi: 10.1177/03635465241246.
+
+Journal: H. Melugin et al. Injury prevention in baseball: from youth to the pros. Current Reviews in Musculoskeletal Medicine. Vol. 11, March 2018, p. 26. doi: 10.1007/s12178-018-9456-5
+
+Katie Grace Carpenter is a science writer and curriculum developer, with degrees in biology and biogeochemistry. She also writes science fiction and creates science videos. Katie lives in the U.S. but also spends time in Sweden with her husband, who’s a chef.
+
+Readability Score: 7.2
+
+HS-LS1-2, MS-LS1-3

@@ -1,0 +1,79 @@
+Tiêu đề: Experiment: Can humans recognize AI-generated images?
+Đường dẫn: https://www.snexplores.org/article/people-identify-ai-generated-images
+--------------------------------------------------
+
+AI-made images have exploded in popularity — making it harder to tell what’s real or fake online
+
+Left: a picture made with the AI image generation tool on ChatGPT. Right: a (real) picture of a tiger. Can you tell the difference between the two?
+
+Left: M. Temming/ChatGPT; Right: Devang Shetty/500px/Getty Images
+
+By Science Buddies
+
+May 22, 2026 at 6:30 am
+
+Objective: Find out whether people can tell the difference between real pictures and AI-generated images.
+
+Areas of science: Artificial intelligence, human behavior
+
+Difficulty: Medium intermediate
+
+Time required: Short (2–5 days)
+
+Prerequisites: None
+
+Material availability: Readily available
+
+Cost: Under $20
+
+Safety: No issues
+
+Credits: Ben Finio, PhD, Science Buddies
+
+Computer-generated images have been around for decades. People use computers to make digital art and animations for movies, TV shows and video games. However, just like making a physical painting with a paintbrush, these images take a lot of time and human effort to produce.
+
+The rise of artificial intelligence has drastically reduced the amount of time and effort it takes to create computer-generated images. New programs and websites can generate images using a text prompt from the user, such as “a picture of a tiger walking through a grassy field.” These programs can automatically generate artwork and photo-realistic images that can be difficult to tell apart from “real” photos and artwork. Can you tell which picture at the top of this story is real and which is AI-generated?
+
+While AI-generated images might seem fun or harmless, they can also cause problems. People can use them to create deepfakes, or fake images of things that did not really happen. Some people might see the picture and believe that it is real. While fake news and fake images have been around for a long time, AI tools can make it easier and faster to produce this misleading content.
+
+Can people tell the difference between real pictures and AI-generated pictures? How hard is it to spot “fake” pictures? In this science project you will find out!
+
+This activity is brought to you in partnership with Science Buddies. Find the original activity on the Science Buddies website.
+
+artificial intelligence: A type of knowledge-based decision-making exhibited by machines or computers. The term also refers to the field of study in which scientists try to create machines or computer software capable of intelligent behavior.
+
+behavior: The way something (often a person or other organism) conducts itself or acts towards others.
+
+data: Facts and/or statistics collected together for analysis but not necessarily organized in a way that gives them meaning. For digital information (the type stored by computers), those data typically are numbers stored in a binary code, portrayed as strings of zeros and ones.
+
+digital: (in computer science and engineering)  An adjective indicating that something has been developed numerically on a computer or on some other electronic device, based on a binary system (where all numbers are displayed using a series of only zeros and ones).
+
+engine: A machine designed to convert energy into useful mechanical motion. Sometimes an engine is called a motor. (in computer science) A computer program that performs a particular, narrow range of functions.
+
+generator: A device used to convert mechanical energy into electrical energy.
+
+information: (as opposed to data) Facts provided or trends learned about something or someone, often as a result of studying data.
+
+intelligence: The ability to collect and apply knowledge and skills.
+
+internet: An electronic communications network. It allows computers anywhere in the world to link into other networks to find information, download files and share data (including pictures).
+
+online: (n.) On the internet. (adj.) A term for what can be found or accessed on the internet.
+
+PhD: (also known as a doctorate) A type of advanced degree offered by universities — typically after five or six years of study — for work that creates new knowledge. People qualify to begin this type of graduate study only after having first completed a college degree (a program that typically takes four years of study).
+
+physical: (adj.) A term for things that exist in the real world, as opposed to in memories or the imagination. It can also refer to properties of materials that are due to their size and non-chemical interactions (such as when one block slams with force into another).
+
+politician: A person who runs for or holds elected office in a town or larger governing body. For politicians, governing people (or organizations) and wielding power within government is a profession (job).
+
+random: Something that occurs haphazardly or without reason, based on no intention or purpose. Or an adjective that describes some thing that found itself selected for no particular reason, or even chaotically.
+
+search engine: (in computing) A computer program that allows a computer to search for information on the Internet. Common examples include Google, Bing and DuckDuckGo.
+
+smartphone: A cell (or mobile) phone that can perform a host of functions, including search for information on the internet.
+
+tool: An object that a person or other animal makes or obtains and then uses to carry out some purpose such as reaching food, defending itself or grooming.
+
+Readability Score: 7.9
+
+HS-ETS1-1, MS-ETS1-3

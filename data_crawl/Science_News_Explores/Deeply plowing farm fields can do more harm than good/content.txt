@@ -1,0 +1,89 @@
+Tiêu đề: Deeply plowing farm fields can do more harm than good
+Đường dẫn: https://www.snexplores.org/article/deep-plowing-soil-farm-fields
+--------------------------------------------------
+
+It can impair water’s flow through the soil, making land susceptible to floods and drought
+
+Farmers often use a harrow, as here, to break up the soil in preparation for the spring planting season. New research shows that this can actually make it harder for later rains to successfully filter down to and through the plants’ root zone.
+
+Serghei Cernovschi/Creatas Video+/Getty Images Plus
+
+By Carolyn Gramling
+
+June 18, 2026 at 6:30 am
+
+For thousands of years, farmers have prepared their fields for planting by overturning the soil. It helps them the manage the moisture, nutrients and flow of air underfoot. But modern farming’s deep plowing and heavy machinery often do more harm than good, researchers report.
+
+All that soil turnover disrupts the natural paths that water takes to percolate into the root zone. And this is not a problem just for growing crops. Breaking down the network of pores that water wants to move through also makes the soil less resilient to flooding and drought. So concludes a team of scientists in the April 16 Science.
+
+Qibin Shi is a geophysicist with the Chinese Academy of Sciences in Beijing. He was part of a team that fashioned a dense array of sensors out of fiber-optic cables. Such cables find use in more than just high-speed internet. They also can become powerful tools for seismology — and not just for earthquakes. They’re proving sensitive enough to detect even the tiny vibrations triggered as water moves through soil.
+
+Shi’s group installed these cables along the edges of 27 plots of land at a university test farm in Newport, England. The plots were treated one of three ways. Nine went unplowed. Another nine were tilled to a depth of 10 centimeters (4 inches). The last nine were turned over to a depth of 25 centimeters (almost 10 inches). Within each group, plowing machinery of different weights were used. Why? The heavier they are, they more they can compact the soil.
+
+For three days in March 2023, the team used its seismic-sensing system to track how the plots responded to rain. Rainwater didn’t seep down much on plots with the most compacted and deeply plowed soil. Instead, it tended to pool near the surface. Here, it could evaporate swiftly once the sun came out.
+
+Water moved down and around more easily in the plots that were less compacted and less deeply plowed.
+
+To understand what was happening, Shi’s team created a computer program that modeled the water’s movements. Rain, they found, moves through porous soil in a way that sort of mimics what happens to blood in capillaries — the body’s tiniest blood vessels. This process is known as capillary action.
+
+Like our capillaries, the tiny, tunnel-like airways between specks of soil are very thin. Gravity does not drive water’s flow through these holes. Instead, as water tries to alternately adhere to soil particles and bind to other water molecules, it gets caught in a push-pull action. And that moves it. When those narrow pathways get disturbed or crushed, however, the suction forces strengthen, impairing the water’s flow.
+
+Fiber-optic sensing could offer farmers a quick and inexpensive way to monitor soil moisture on a large scale, Shi’s team says. Such monitoring also could provide real-time warnings of natural hazards, such as flooding and soil liquefaction during an earthquake (when saturated ground can suddenly turn unstable due to shaking).
+
+array: A broad and organized group of objects. Sometimes they are instruments placed in a systematic fashion to collect information in a coordinated way. Other times, an array can refer to things that are laid out or displayed in a way that can make a broad range of related things, such as colors, visible at once. The term can even apply to a range of options or choices.
+
+blood vessel: A tubular structure that carries blood through the tissues and organs.
+
+capillary action: This is the force that governs the movement of a liquid along the surface of a solid. Because molecules of the liquid are attracted to the surface and to each other, they can pull each other along. Capillary action explains how sponges wick up liquids.
+
+computer program: A set of instructions that a computer uses to perform some analysis or computation. The writing of these instructions is known as computer programming.
+
+crop: (in agriculture) A type of plant grown intentionally grown and nurtured by farmers, such as corn, coffee or tomatoes. Or the term could apply to the part of the plant harvested and sold by farmers.
+
+disrupt: (n. disruption) To break apart something; interrupt the normal operation of something; or to throw the normal organization (or order) of something into disorder.
+
+drought: An extended period of abnormally low rainfall; a shortage of water resulting from this.
+
+earthquake: A sudden and sometimes violent shaking of the ground, sometimes causing great destruction, as a result of movements within Earth’s crust or of volcanic action.
+
+force: Some outside influence that can change the motion of an object, hold objects close to one another, or produce motion or stress in a stationary object.
+
+gravity: The force that attracts anything with mass, or bulk, toward any other thing with mass. The more mass that something has, the greater its gravity.
+
+internet: An electronic communications network. It allows computers anywhere in the world to link into other networks to find information, download files and share data (including pictures).
+
+liquefaction: The process of turning a solid into a liquid, often through some chemical process. (in geology) A reduction in the strength and stiffness of a soil due to shaking, such as during an earthquake. For a time, the soil is no longer a firm platform, which may allow structures on it to shake and even crumble.
+
+moisture: Small amounts of water present in the air, as vapor. It can also be present as a liquid, such as water droplets condensed on the inside of a window, or dampness present in clothing or soil.
+
+molecule: A group of atoms that represents the smallest possible amount of a chemical compound. Molecules can be made of single types of atoms or of different types. For example, the oxygen in air is made of two bound oxygen atoms (O2). Water is made of two hydrogen atoms and one oxygen atom (H2O).
+
+monitor: To test, sample or watch something, especially on a regular or ongoing basis.
+
+network: A group of interconnected people or things. (v.) The act of connecting with other people who work in a given area or do similar thing (such as artists, business leaders or medical-support groups), often by going to gatherings where such people would be expected, and then chatting them up. (n. networking)
+
+nutrient: A vitamin, mineral, fat, carbohydrate or protein that a plant, animal or other organism requires as part of its food in order to survive.
+
+particle: A minute amount of something.
+
+percolate: The action of a liquid that gradually moves through a filter or porous material.
+
+pore: A tiny hole in a surface. On the skin, substances such as oil, water and sweat pass through these openings.
+
+porous: The description of a substance that contains tiny holes, called pores, through which a liquid or gas can pass.
+
+resilient: (n. resilience) To be able to recover fairly quickly from obstacles or difficult conditions. (in materials) The ability of something to spring back or recover to its original shape after bending or otherwise contorting the material.
+
+seismology: The science concerned with earthquakes and related phenomena. People who work in this field are known as seismologists.
+
+sensor: A device that picks up information on physical or chemical conditions — such as temperature, barometric pressure, salinity, humidity, pH, light intensity or radiation — and stores or broadcasts that information. Scientists and engineers often rely on sensors to inform them of conditions that may change over time or that exist far from where a researcher can measure them directly. (in biology) The structure that an organism uses to sense attributes of its environment, such as heat, winds, chemicals, moisture, trauma or an attack by predators.
+
+system: A network of parts that together work to achieve some function. For instance, the blood, vessels and heart are primary components of the human body's circulatory system. Similarly, trains, platforms, tracks, roadway signals and overpasses are among the potential components of a nation's railway system. System can even be applied to the processes or ideas that are part of some method or ordered set of procedures for getting a task done.
+
+Journal:​ ​​J Q. Shi et al. Agroseismology and the impact of farming practices on soil hydrodynamics. Science. Vol. 392, April 16, 2026, p. 306. doi: 10.1126/science.aec0970.
+
+Carolyn Gramling is the earth & climate writer at Science News. She has bachelor’s degrees in geology and European history and a Ph.D. in marine geochemistry from MIT and the Woods Hole Oceanographic Institution.
+
+Readability Score: 7.6
+
+HS-ESS3-1, MS-ESS3-3
