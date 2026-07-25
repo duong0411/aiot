@@ -1,5 +1,0 @@
-Tiêu đề: Experiments
-Đường dẫn: https://www.snexplores.org/collections/experiments
---------------------------------------------------
-
-This series is meant to teach about how science is done, from generating a hypothesis to designing an experiment to analyzing the results with statistics. You can repeat the steps of one of these experiments and compare your results — or use this as inspiration to design your own experiment.
