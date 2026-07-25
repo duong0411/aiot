@@ -3,8 +3,7 @@ name: iOS-ipa-build
 on:
   workflow_dispatch:
 
-# Required to create/update GitHub Releases with GITHUB_TOKEN.
-# Without this, the Releases API returns 404 Not Found instead of 403.
+
 permissions:
   contents: write
 
