@@ -13,3 +13,14 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+
+# File dữ liệu lớn
+*.zip
+*.ps1
+*.mp3
+
+# Tệp tạm Flutter / Android
+.dart_tool/
+build/
+*.dill
