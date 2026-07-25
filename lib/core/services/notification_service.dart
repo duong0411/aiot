@@ -13,10 +13,18 @@ class NotificationService {
     // Cấu hình icon mặc định trên Android (sử dụng ic_launcher trong thư mục mipmap)
     const AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings('@mipmap/ic_launcher');
+        
+    const DarwinInitializationSettings initializationSettingsIOS =
+        DarwinInitializationSettings(
+            requestAlertPermission: false,
+            requestBadgePermission: false,
+            requestSoundPermission: false,
+        );
 
     const InitializationSettings initializationSettings =
         InitializationSettings(
       android: initializationSettingsAndroid,
+      iOS: initializationSettingsIOS,
     );
 
     await _notificationsPlugin.initialize(

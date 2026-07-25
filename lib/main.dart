@@ -11,24 +11,38 @@ import 'core/services/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
+  
+  try {
+    await dotenv.load(fileName: ".env");
+  } catch (e) {
+    debugPrint("Failed to load .env file: $e");
+    // Optionally load default values here if needed
+  }
 
-  // Khởi tạo NotificationService cho Local Notification (nếu cần thiết)
-  await NotificationService().init();
+  try {
+    // Khởi tạo NotificationService cho Local Notification (nếu cần thiết)
+    await NotificationService().init();
+  } catch (e) {
+    debugPrint("Failed to initialize NotificationService: $e");
+  }
 
-  // Chỉ set overlay style (status bar trong suốt) — không dùng edgeToEdge
-  // vì gây vòng lặp WindowInsets trên emulator Android
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.light,
-    ),
-  );
+  try {
+    // Chỉ set overlay style (status bar trong suốt) — không dùng edgeToEdge
+    // vì gây vòng lặp WindowInsets trên emulator Android
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    );
 
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  } catch (e) {
+    debugPrint("Failed to set system ui: $e");
+  }
 
   runApp(const MyApp());
 }
