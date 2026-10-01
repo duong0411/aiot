@@ -553,9 +553,25 @@ void setup() {
   servoDryer.attach(PIN_DRYER, 1);
   servoDryer.write(0);
 
-  // Kết nối WebSockets SSL Port 443
+  // Cấu hình WebSocket SSL Port 443
   wsClient.beginSSL(MQTT_HOST, MQTT_PORT, MQTT_PATH);
   wsClient.setExtraHeaders("Sec-WebSocket-Protocol: mqtt");
+  
+  // Lắng nghe chi tiết sự kiện WebSocket để Debug trên Serial Monitor
+  wsClient.onEvent([](WStype_t type, uint8_t * payload, size_t length) {
+    switch (type) {
+      case WStype_DISCONNECTED:
+        Serial.println("🔴 [WSS] Đang chờ hoặc Mất kết nối WebSocket Cloudflare Tunnel!");
+        break;
+      case WStype_CONNECTED:
+        Serial.printf("🟢 [WSS] Kết nối WebSocket THÀNH CÔNG tới Server: %s\n", payload);
+        break;
+      case WStype_ERROR:
+        Serial.println("❌ [WSS] Lỗi bắt tay WebSocket SSL!");
+        break;
+      default: break;
+    }
+  });
   
   mqttClient.begin(wsClient);
 
