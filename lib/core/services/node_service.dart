@@ -2,9 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/node_model.dart';
+import 'auth_service.dart';
 
 class NodeService {
-  static const String baseUrl = 'https://adam.podcast.io.vn/api';
+  String get baseUrl => AuthService.baseUrl;
 
   Future<String?> _getToken() async {
     final prefs = await SharedPreferences.getInstance();
@@ -29,7 +30,7 @@ class NodeService {
         }
       }
     } catch (e) {
-      print('Lỗi fetch nodes: $e');
+      print('Lỗi fetch nodes từ $baseUrl: $e');
     }
     return [];
   }
@@ -60,7 +61,7 @@ class NodeService {
         throw Exception(data['message'] ?? 'Thêm thiết bị thất bại');
       }
     } catch (e) {
-      print('Lỗi create node: $e');
+      print('Lỗi create node tại $baseUrl: $e');
       rethrow;
     }
   }

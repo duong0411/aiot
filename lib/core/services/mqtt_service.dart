@@ -107,13 +107,25 @@ class MqttService extends ChangeNotifier {
     _currentNodes = nodes;
     if (_client == null || !_isConnected) return;
     
-    final topics = <String>[];
+    final topics = <String>{
+      'tele/+/status', // Wildcard toàn bộ thiết bị
+      'tele/123/status',
+      'tele/123_temp_livingroom/status',
+      'tele/123_humi_living_room/status',
+      'tele/123_led1/status',
+      'tele/123_fan_livingroom/status',
+      'tele/123_door_livingroom1/status',
+      'tele/123_gas_livingroom/status',
+      'tele/123_fire_livingroom/status',
+      'tele/123_rain_livingroom/status',
+      'tele/123_dryer_livingroom/status',
+    };
     
     for (var node in nodes) {
       if (node.chipId.isEmpty) continue;
       final cId = node.chipId;
       
-      topics.add('tele/$cId/status'); // Online/Offline status
+      topics.add('tele/$cId/status');
 
       if (node.templateType == 'kitchen_living') {
         topics.addAll([
@@ -139,6 +151,7 @@ class MqttService extends ChangeNotifier {
     for (final t in topics) {
       try {
         _client!.subscribe(t, MqttQos.atLeastOnce);
+        if (kDebugMode) print('MQTT: Đã subscribe -> $t');
       } catch (e) {
         if (kDebugMode) print('MQTT Subscribe Error on $t: $e');
       }
@@ -197,6 +210,7 @@ class MqttService extends ChangeNotifier {
   void _onConnected() {
     if (kDebugMode) print('MQTT: ✅ Đã kết nối thành công');
     _isConnected = true;
+    subscribeNodes(_currentNodes);
     notifyListeners();
   }
 

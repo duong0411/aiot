@@ -116,6 +116,15 @@ class DeviceProvider extends ChangeNotifier {
     // Handle raw LWT and Heartbeat messages
     if (payload == "online" || payload == "offline") {
       final isOnline = payload == "online";
+      if (topic.contains('123') && !_nodes.any((n) => n.chipId == '123')) {
+        _nodes.add(NodeModel(
+          id: 'node_living_123',
+          name: 'Phòng Khách',
+          chipId: '123',
+          templateType: 'kitchen_living',
+          isOnline: isOnline,
+        ));
+      }
       for (var node in _nodes) {
         if (node.chipId.isNotEmpty && topic.contains(node.chipId)) {
           if (isOnline) {
@@ -134,6 +143,16 @@ class DeviceProvider extends ChangeNotifier {
     try {
       final data = jsonDecode(payload);
       final value = data['value'];
+
+      if (topic.contains('123') && !_nodes.any((n) => n.chipId == '123')) {
+        _nodes.add(NodeModel(
+          id: 'node_living_123',
+          name: 'Phòng Khách',
+          chipId: '123',
+          templateType: 'kitchen_living',
+          isOnline: true,
+        ));
+      }
 
       for (int i = 0; i < _nodes.length; i++) {
         final node = _nodes[i];
