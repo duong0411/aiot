@@ -1,82 +1,55 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
 const Device = require('../models/device.model');
-const { OAuth2Client } = require('google-auth-library');
-const { getAuth, isFirebaseInitialized } = require('../config/firebase');
-
-const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com';
-const client = new OAuth2Client(GOOGLE_CLIENT_ID);
 
 const generateToken = (userId) => {
   return jwt.sign(
     { id: userId },
-    process.env.JWT_SECRET,
-    { expiresIn: process.env.JWT_EXPIRES_IN }
+    process.env.JWT_SECRET || 'alot_secret_key_2026',
+    { expiresIn: process.env.JWT_EXPIRES_IN || '7d' }
   );
-};
-
-// POST /api/auth/check-pre-register
-exports.checkPreRegister = async (req, res) => {
-  try {
-    const { email, phone } = req.body;
-    if (!email || !phone) {
-      return res.status(400).json({ success: false, message: 'Vui lòng cung cấp email và số điện thoại' });
-    }
-    
-    const existingUser = await User.findOne({ $or: [{ email: email.toLowerCase().trim() }, { phone: phone.trim() }] });
-    if (existingUser) {
-      if (existingUser.email === email.toLowerCase().trim()) {
-        return res.status(409).json({ success: false, message: 'Email đã được sử dụng' });
-      }
-      return res.status(409).json({ success: false, message: 'Số điện thoại đã được sử dụng' });
-    }
-
-    res.json({ success: true, message: 'Thông tin hợp lệ, có thể gửi OTP' });
-  } catch (err) {
-    console.error('Check pre-register error:', err);
-    res.status(500).json({ success: false, message: 'Lỗi server, vui lòng thử lại' });
-  }
 };
 
 // POST /api/auth/register
 exports.register = async (req, res) => {
   try {
-    const { name, email, phone, password, firebaseIdToken } = req.body;
+    const { name, email, phone, password } = req.body;
 
-    if (!name || !email || !phone || !password || !firebaseIdToken) {
-      return res.status(400).json({ success: false, message: 'Vui lòng cung cấp đầy đủ thông tin' });
+    if (!name || !email || !password) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Vui lòng cung cấp đầy đủ tên, email và mật khẩu' 
+      });
     }
 
-    if (!isFirebaseInitialized) {
-      return res.status(500).json({ success: false, message: 'Tính năng OTP chưa được cấu hình trên Server. Vui lòng thêm serviceAccountKey.json' });
+    if (password.length < 6) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Mật khẩu phải có tối thiểu 6 ký tự' 
+      });
     }
 
-    let decodedToken;
-    try {
-      decodedToken = await getAuth().verifyIdToken(firebaseIdToken);
-    } catch (e) {
-      return res.status(400).json({ success: false, message: 'Xác thực mã OTP thất bại' });
-    }
+    const cleanEmail = email.toLowerCase().trim();
+    const cleanPhone = phone ? phone.trim() : '';
 
-    const firebasePhone = decodedToken.phone_number;
-    let normalizedInputPhone = phone.trim();
-    if (normalizedInputPhone.startsWith('0')) {
-      normalizedInputPhone = '+84' + normalizedInputPhone.substring(1);
-    }
-
-    if (firebasePhone !== normalizedInputPhone) {
-      return res.status(400).json({ success: false, message: 'Số điện thoại xác thực không khớp với đăng ký' });
-    }
-
-    const existingUser = await User.findOne({ $or: [{ email: email.toLowerCase().trim() }, { phone: phone.trim() }] });
+    // Kiểm tra trùng lặp Email
+    const existingUser = await User.findOne({ email: cleanEmail });
     if (existingUser) {
-      return res.status(409).json({ success: false, message: 'Email hoặc số điện thoại đã được sử dụng' });
+      return res.status(409).json({ success: false, message: 'Email này đã được sử dụng' });
+    }
+
+    // Nếu có SĐT, kiểm tra trùng SĐT
+    if (cleanPhone) {
+      const existingPhone = await User.findOne({ phone: cleanPhone });
+      if (existingPhone) {
+        return res.status(409).json({ success: false, message: 'Số điện thoại này đã được sử dụng' });
+      }
     }
 
     const user = await User.create({
       name: name.trim(),
-      email: email.toLowerCase().trim(),
-      phone: phone.trim(),
+      email: cleanEmail,
+      phone: cleanPhone,
       password,
     });
 
@@ -86,7 +59,7 @@ exports.register = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      message: 'Đăng ký thành công!',
+      message: 'Đăng ký tài khoản thành công!',
       data: {
         token,
         user: {
@@ -117,24 +90,26 @@ exports.login = async (req, res) => {
     if (!email || !password) {
       return res.status(400).json({
         success: false,
-        message: 'Vui lòng nhập email và mật khẩu',
+        message: 'Vui lòng nhập email/SĐT và mật khẩu',
       });
     }
 
+    const cleanInput = email.toLowerCase().trim();
+
     const user = await User.findOne({ 
       $or: [
-        { email: email.toLowerCase().trim() },
+        { email: cleanInput },
         { phone: email.trim() } 
       ]
     }).select('+password');
 
     if (!user || !user.isActive) {
-      return res.status(401).json({ success: false, message: 'Tài khoản hoặc mật khẩu không đúng' });
+      return res.status(401).json({ success: false, message: 'Tài khoản hoặc mật khẩu không chính xác' });
     }
 
     const isPasswordValid = await user.comparePassword(password);
     if (!isPasswordValid) {
-      return res.status(401).json({ success: false, message: 'Tài khoản hoặc mật khẩu không đúng' });
+      return res.status(401).json({ success: false, message: 'Tài khoản hoặc mật khẩu không chính xác' });
     }
 
     user.lastLogin = new Date();
@@ -164,135 +139,27 @@ exports.login = async (req, res) => {
   }
 };
 
-// POST /api/auth/google-login
-exports.googleLogin = async (req, res) => {
-  try {
-    const { idToken } = req.body;
-    if (!idToken) return res.status(400).json({ success: false, message: 'Vui lòng cung cấp idToken' });
-
-    const ticket = await client.verifyIdToken({
-      idToken,
-      audience: GOOGLE_CLIENT_ID, 
-    });
-    
-    const payload = ticket.getPayload();
-    const { sub: googleId, email, name, picture } = payload;
-
-    let user = await User.findOne({ email: email.toLowerCase().trim() });
-
-    if (user) {
-      if (!user.isActive) return res.status(403).json({ success: false, message: 'Tài khoản đã bị khóa' });
-
-      if (!user.googleId) {
-        user.googleId = googleId;
-        user.provider = 'google';
-        if (!user.avatar && picture) user.avatar = picture;
-        await user.save({ validateBeforeSave: false });
-      }
-    } else {
-      user = await User.create({
-        name,
-        email: email.toLowerCase().trim(),
-        googleId,
-        provider: 'google',
-        avatar: picture,
-      });
-      await Device.create({ userId: user._id });
-    }
-
-    user.lastLogin = new Date();
-    await user.save({ validateBeforeSave: false });
-
-    const token = generateToken(user._id);
-
-    res.json({
-      success: true,
-      message: 'Đăng nhập Google thành công!',
-      data: {
-        token,
-        user: {
-          id: user._id,
-          name: user.name,
-          email: user.email,
-          phone: user.phone,
-          avatar: user.avatar,
-          role: user.role,
-          lastLogin: user.lastLogin,
-          createdAt: user.createdAt,
-        },
-      },
-    });
-
-  } catch (err) {
-    console.error('Google Login error:', err);
-    res.status(401).json({ success: false, message: 'Xác thực Google thất bại' });
-  }
-};
-
-// POST /api/auth/check-phone-exists
-exports.checkPhoneExists = async (req, res) => {
-  try {
-    const { phone } = req.body;
-
-    if (!phone) {
-      return res.status(400).json({ success: false, message: 'Vui lòng nhập số điện thoại' });
-    }
-
-    const user = await User.findOne({
-      $or: [{ email: phone.toLowerCase().trim() }, { phone: phone.trim() }]
-    });
-
-    if (!user) {
-      return res.status(404).json({ success: false, message: 'Tài khoản không tồn tại trong hệ thống' });
-    }
-
-    res.json({ success: true, message: 'Số điện thoại hợp lệ' });
-  } catch (err) {
-    console.error('Check phone error:', err);
-    res.status(500).json({ success: false, message: 'Lỗi server, vui lòng thử lại' });
-  }
-};
-
 // POST /api/auth/reset-password
 exports.resetPassword = async (req, res) => {
   try {
-    const { phone, firebaseIdToken, newPassword } = req.body;
+    const { email, newPassword } = req.body;
 
-    if (!phone || !firebaseIdToken || !newPassword) {
-      return res.status(400).json({ success: false, message: 'Vui lòng cung cấp đầy đủ thông tin' });
+    if (!email || !newPassword) {
+      return res.status(400).json({ success: false, message: 'Vui lòng cung cấp email/SĐT và mật khẩu mới' });
     }
 
     if (newPassword.length < 6) {
-      return res.status(400).json({ success: false, message: 'Mật khẩu mới ít nhất 6 ký tự' });
+      return res.status(400).json({ success: false, message: 'Mật khẩu mới phải từ 6 ký tự trở lên' });
     }
 
-    if (!isFirebaseInitialized) {
-      return res.status(500).json({ success: false, message: 'Tính năng OTP chưa được cấu hình trên Server' });
-    }
-
-    let decodedToken;
-    try {
-      decodedToken = await getAuth().verifyIdToken(firebaseIdToken);
-    } catch (e) {
-      return res.status(400).json({ success: false, message: 'Xác thực OTP thất bại' });
-    }
-
-    const firebasePhone = decodedToken.phone_number;
-    let normalizedInputPhone = phone.trim();
-    if (normalizedInputPhone.startsWith('0')) {
-      normalizedInputPhone = '+84' + normalizedInputPhone.substring(1);
-    }
-
-    if (firebasePhone !== normalizedInputPhone) {
-      return res.status(400).json({ success: false, message: 'Số điện thoại xác thực không khớp' });
-    }
+    const cleanInput = email.toLowerCase().trim();
 
     const user = await User.findOne({
-      $or: [{ email: phone.toLowerCase().trim() }, { phone: phone.trim() }]
+      $or: [{ email: cleanInput }, { phone: email.trim() }]
     });
 
     if (!user) {
-      return res.status(400).json({ success: false, message: 'Không tìm thấy tài khoản' });
+      return res.status(404).json({ success: false, message: 'Không tìm thấy tài khoản tương ứng' });
     }
 
     user.password = newPassword;

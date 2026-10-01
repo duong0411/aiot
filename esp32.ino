@@ -1,74 +1,118 @@
 /*
  * ╔══════════════════════════════════════════════════════════════╗
- * ║         SMARTHOME ESP8266 — TỐI ƯU HÓA BỘ NHỚ (40KB RAM)    ║
+ * ║         SMARTHOME ESP32 — ĐIỀU KHIỂN & CẢNH BÁO THÔNG MINH  ║
  * ╠══════════════════════════════════════════════════════════════╣
- * ║  ✅ WiFiManager Web Portal tĩnh tối ưu bộ nhớ               ║
- * ║  ✅ Lưu WiFi vào EEPROM thay cho Preferences của ESP32      ║
- * ║  ✅ PubSubClient (MQTT TCP 1883) + WebSocketMCP (WSS)       ║
- * ║  ✅ Quản lý Cảm biến (Gas, Lửa, DHT) và Relay, Servo        ║
+ * ║  ✅ WiFiManager Web Portal cấu hình AP tĩnh 192.168.4.1       ║
+ * ║  ✅ Quét & tự động lưu 5 mạng WiFi vào EEPROM Flash          ║
+ * ║  ✅ Double Reset Detector (Nhấn Reset 2 lần để xóa WiFi)    ║
+ * ║  ✅ MQTT qua WebSockets SSL (WSS Port 443 Cloudflare Tunnel) ║
+ * ║  ✅ Quản lý Cảm biến (Gas D34, Lửa D19, DHT11 D27, Mưa D18)  ║
+ * ║  ✅ Điều khiển Relay Đèn (D25), Relay Quạt (D26), Còi (D14)  ║
+ * ║  ✅ Điều khiển Servo Cửa (D13), Servo Giàn phơi (D15)        ║
  * ╚══════════════════════════════════════════════════════════════╝
- * ⚠️ CHÚ Ý QUAN TRỌNG VỀ PHẦN CỨNG & BỘ NHỚ:
- * - Chân D5 (GPIO14) được dùng cho cảm biến Lửa (an toàn hơn D3).
- * - Code MCP XiaoZhi đã được chuyển lên Node.js Backend. ESP8266 chỉ còn chạy MQTT.
+ * 
+ * ⚠️ THƯ VIỆN CẦN CÓ TRÊN ARDUINO IDE:
+ * 1. WebSockets by Markus Sattler
+ * 2. MQTTPubSubClient by Hideaki Tai
+ * 3. DHT sensor library by Adafruit
+ * 4. ArduinoJson by Benoit Blanchon
+ * (Servo được tích hợp sẵn qua bộ tạo xung LEDC của ESP32, KHÔNG BẮT BUỘC cài thêm thư viện ngoài!)
  */
 
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
+#include <WiFi.h>
+#include <WebServer.h>
 #include <DNSServer.h>
 #include <EEPROM.h>
 #include <WebSocketsClient.h>
 #include <MQTTPubSubClient.h>
 #include "DHT.h"
-#include <Servo.h>
 #include <ArduinoJson.h>
 
 // ─────────────────────────────────────────────────────────────
-//  SƠ ĐỒ CHÂN (PINOUT ESP8266)
+//  TÍCH HỢP ĐIỀU KHIỂN SERVO TRÊN ESP32
+//  (Tự động hỗ trợ cả Core ESP32 v2.x và v3.x mà không sợ lỗi thư viện)
 // ─────────────────────────────────────────────────────────────
-#define PIN_GAS     A0  // MQ2 Analog
-#define PIN_FAN     5   // D1 (GPIO5)
-#define PIN_LED     4   // D2 (GPIO4)
-#define PIN_FIRE    14  // D5 (GPIO14) - An toàn khi boot
-#define PIN_DHT     2   // D4 (GPIO2)
-#define PIN_DOOR    13  // D7 (GPIO13)
-#define PIN_DRYER   15  // D8 (GPIO15)
-#define PIN_BUZZER  12  // D6 (GPIO12) - Còi báo động
-#define PIN_RAIN    16  // D0 (GPIO16) - Cảm biến mưa
+#if __has_include(<ESP32Servo.h>)
+  #include <ESP32Servo.h>
+#else
+  class Servo {
+  private:
+    int _pin = -1;
+    int _channel = 0;
+  public:
+    void attach(int pin, int channel = 0) {
+      _pin = pin;
+      _channel = channel;
+      #if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR >= 3)
+        ledcAttach(_pin, 50, 16);
+      #else
+        ledcSetup(_channel, 50, 16);
+        ledcAttachPin(_pin, _channel);
+      #endif
+    }
+    void write(int angle) {
+      if (_pin < 0) return;
+      angle = constrain(angle, 0, 180);
+      // Tần số 50Hz (chu kỳ 20ms). 16-bit: 0.5ms = 1638, 2.5ms = 8192
+      uint32_t duty = (uint32_t)(1638 + ((float)angle / 180.0f) * (8192 - 1638));
+      #if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR >= 3)
+        ledcWrite(_pin, duty);
+      #else
+        ledcWrite(_channel, duty);
+      #endif
+    }
+  };
+#endif
 
-#define DHTTYPE     DHT11
-#define RELAY_ON    HIGH
-#define RELAY_OFF   LOW
-#define GAS_THRESHOLD 500
+// ─────────────────────────────────────────────────────────────
+//  SƠ ĐỒ CHÂN (PINOUT ESP32 CHÍNH XÁC THEO YÊU CẦU)
+// ─────────────────────────────────────────────────────────────
+#define PIN_GAS       34  // D34 (GPIO34) - Cảm biến Khí Gas MQ2 (ADC1)
+#define PIN_FAN       26  // D26 (GPIO26) - Relay Quạt
+#define PIN_LED       25  // D25 (GPIO25) - Relay Đèn
+#define PIN_FIRE      19  // D19 (GPIO19) - Cảm biến Lửa (Flame)
+#define PIN_DHT       27  // D27 (GPIO27) - Cảm biến DHT11 (Nhiệt độ & Độ ẩm)
+#define PIN_DOOR      13  // D13 (GPIO13) - Động cơ Servo (Cửa)
+#define PIN_BUZZER    14  // D14 (GPIO14) - Còi báo động
+#define PIN_DRYER     15  // D15 (GPIO15) - Động cơ Servo (Giàn phơi)
+#define PIN_RAIN      18  // D18 (GPIO18) - Cảm biến Mưa
+
+#define DHTTYPE       DHT11
+#define RELAY_ON      HIGH
+#define RELAY_OFF     LOW
+#define GAS_THRESHOLD 500 // Ngưỡng kích hoạt cảnh báo Gas (trên thang đo 0 - 1023)
 
 // ─────────────────────────────────────────────────────────────
-//  PORTAL CẤU HÌNH
+//  PORTAL CẤU HÌNH WIFI TĨNH
 // ─────────────────────────────────────────────────────────────
-#define AP_SSID     "SmartHome"
-#define AP_PASSWORD ""
+#define AP_SSID       "SmartHome"
+#define AP_PASSWORD   ""
 IPAddress apIP(192, 168, 4, 1);
 const byte DNS_PORT = 53;
 
-//  MQTT qua WebSockets (Cloudflare Tunnel: mqtt.duynguyen.io.vn)
-#define MQTT_HOST   "mqtt.duynguyen.io.vn"
-#define MQTT_PORT   443
-#define MQTT_PATH   "/"
-#define CHIP_ID     "123"
+// ─────────────────────────────────────────────────────────────
+//  THÔNG SỐ KẾT NỐI MQTT (CLOUDFLARE TUNNEL WSS)
+// ─────────────────────────────────────────────────────────────
+#define MQTT_HOST     "mqtt.duynguyen.io.vn"
+#define MQTT_PORT     443
+#define MQTT_PATH     "/mqtt"
+#define CHIP_ID       "123"
 
-#define DEV_TEMP    "123_temp_livingroom"
-#define DEV_HUMI    "123_humi_living_room"
-#define DEV_LED     "123_led1"
-#define DEV_FAN     "123_fan_livingroom"
-#define DEV_DOOR    "123_door_livingroom1"
-#define DEV_DRYER   "123_dryer_livingroom"
-#define DEV_GAS     "123_gas_livingroom"
-#define DEV_FIRE    "123_fire_livingroom"
-#define DEV_RAIN    "123_rain_livingroom"
+#define DEV_TEMP      "123_temp_livingroom"
+#define DEV_HUMI      "123_humi_living_room"
+#define DEV_LED       "123_led1"
+#define DEV_FAN       "123_fan_livingroom"
+#define DEV_DOOR      "123_door_livingroom1"
+#define DEV_DRYER     "123_dryer_livingroom"
+#define DEV_GAS       "123_gas_livingroom"
+#define DEV_FIRE      "123_fire_livingroom"
+#define DEV_RAIN      "123_rain_livingroom"
 
 // ─────────────────────────────────────────────────────────────
-//  MULTI-WIFI (EEPROM)
+//  MULTI-WIFI (LƯU VÀO FLASH EEPROM)
 // ─────────────────────────────────────────────────────────────
-#define EEPROM_SIZE 512
-#define MAX_WIFI    5
+#define EEPROM_SIZE   512
+#define MAX_WIFI      5
 
 struct WifiEntry {
   char ssid[32];
@@ -78,26 +122,26 @@ WifiEntry wifiList[MAX_WIFI];
 int wifiCount = 0;
 
 // ─────────────────────────────────────────────────────────────
-//  INTERVAL
+//  CHU KỲ THỰC HIỆN TÁC VỤ (INTERVALS)
 // ─────────────────────────────────────────────────────────────
-#define TELEMETRY_MS     5000
-#define SENSOR_FAST_MS   500
-#define HEARTBEAT_MS    30000
-#define RECONNECT_MS    10000
+#define TELEMETRY_MS   5000
+#define SENSOR_FAST_MS 500
+#define HEARTBEAT_MS  30000
+#define RECONNECT_MS  10000
 
 // ─────────────────────────────────────────────────────────────
-//  OBJECTS
+//  KHỞI TẠO ĐỐI TƯỢNG
 // ─────────────────────────────────────────────────────────────
 DHT dht(PIN_DHT, DHTTYPE);
 Servo servoDoor;
 Servo servoDryer;
-ESP8266WebServer webServer(80);
+WebServer webServer(80);
 DNSServer dnsServer;
 WebSocketsClient wsClient;
 MQTTPubSubClient mqttClient;
 
 // ─────────────────────────────────────────────────────────────
-//  TRẠNG THÁI
+//  BIẾN TRẠNG THÁI HỆ THỐNG
 // ─────────────────────────────────────────────────────────────
 bool portalActive = false;
 int doorAngle = 0;
@@ -115,7 +159,7 @@ unsigned long lastHeartbeat = 0;
 unsigned long lastReconnect = 0;
 
 // ─────────────────────────────────────────────────────────────
-//  HELPER
+//  HÀM HỖ TRỢ TRẠNG THÁI
 // ─────────────────────────────────────────────────────────────
 String relayRead(uint8_t pin) {
   return (digitalRead(pin) == RELAY_ON) ? "ON" : "OFF";
@@ -132,7 +176,7 @@ void adjustDryerAngle(int angle) {
 }
 
 // ─────────────────────────────────────────────────────────────
-//  EEPROM WIFI
+//  QUẢN LÝ LƯU TRỮ DANH SÁCH MẠNG WIFI (EEPROM FLASH)
 // ─────────────────────────────────────────────────────────────
 void saveWifiList() {
   EEPROM.begin(EEPROM_SIZE);
@@ -178,13 +222,13 @@ void addOrUpdateWifi(String ssid, String pass) {
 }
 
 bool connectBestWifi() {
-  Serial.println("\n🔍 Quét mạng WiFi đã lưu...");
+  Serial.println("\n🔍 Quét danh sách mạng WiFi đã lưu...");
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
 
   if (wifiCount == 0) {
-    Serial.println("❌ Chưa có WiFi nào được lưu!");
+    Serial.println("❌ Chưa có mạng WiFi nào được lưu trong bộ nhớ!");
     return false;
   }
 
@@ -207,13 +251,13 @@ bool connectBestWifi() {
   }
 
   if (bestIdx < 0) {
-    Serial.println("⚠️ Không thấy qua scan, thử kết nối WiFi được lưu gần nhất...");
-    bestIdx = wifiCount - 1; // Fallback: thử mạng mới nhất
+    Serial.println("⚠️ Không thấy qua quét sóng, thử mạng đã lưu gần nhất...");
+    bestIdx = wifiCount - 1;
   } else {
-    Serial.printf("📶 Tìm thấy: %s (%ddBm)\n", wifiList[bestIdx].ssid, bestRSSI);
+    Serial.printf("📶 Tìm thấy mạng tốt nhất: %s (%ddBm)\n", wifiList[bestIdx].ssid, bestRSSI);
   }
 
-  Serial.printf("🚀 Đang kết nối: %s\n", wifiList[bestIdx].ssid);
+  Serial.printf("🚀 Đang kết nối tới: %s\n", wifiList[bestIdx].ssid);
   WiFi.begin(wifiList[bestIdx].ssid, wifiList[bestIdx].pass);
   
   for (int i = 0; i < 30 && WiFi.status() != WL_CONNECTED; i++) {
@@ -222,7 +266,7 @@ bool connectBestWifi() {
   }
 
   if (WiFi.status() == WL_CONNECTED) {
-    Serial.println("\n✅ WiFi OK! IP: " + WiFi.localIP().toString());
+    Serial.println("\n✅ WiFi OK! IP Của mạch: " + WiFi.localIP().toString());
     return true;
   } else {
     Serial.println("\n❌ Kết nối WiFi thất bại!");
@@ -231,7 +275,7 @@ bool connectBestWifi() {
 }
 
 // ─────────────────────────────────────────────────────────────
-//  MQTT
+//  MQTT GỬI & NHẬN LỆNH ĐIỀU KHIỂN
 // ─────────────────────────────────────────────────────────────
 void mqttPub(const char* device, const String& payload) {
   if (!mqttClient.isConnected()) return;
@@ -239,28 +283,30 @@ void mqttPub(const char* device, const String& payload) {
   mqttClient.publish(topic, payload, false, 0);
 }
 
-void pubOnline()    { mqttPub(CHIP_ID, "online"); }
+void pubOnline()     { mqttPub(CHIP_ID, "online"); }
 void pubTemp(float t){ mqttPub(DEV_TEMP, "{\"value\":" + String(t,1) + "}"); }
 void pubHumi(float h){ mqttPub(DEV_HUMI, "{\"value\":" + String(h,1) + "}"); }
-void pubLed()  { ledState = relayRead(PIN_LED); mqttPub(DEV_LED, "{\"value\":\""+ledState+"\"}"); }
-void pubFan()  { fanState = relayRead(PIN_FAN); mqttPub(DEV_FAN, "{\"value\":\""+fanState+"\"}"); }
-void pubDoor() { mqttPub(DEV_DOOR, "{\"value\":" + String(doorAngle) + "}"); }
+void pubLed()   { ledState = relayRead(PIN_LED); mqttPub(DEV_LED, "{\"value\":\""+ledState+"\"}"); }
+void pubFan()   { fanState = relayRead(PIN_FAN); mqttPub(DEV_FAN, "{\"value\":\""+fanState+"\"}"); }
+void pubDoor()  { mqttPub(DEV_DOOR, "{\"value\":" + String(doorAngle) + "}"); }
 void pubDryer() { mqttPub(DEV_DRYER, "{\"value\":" + String(dryerAngle) + "}"); }
-void pubGas() { mqttPub(DEV_GAS, isGasAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
-void pubFire() { mqttPub(DEV_FIRE, isFireAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
-void pubRain() { mqttPub(DEV_RAIN, isRainAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
+void pubGas()   { mqttPub(DEV_GAS, isGasAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
+void pubFire()  { mqttPub(DEV_FIRE, isFireAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
+void pubRain()  { mqttPub(DEV_RAIN, isRainAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
 
 void mqttCallback(const String& topicStr, const String& payload, const size_t size) {
   String topic = topicStr;
   String cmd = payload;
   cmd.trim();
 
+  Serial.printf("📩 Nhận lệnh [%s]: %s\n", topic.c_str(), cmd.c_str());
+
   if (topic.indexOf(DEV_LED) >= 0) {
-    digitalWrite(PIN_LED, cmd == "ON" ? RELAY_ON : RELAY_OFF);
+    digitalWrite(PIN_LED, (cmd == "ON") ? RELAY_ON : RELAY_OFF);
     pubLed();
   }
   else if (topic.indexOf(DEV_FAN) >= 0) {
-    digitalWrite(PIN_FAN, cmd == "ON" ? RELAY_ON : RELAY_OFF);
+    digitalWrite(PIN_FAN, (cmd == "ON") ? RELAY_ON : RELAY_OFF);
     pubFan();
   }
   else if (topic.indexOf(DEV_DOOR) >= 0) {
@@ -278,51 +324,59 @@ void mqttCallback(const String& topicStr, const String& payload, const size_t si
 void reconnectMQTT() {
   if (!mqttClient.isConnected()) {
     Serial.print("📡 Đang kết nối MQTT WSS (Port " + String(MQTT_PORT) + ")...");
-    String clientId = "ESP8266-" + String(ESP.getChipId(), HEX);
-    String lwtTopic = "tele/" + String(CHIP_ID) + "/status";
     
+    // Tạo Client ID từ MAC của ESP32 (Chuẩn ESP32 không dùng ESP.getChipId)
+    uint32_t chipId = (uint32_t)ESP.getEfuseMac();
+    String clientId = "ESP32-" + String(chipId, HEX);
+    
+    String lwtTopic = "tele/" + String(CHIP_ID) + "/status";
     mqttClient.setWill(lwtTopic, "offline", true, 1);
     
     if (mqttClient.connect(clientId, "", "")) {
-      Serial.println("Thành công!");
+      Serial.println(" Thành công!");
       pubOnline(); wsClient.loop(); delay(50);
       
+      // Lắng nghe lệnh điều khiển Đèn
       mqttClient.subscribe("cmnd/" + String(DEV_LED) + "/POWER", [](const char* payload, unsigned int size) {
         String cmd = ""; for(unsigned int i=0; i<size; i++) cmd += payload[i];
         mqttCallback("cmnd/" + String(DEV_LED) + "/POWER", cmd, size);
       });
       wsClient.loop(); delay(50);
       
+      // Lắng nghe lệnh điều khiển Quạt
       mqttClient.subscribe("cmnd/" + String(DEV_FAN) + "/POWER", [](const char* payload, unsigned int size) {
         String cmd = ""; for(unsigned int i=0; i<size; i++) cmd += payload[i];
         mqttCallback("cmnd/" + String(DEV_FAN) + "/POWER", cmd, size);
       });
       wsClient.loop(); delay(50);
       
+      // Lắng nghe lệnh điều khiển Cửa
       mqttClient.subscribe("cmnd/" + String(DEV_DOOR) + "/POWER", [](const char* payload, unsigned int size) {
         String cmd = ""; for(unsigned int i=0; i<size; i++) cmd += payload[i];
         mqttCallback("cmnd/" + String(DEV_DOOR) + "/POWER", cmd, size);
       });
       wsClient.loop(); delay(50);
-      
+
+      // Lắng nghe lệnh điều khiển Giàn phơi
       mqttClient.subscribe("cmnd/" + String(DEV_DRYER) + "/POWER", [](const char* payload, unsigned int size) {
         String cmd = ""; for(unsigned int i=0; i<size; i++) cmd += payload[i];
         mqttCallback("cmnd/" + String(DEV_DRYER) + "/POWER", cmd, size);
       });
       wsClient.loop(); delay(50);
 
+      // Đồng bộ trạng thái hiện tại lên server
       pubLed(); wsClient.loop(); delay(50);
       pubFan(); wsClient.loop(); delay(50);
       pubDoor(); wsClient.loop(); delay(50);
       pubDryer(); wsClient.loop();
     } else {
-      Serial.println("Lỗi hoặc Đang thiết lập WebSockets, thử lại sau...");
+      Serial.println(" Lỗi hoặc Đang thiết lập WebSockets...");
     }
   }
 }
 
 // ─────────────────────────────────────────────────────────────
-//  PORTAL HTML
+//  GIAO DIỆN WEB PORTAL CẤU HÌNH WIFI TĨNH
 // ─────────────────────────────────────────────────────────────
 const char PORTAL_HTML[] PROGMEM = R"rawhtml(
 <!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SmartHome Setup</title>
@@ -388,6 +442,7 @@ void handleNotFound() {
 }
 
 void handleRoot() { webServer.send_P(200, "text/html", PORTAL_HTML); }
+
 void handleScan() {
   int n = WiFi.scanNetworks();
   String json = "[";
@@ -397,8 +452,10 @@ void handleScan() {
   }
   json += "]"; WiFi.scanDelete(); webServer.send(200, "application/json", json);
 }
+
 void handleConnect() {
-  String ssid = webServer.arg("ssid"); String pass = webServer.arg("pass");
+  String ssid = webServer.arg("ssid"); 
+  String pass = webServer.arg("pass");
   if (ssid.length() > 0) {
     Serial.printf("Thử kết nối đến WiFi: %s\n", ssid.c_str());
     WiFi.begin(ssid.c_str(), pass.c_str());
@@ -410,7 +467,7 @@ void handleConnect() {
       addOrUpdateWifi(ssid, pass);
       webServer.send(200, "application/json", "{\"ok\":true}");
       delay(1000); 
-      ESP.restart(); // Khởi động lại để kết nối thay vì connect ngay
+      ESP.restart();
     } else {
       Serial.println("Kết nối WiFi thử nghiệm thất bại!");
       WiFi.disconnect();
@@ -439,37 +496,29 @@ void startPortal() {
 }
 
 // ─────────────────────────────────────────────────────────────
-//  DOUBLE RESET DETECTOR
+//  DOUBLE RESET DETECTOR (SỬ DỤNG BỘ NHỚ RTC CỦA ESP32)
 // ─────────────────────────────────────────────────────────────
 #define DOUBLE_RESET_MAGIC 0x12345678
-#define RTC_OFFSET 0
-
-uint32_t rtcData = 0;
+RTC_DATA_ATTR uint32_t rtcMagic = 0;
 bool isDoubleReset = false;
 
 void checkDoubleReset() {
-  ESP.rtcUserMemoryRead(RTC_OFFSET, (uint32_t*) &rtcData, sizeof(rtcData));
-  if (rtcData == DOUBLE_RESET_MAGIC) {
+  if (rtcMagic == DOUBLE_RESET_MAGIC) {
     isDoubleReset = true;
     Serial.println("\n⚠️ DOUBLE RESET DETECTED! Xóa toàn bộ cấu hình WiFi...");
-    rtcData = 0;
-    ESP.rtcUserMemoryWrite(RTC_OFFSET, (uint32_t*) &rtcData, sizeof(rtcData));
-    
-    // Xóa danh sách WiFi trong EEPROM
+    rtcMagic = 0;
     wifiCount = 0;
     saveWifiList();
     Serial.println("✅ Đã xóa WiFi. Khởi động chế độ cài đặt mạng (Portal)...");
   } else {
     isDoubleReset = false;
-    rtcData = DOUBLE_RESET_MAGIC;
-    ESP.rtcUserMemoryWrite(RTC_OFFSET, (uint32_t*) &rtcData, sizeof(rtcData));
+    rtcMagic = DOUBLE_RESET_MAGIC;
   }
 }
 
 void clearDoubleResetFlag() {
-  if (rtcData == DOUBLE_RESET_MAGIC) {
-    rtcData = 0;
-    ESP.rtcUserMemoryWrite(RTC_OFFSET, (uint32_t*) &rtcData, sizeof(rtcData));
+  if (rtcMagic == DOUBLE_RESET_MAGIC) {
+    rtcMagic = 0;
   }
 }
 
@@ -480,30 +529,39 @@ void setup() {
   Serial.begin(115200);
   delay(300);
   Serial.println("\n╔════════════════════════════════════╗");
-  Serial.println("║  🚀 SmartHome ESP8266 Khởi động  ║");
+  Serial.println("║  🚀 SmartHome ESP32 Khởi động    ║");
   Serial.println("╚════════════════════════════════════╝");
-  
+
+  // Cấu hình Relay & Còi
   pinMode(PIN_LED, OUTPUT); digitalWrite(PIN_LED, RELAY_OFF);
   pinMode(PIN_FAN, OUTPUT); digitalWrite(PIN_FAN, RELAY_OFF);
   pinMode(PIN_BUZZER, OUTPUT); digitalWrite(PIN_BUZZER, LOW);
+  
+  // Cấu hình Cảm biến Digital
   pinMode(PIN_FIRE, INPUT_PULLUP);
   pinMode(PIN_RAIN, INPUT_PULLUP);
+  
+  // ESP32 ADC: Cấu hình độ phân giải 10-bit (0 - 1023) để khớp ngưỡng GAS 500 như ESP8266
+  analogReadResolution(10);
+
   dht.begin();
-  servoDoor.attach(PIN_DOOR);
+  
+  // Khởi tạo Servo Cửa (D13) & Giàn phơi (D15)
+  servoDoor.attach(PIN_DOOR, 0);
   servoDoor.write(0);
-  servoDryer.attach(PIN_DRYER);
+
+  servoDryer.attach(PIN_DRYER, 1);
   servoDryer.write(0);
 
-  wsClient.beginSSL(MQTT_HOST, MQTT_PORT, "/mqtt");
+  // Kết nối WebSockets SSL Port 443
+  wsClient.beginSSL(MQTT_HOST, MQTT_PORT, MQTT_PATH);
   wsClient.setExtraHeaders("Sec-WebSocket-Protocol: mqtt");
-  // Thư viện WebSocketsClient mặc định không kiểm tra SSL nếu không truyền fingerprint, nên không cần hàm setInsecure()
   
   mqttClient.begin(wsClient);
 
   loadWifiList();
-  
   checkDoubleReset();
-  
+
   if (isDoubleReset) {
     startPortal();
   } else {
@@ -519,8 +577,8 @@ void setup() {
 int wifiRetries = 0;
 
 void loop() {
-  // Xóa cờ Double Reset nếu mạch đã chạy ổn định quá 3 giây (3000ms)
-  if (millis() > 3000 && rtcData == DOUBLE_RESET_MAGIC) {
+  // Xóa cờ Double Reset nếu mạch đã chạy ổn định quá 3 giây
+  if (millis() > 3000 && rtcMagic == DOUBLE_RESET_MAGIC) {
     clearDoubleResetFlag();
   }
 
@@ -532,6 +590,7 @@ void loop() {
 
   unsigned long now = millis();
 
+  // Kiểm tra & Tự động kết nối lại WiFi nếu mất kết nối
   if (WiFi.status() != WL_CONNECTED) {
     if (now - lastReconnect >= RECONNECT_MS) {
       lastReconnect = now;
@@ -554,6 +613,7 @@ void loop() {
   wsClient.loop();
   mqttClient.update();
 
+  // Kiểm tra & Tự động kết nối lại MQTT
   if (!mqttClient.isConnected()) {
     if (now - lastReconnect >= 5000) {
       lastReconnect = now;
@@ -561,8 +621,11 @@ void loop() {
     }
   }
 
+  // Đọc nhanh cảm biến khẩn cấp (Gas, Lửa, Mưa) mỗi 500ms
   if (now - lastFastRead >= SENSOR_FAST_MS) {
     lastFastRead = now;
+
+    // Đọc Gas MQ2 (0 - 1023)
     int gasVal = analogRead(PIN_GAS);
     bool currentGasAlert = (gasVal > GAS_THRESHOLD);
     if (currentGasAlert != isGasAlert) {
@@ -570,22 +633,25 @@ void loop() {
       pubGas();
     }
 
+    // Đọc cảm biến Lửa (Chân D19: LOW là phát hiện lửa)
     bool currentFireAlert = (digitalRead(PIN_FIRE) == LOW);
     if (currentFireAlert != isFireAlert) {
       isFireAlert = currentFireAlert;
       pubFire();
     }
 
+    // Đọc cảm biến Mưa (Chân D18: LOW là có mưa)
     bool currentRainAlert = (digitalRead(PIN_RAIN) == LOW);
     if (currentRainAlert != isRainAlert) {
       isRainAlert = currentRainAlert;
       pubRain();
       if (isRainAlert) {
-        adjustDryerAngle(0); // Tự động đóng dàn phơi khi mưa
+        adjustDryerAngle(0); // Tự động thu giàn phơi khi trời mưa
         pubDryer();
       }
     }
 
+    // Bật còi báo động khi có Gas hoặc Lửa
     if (isGasAlert || isFireAlert) {
       digitalWrite(PIN_BUZZER, HIGH);
     } else {
@@ -593,20 +659,21 @@ void loop() {
     }
   }
 
-  // Heartbeat
+  // Gửi gói Heartbeat mỗi 30s
   if (now - lastHeartbeat >= HEARTBEAT_MS) {
     lastHeartbeat = now;
     pubOnline();
   }
 
-  // Telemetry 5s
+  // Gửi Telemetry Nhiệt độ & Độ ẩm mỗi 5s
   if (now - lastTelemetry >= TELEMETRY_MS) {
     lastTelemetry = now;
     float h = dht.readHumidity();
     float t = dht.readTemperature();
     if (!isnan(t) && !isnan(h)) {
       Serial.printf("🌡️ Nhiệt độ: %.1f°C | 💧 Độ ẩm: %.1f%%\n", t, h);
-      pubTemp(t); pubHumi(h);
+      pubTemp(t); 
+      pubHumi(h);
     } else {
       Serial.println("⚠️ Lỗi: Không đọc được cảm biến DHT!");
     }

@@ -26,9 +26,10 @@
 IPAddress apIP(192, 168, 4, 1);
 const byte DNS_PORT = 53;
 
-// MQTT
-#define MQTT_HOST   "mqtt.aiotlearninghub.com"
+// MQTT qua WebSockets (Cloudflare Tunnel: mqtt.duynguyen.io.vn)
+#define MQTT_HOST   "mqtt.duynguyen.io.vn"
 #define MQTT_PORT   443
+#define MQTT_PATH   "/"
 #define CHIP_ID     "456"
 
 #define DEV_LED     "456_led_bedroom"

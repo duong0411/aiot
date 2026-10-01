@@ -1,14 +1,11 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/providers/auth_provider.dart';
 import '../../../core/providers/device_provider.dart';
-import '../../../core/models/node_model.dart';
 import '../../../core/utils/responsive.dart';
 import '../widgets/node_card.dart';
-import '../widgets/stat_card.dart';
 import '../../auth/screens/login_screen.dart';
 import 'kitchen_living_screen.dart';
 import 'bedroom_screen.dart';
@@ -95,10 +92,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextField(
-                controller: nameController,
+                controller: nameController..text = nameController.text.isEmpty ? 'Phòng Khách' : nameController.text,
                 style: const TextStyle(color: AppTheme.textPrimary),
                 decoration: InputDecoration(
-                  hintText: 'Tên phòng (VD: Bếp tầng 1)',
+                  hintText: 'Tên phòng (VD: Phòng Khách)',
                   hintStyle: const TextStyle(color: AppTheme.textMuted),
                   filled: true,
                   fillColor: AppTheme.bgDark,
@@ -110,10 +107,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
               const SizedBox(height: 16),
               TextField(
-                controller: chipIdController,
+                controller: chipIdController..text = chipIdController.text.isEmpty ? '123' : chipIdController.text,
                 style: const TextStyle(color: AppTheme.textPrimary),
                 decoration: InputDecoration(
-                  hintText: 'Mã Chip ID (VD: esp_123)',
+                  hintText: 'Mã Chip ID (VD: 123)',
                   hintStyle: const TextStyle(color: AppTheme.textMuted),
                   filled: true,
                   fillColor: AppTheme.bgDark,
@@ -139,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                 ),
                 items: const [
-                  DropdownMenuItem(value: 'kitchen_living', child: Text('Bếp & Khách')),
+                  DropdownMenuItem(value: 'kitchen_living', child: Text('Phòng Khách (Đèn, Quạt, Cửa, Gas, Lửa)')),
                   DropdownMenuItem(value: 'bedroom', child: Text('Phòng Ngủ')),
                 ],
                 onChanged: (val) {

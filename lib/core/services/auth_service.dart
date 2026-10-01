@@ -4,12 +4,27 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/user_model.dart';
 
 class AuthService {
-  static const String baseUrl = 'https://adam.podcast.io.vn/api';
+  // Đường dẫn Backend mặc định qua tên miền riêng Cloudflare Tunnel
+  static String baseUrl = 'https://duynguyen.io.vn/api'; 
 
   String? _token;
   String? get token => _token;
 
-  // ─── Lấy SharedPreferences ──────────────────────────────────────────────────
+  Future<void> updateBaseUrl(String newUrl) async {
+    baseUrl = newUrl.endsWith('/api') ? newUrl : '$newUrl/api';
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('custom_base_url', baseUrl);
+  }
+
+  Future<void> loadBaseUrl() async {
+    final prefs = await SharedPreferences.getInstance();
+    final savedUrl = prefs.getString('custom_base_url');
+    if (savedUrl != null && savedUrl.isNotEmpty) {
+      baseUrl = savedUrl;
+    }
+  }
+
+  // ─── Lưu/Xóa thông tin người dùng ──────────────────────────────────────────
   Future<void> _saveUserData(String token, Map<String, dynamic> userJson) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('auth_token', token);
@@ -24,6 +39,7 @@ class AuthService {
   }
 
   Future<UserModel?> loadSavedUser() async {
+    await loadBaseUrl();
     final prefs = await SharedPreferences.getInstance();
     final token = prefs.getString('auth_token');
     final userData = prefs.getString('user_data');
@@ -36,6 +52,7 @@ class AuthService {
 
   // ─── Login ────────────────────────────────────────────────────────────────
   Future<UserModel?> login(String email, String password) async {
+    await loadBaseUrl();
     final response = await http.post(
       Uri.parse('$baseUrl/auth/login'),
       headers: {'Content-Type': 'application/json'},
@@ -49,66 +66,45 @@ class AuthService {
       await _saveUserData(_token!, data['data']['user']);
       return user;
     }
-    return null;
+    throw Exception(data['message'] ?? 'Đăng nhập thất bại');
   }
 
-  // ─── Google Login ─────────────────────────────────────────────────────────
-  Future<UserModel?> googleLogin(String idToken) async {
+  // ─── Register ─────────────────────────────────────────────────────────────
+  Future<UserModel?> register(String name, String email, String phone, String password) async {
+    await loadBaseUrl();
     final response = await http.post(
-      Uri.parse('$baseUrl/auth/google-login'),
+      Uri.parse('$baseUrl/auth/register'),
       headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({'idToken': idToken}),
+      body: jsonEncode({
+        'name': name, 
+        'email': email, 
+        'phone': phone, 
+        'password': password
+      }),
     ).timeout(const Duration(seconds: 10));
 
     final data = jsonDecode(response.body);
-    if (response.statusCode == 200 && data['success'] == true) {
+    if (response.statusCode == 201 && data['success'] == true) {
       _token = data['data']['token'];
       final user = UserModel.fromJson(data['data']['user']);
       await _saveUserData(_token!, data['data']['user']);
       return user;
     }
-    throw Exception(data['message'] ?? 'Đăng nhập Google thất bại');
+    throw Exception(data['message'] ?? 'Đăng ký thất bại');
   }
 
-  // ─── Register ─────────────────────────────────────────────────────────────
-  Future<void> requestRegisterOtp(String name, String email, String phone, String password) async {
-    final response = await http.post(
-      Uri.parse('$baseUrl/auth/check-pre-register'),
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({'email': email, 'phone': phone}),
-    ).timeout(const Duration(seconds: 10));
-    final data = jsonDecode(response.body);
-    if (response.statusCode != 200) throw Exception(data['message'] ?? 'Thông tin không hợp lệ');
-  }
-
-  Future<void> register(String name, String email, String phone, String password, String idToken) async {
-    final response = await http.post(
-      Uri.parse('$baseUrl/auth/register'),
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({'name': name, 'email': email, 'phone': phone, 'password': password, 'firebaseIdToken': idToken}),
-    ).timeout(const Duration(seconds: 10));
-    final data = jsonDecode(response.body);
-    if (response.statusCode != 201) throw Exception(data['message'] ?? 'Đăng ký thất bại');
-  }
-
-  // ─── Forgot Password ──────────────────────────────────────────────────────
-  Future<void> forgotPassword(String phone) async {
-    final response = await http.post(
-      Uri.parse('$baseUrl/auth/check-phone-exists'),
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({'phone': phone}),
-    ).timeout(const Duration(seconds: 10));
-    final data = jsonDecode(response.body);
-    if (response.statusCode != 200) throw Exception(data['message'] ?? 'Số điện thoại không tồn tại');
-  }
-
-  Future<void> resetPassword(String phone, String idToken, String newPassword) async {
+  // ─── Reset Password ───────────────────────────────────────────────────────
+  Future<void> resetPassword(String email, String newPassword) async {
+    await loadBaseUrl();
     final response = await http.post(
       Uri.parse('$baseUrl/auth/reset-password'),
       headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({'phone': phone, 'firebaseIdToken': idToken, 'newPassword': newPassword}),
+      body: jsonEncode({'email': email, 'newPassword': newPassword}),
     ).timeout(const Duration(seconds: 10));
+
     final data = jsonDecode(response.body);
-    if (response.statusCode != 200) throw Exception(data['message'] ?? 'Đặt lại mật khẩu thất bại');
+    if (response.statusCode != 200 || data['success'] != true) {
+      throw Exception(data['message'] ?? 'Đặt lại mật khẩu thất bại');
+    }
   }
 }

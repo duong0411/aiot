@@ -14,7 +14,6 @@
 .cxx
 local.properties
 
-
 # File dữ liệu lớn
 *.zip
 *.ps1
@@ -24,3 +23,10 @@ local.properties
 .dart_tool/
 build/
 *.dill
+
+# Node.js
+node_modules/
+backend/node_modules/
+backend/test_*.js
+backend/check_status.js
+backend/full_check.js

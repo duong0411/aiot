@@ -10,16 +10,15 @@ class MqttService {
   }
 
   async connect() {
-    // Kết nối bằng giao thức mqtt qua port 1883 hoặc wss qua 443
-    const mqttUrl = 'wss://mqtt.aiotlearninghub.com:443/mqtt';
-    console.log(`🔌 Đang kết nối tới MQTT Broker: ${mqttUrl}`);
+    // Kết nối tới Local Broker vừa khởi tạo (port 1883)
+    const mqttUrl = process.env.MQTT_URL || 'mqtt://127.0.0.1:1883';
+    console.log(`🔌 Backend đang kết nối tới MQTT Broker nội bộ: ${mqttUrl}`);
     
     this.client = mqtt.connect(mqttUrl, {
       clientId: `backend_server_${Math.random().toString(16).slice(2, 8)}`,
+      protocolVersion: 4,
       keepalive: 60,
-      reconnectPeriod: 1000,
-      clean: true,
-      protocol: 'wss'
+      clean: true
     });
 
     this.client.on('connect', async () => {

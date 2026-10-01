@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:mqtt_client/mqtt_client.dart';
 import 'package:mqtt_client/mqtt_server_client.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/node_model.dart';
 
 class MqttService extends ChangeNotifier {
-  static const String broker = 'mqtt.aiotlearninghub.com';
-  static const int port = 443;
+  static String defaultBrokerUrl = 'wss://mqtt.duynguyen.io.vn';
   
   MqttServerClient? _client;
   bool _isConnected = false;
@@ -15,24 +15,50 @@ class MqttService extends ChangeNotifier {
 
   List<NodeModel> _currentNodes = [];
 
-  // Stream để truyền dữ liệu sang DeviceProvider
+  // Stream truyền dữ liệu sang DeviceProvider
   final _messageController = StreamController<Map<String, dynamic>>.broadcast();
   Stream<Map<String, dynamic>> get messages => _messageController.stream;
 
   MqttService();
 
+  Future<void> saveBrokerUrl(String url) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('custom_mqtt_url', url);
+  }
+
+  Future<String> getSavedBrokerUrl() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('custom_mqtt_url') ?? defaultBrokerUrl;
+  }
+
   // ═══════════════════════════════════════════════════════════
   //  KẾT NỐI
   // ═══════════════════════════════════════════════════════════
-  Future<bool> connect() async {
-    if (_isConnected) {
+  Future<bool> connect({String? customUrl}) async {
+    if (_isConnected && _client != null) {
       return true;
     }
 
+    final targetUrlStr = customUrl ?? await getSavedBrokerUrl();
+    if (customUrl != null) {
+      await saveBrokerUrl(customUrl);
+    }
+
+    final Uri uri = Uri.parse(targetUrlStr);
+    final String scheme = uri.scheme.isNotEmpty ? uri.scheme : 'ws';
+    final bool isSecure = scheme == 'wss' || scheme == 'https';
+    final String host = uri.host.isNotEmpty ? uri.host : '10.0.2.2';
+    final int port = uri.port != 0 ? uri.port : (isSecure ? 443 : 8083);
+    final String path = uri.path.isNotEmpty ? uri.path : '/mqtt';
+
     final clientId = 'flutter_${DateTime.now().millisecondsSinceEpoch}';
 
-    _client = MqttServerClient('wss://mqtt.aiotlearninghub.com/mqtt', clientId);
-    _client!.port = port;
+    if (kDebugMode) {
+      print('MQTT: Đang kết nối tới $scheme://$host:$port$path ...');
+    }
+
+    // Server client với URI WebSocket
+    _client = MqttServerClient.withPort('$scheme://$host$path', clientId, port);
     _client!.useWebSocket = true;
     _client!.websocketProtocols = MqttClientConstants.protocolsSingleDefault;
     
@@ -56,7 +82,6 @@ class MqttService extends ChangeNotifier {
     _client!.connectionMessage = connMsg;
 
     try {
-      if (kDebugMode) print('MQTT: Đang kết nối tới ${_client!.server} qua port ${_client!.port} ...');
       await _client!.connect().timeout(const Duration(seconds: 10));
     } catch (e) {
       if (kDebugMode) print('MQTT: Lỗi kết nối - $e');
@@ -65,7 +90,7 @@ class MqttService extends ChangeNotifier {
       return false;
     }
 
-    if (_client!.connectionStatus!.state == MqttConnectionState.connected) {
+    if (_client!.connectionStatus?.state == MqttConnectionState.connected) {
       _isConnected = true;
       _listenMessages();
       notifyListeners();
@@ -112,7 +137,11 @@ class MqttService extends ChangeNotifier {
     }
 
     for (final t in topics) {
-      _client!.subscribe(t, MqttQos.atLeastOnce);
+      try {
+        _client!.subscribe(t, MqttQos.atLeastOnce);
+      } catch (e) {
+        if (kDebugMode) print('MQTT Subscribe Error on $t: $e');
+      }
     }
   }
 
@@ -127,10 +156,6 @@ class MqttService extends ChangeNotifier {
       final payload = MqttPublishPayload.bytesToStringAsString(
           recMsg.payload.message);
       final topic = c[0].topic;
-
-      // if (kDebugMode) {
-      //   print('MQTT RX: [$topic] → $payload');
-      // }
 
       dynamic value;
       try {
@@ -162,7 +187,6 @@ class MqttService extends ChangeNotifier {
     _client!.publishMessage(topic, MqttQos.atLeastOnce, builder.payload!);
   }
 
-  // Helper cho lệnh
   void publishCommand(String chipId, String deviceSuffix, String command) {
     publish('cmnd/${chipId}_$deviceSuffix/POWER', command);
   }
@@ -183,23 +207,18 @@ class MqttService extends ChangeNotifier {
   }
 
   void _onAutoReconnect() {
-    if (kDebugMode) print('MQTT: 🔄 Đang tự động kết nối lại...');
+    if (kDebugMode) print('MQTT: 🔄 Đang kết nối lại...');
   }
 
   void _onAutoReconnected() {
-    if (kDebugMode) print('MQTT: ✅ Tự động kết nối lại thành công');
+    if (kDebugMode) print('MQTT: ✅ Đã kết nối lại thành công');
     _isConnected = true;
     subscribeNodes(_currentNodes);
     notifyListeners();
   }
 
-  void _onSubscribed(String topic) {
-    // if (kDebugMode) print('MQTT: 📡 Đã subscribe: $topic');
-  }
+  void _onSubscribed(String topic) {}
 
-  // ═══════════════════════════════════════════════════════════
-  //  CLEANUP
-  // ═══════════════════════════════════════════════════════════
   void disconnect() {
     _client?.disconnect();
     _isConnected = false;

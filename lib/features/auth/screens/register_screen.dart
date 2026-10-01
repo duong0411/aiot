@@ -6,6 +6,7 @@ import '../../../core/providers/auth_provider.dart';
 import '../../../core/utils/responsive.dart';
 import '../widgets/gradient_button.dart';
 import '../widgets/custom_text_field.dart';
+import '../../home/screens/home_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -16,18 +17,15 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _otpFormKey = GlobalKey<FormState>();
 
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _phoneController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
-  final _otpController = TextEditingController();
 
   bool _obscurePassword = true;
-  bool _obscureConfirm = true;
-  bool _isOtpStep = false;
+  bool _obscureConfirmPassword = true;
 
   @override
   void dispose() {
@@ -36,42 +34,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
     _phoneController.dispose();
     _passwordController.dispose();
     _confirmPasswordController.dispose();
-    _otpController.dispose();
     super.dispose();
   }
 
-  Future<void> _handleRequestOtp() async {
-    if (!_formKey.currentState!.validate()) return;
-
-    final authProvider = context.read<AuthProvider>();
-    final success = await authProvider.requestRegisterOtp(
-      _nameController.text.trim(),
-      _emailController.text.trim(),
-      _phoneController.text.trim(),
-      _passwordController.text,
-    );
-
-    if (!mounted) return;
-
-    if (success) {
-      setState(() {
-        _isOtpStep = true;
-      });
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: const Text('Mã OTP đã được gửi đến số điện thoại của bạn'),
-          backgroundColor: AppTheme.success,
-          behavior: SnackBarBehavior.floating,
-          margin: EdgeInsets.only(bottom: R.bottom(context) + 16, left: 16, right: 16),
-        ),
-      );
-    } else {
-      _showError(authProvider.errorMessage ?? 'Yêu cầu OTP thất bại');
-    }
-  }
-
   Future<void> _handleRegister() async {
-    if (!_otpFormKey.currentState!.validate()) return;
+    if (!_formKey.currentState!.validate()) return;
 
     final authProvider = context.read<AuthProvider>();
     final success = await authProvider.register(
@@ -79,21 +46,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
       _emailController.text.trim(),
       _phoneController.text.trim(),
       _passwordController.text,
-      _otpController.text.trim(),
     );
 
     if (!mounted) return;
 
     if (success) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: const Text('Đăng ký thành công! Vui lòng đăng nhập.'),
+        const SnackBar(
+          content: Text('🎉 Đăng ký thành công! Chào mừng bạn.'),
           backgroundColor: AppTheme.success,
           behavior: SnackBarBehavior.floating,
-          margin: EdgeInsets.only(bottom: R.bottom(context) + 16, left: 16, right: 16),
         ),
       );
-      Navigator.of(context).pop();
+      Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(builder: (_) => const HomeScreen()),
+        (route) => false,
+      );
     } else {
       _showError(authProvider.errorMessage ?? 'Đăng ký thất bại');
     }
@@ -105,7 +73,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
         content: Text(message),
         backgroundColor: AppTheme.danger,
         behavior: SnackBarBehavior.floating,
-        margin: EdgeInsets.only(bottom: R.bottom(context) + 16, left: 16, right: 16),
+        margin: EdgeInsets.only(
+          bottom: R.bottom(context) + 16,
+          left: 16,
+          right: 16,
+        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     );
   }
@@ -116,214 +89,224 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     return Scaffold(
       backgroundColor: AppTheme.bgDark,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: AppTheme.bgCard,
-              borderRadius: BorderRadius.circular(12),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Color(0xFF0D1130), Color(0xFF0A0E21), Color(0xFF131838)],
+          ),
+        ),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            padding: EdgeInsets.only(
+              left: hp,
+              right: hp,
+              bottom: R.bottom(context) + 24,
             ),
-            child: const Icon(Icons.arrow_back_ios_rounded, size: 18),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 16),
+                IconButton(
+                  onPressed: () => Navigator.pop(context),
+                  icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
+                ),
+                SizedBox(height: R.sp(context, 10)),
+
+                // Header
+                Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: const LinearGradient(
+                            colors: [AppTheme.secondary, AppTheme.primary],
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppTheme.secondary.withValues(alpha: 0.4),
+                              blurRadius: 20,
+                              spreadRadius: 4,
+                            ),
+                          ],
+                        ),
+                        child: const Icon(Icons.person_add_rounded, size: 36, color: Colors.white),
+                      ).animate().scale(duration: 500.ms, curve: Curves.elasticOut),
+
+                      SizedBox(height: R.sp(context, 16)),
+
+                      Text(
+                        'Tạo Tài Khoản Mới',
+                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                              color: AppTheme.textPrimary,
+                              fontWeight: FontWeight.bold,
+                              fontSize: R.fs(context, 24),
+                            ),
+                      ).animate(delay: 200.ms).fadeIn(),
+                      SizedBox(height: R.sp(context, 6)),
+                      Text(
+                        'Nhập thông tin cá nhân để bắt đầu trải nghiệm',
+                        style: TextStyle(
+                          color: AppTheme.textSecondary,
+                          fontSize: R.fs(context, 13),
+                        ),
+                      ).animate(delay: 300.ms).fadeIn(),
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: R.sp(context, 30)),
+
+                // Form Container
+                Container(
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF151B3B).withValues(alpha: 0.8),
+                    borderRadius: BorderRadius.circular(24),
+                    border: Border.all(color: Colors.white10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.3),
+                        blurRadius: 30,
+                        offset: const Offset(0, 10),
+                      ),
+                    ],
+                  ),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      children: [
+                        CustomTextField(
+                          controller: _nameController,
+                          label: 'Họ và tên',
+                          hint: 'Nguyễn Văn A',
+                          prefixIcon: Icons.badge_rounded,
+                          validator: (v) {
+                            if (v == null || v.trim().isEmpty) return 'Vui lòng nhập họ và tên';
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: R.sp(context, 16)),
+
+                        CustomTextField(
+                          controller: _emailController,
+                          label: 'Email',
+                          hint: 'example@email.com',
+                          prefixIcon: Icons.email_rounded,
+                          keyboardType: TextInputType.emailAddress,
+                          validator: (v) {
+                            if (v == null || v.trim().isEmpty) return 'Vui lòng nhập email';
+                            if (!v.contains('@')) return 'Email không hợp lệ';
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: R.sp(context, 16)),
+
+                        CustomTextField(
+                          controller: _phoneController,
+                          label: 'Số điện thoại (Tùy chọn)',
+                          hint: '0987654321',
+                          prefixIcon: Icons.phone_rounded,
+                          keyboardType: TextInputType.phone,
+                        ),
+                        SizedBox(height: R.sp(context, 16)),
+
+                        CustomTextField(
+                          controller: _passwordController,
+                          label: 'Mật khẩu',
+                          hint: '••••••••',
+                          prefixIcon: Icons.lock_rounded,
+                          obscureText: _obscurePassword,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _obscurePassword
+                                  ? Icons.visibility_off_rounded
+                                  : Icons.visibility_rounded,
+                              color: AppTheme.textMuted,
+                            ),
+                            onPressed: () =>
+                                setState(() => _obscurePassword = !_obscurePassword),
+                          ),
+                          validator: (v) {
+                            if (v == null || v.isEmpty) return 'Vui lòng nhập mật khẩu';
+                            if (v.length < 6) return 'Mật khẩu ít nhất 6 ký tự';
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: R.sp(context, 16)),
+
+                        CustomTextField(
+                          controller: _confirmPasswordController,
+                          label: 'Xác nhận mật khẩu',
+                          hint: '••••••••',
+                          prefixIcon: Icons.lock_clock_rounded,
+                          obscureText: _obscureConfirmPassword,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _obscureConfirmPassword
+                                  ? Icons.visibility_off_rounded
+                                  : Icons.visibility_rounded,
+                              color: AppTheme.textMuted,
+                            ),
+                            onPressed: () => setState(
+                                () => _obscureConfirmPassword = !_obscureConfirmPassword),
+                          ),
+                          validator: (v) {
+                            if (v == null || v.isEmpty) return 'Vui lòng xác nhận mật khẩu';
+                            if (v != _passwordController.text) return 'Mật khẩu xác nhận không khớp';
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: R.sp(context, 24)),
+
+                        Consumer<AuthProvider>(
+                          builder: (_, auth, __) => GradientButton(
+                            onPressed: auth.status == AuthStatus.loading ? null : _handleRegister,
+                            isLoading: auth.status == AuthStatus.loading,
+                            text: 'Đăng Ký Tài Khoản',
+                            icon: Icons.check_circle_rounded,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: R.sp(context, 24)),
+
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Đã có tài khoản? ',
+                        style: TextStyle(
+                            color: AppTheme.textSecondary,
+                            fontSize: R.fs(context, 14)),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: Text(
+                          'Đăng nhập ngay',
+                          style: TextStyle(
+                            color: AppTheme.primaryLight,
+                            fontWeight: FontWeight.bold,
+                            fontSize: R.fs(context, 15),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-          onPressed: () {
-            if (_isOtpStep) {
-              setState(() => _isOtpStep = false);
-            } else {
-              Navigator.pop(context);
-            }
-          },
         ),
       ),
-      body: SafeArea(
-        bottom: true,
-        child: SingleChildScrollView(
-          padding: EdgeInsets.only(left: hp, right: hp, bottom: R.bottom(context) + 16),
-          child: AnimatedSwitcher(
-            duration: const Duration(milliseconds: 300),
-            child: _isOtpStep ? _buildOtpForm() : _buildRegisterForm(),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildRegisterForm() {
-    return Column(
-      key: const ValueKey('register'),
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: R.sp(context, 8)),
-        Text(
-          'Tạo tài khoản',
-          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                color: AppTheme.textPrimary,
-                fontSize: R.fs(context, 28),
-              ),
-        ).animate().fadeIn().slideY(begin: 0.2),
-        SizedBox(height: R.sp(context, 32)),
-
-        Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              CustomTextField(
-                controller: _nameController,
-                label: 'Họ và tên',
-                hint: 'Nguyễn Văn A',
-                prefixIcon: Icons.person_rounded,
-                validator: (v) {
-                  if (v == null || v.isEmpty) return 'Vui lòng nhập tên';
-                  if (v.length < 2) return 'Tên ít nhất 2 ký tự';
-                  return null;
-                },
-              ).animate(delay: 200.ms).fadeIn().slideX(begin: -0.2),
-              SizedBox(height: R.sp(context, 16)),
-
-              CustomTextField(
-                controller: _emailController,
-                label: 'Email',
-                hint: 'example@email.com',
-                prefixIcon: Icons.email_rounded,
-                keyboardType: TextInputType.emailAddress,
-                validator: (v) {
-                  if (v == null || v.isEmpty) return 'Vui lòng nhập email';
-                  if (!v.contains('@')) return 'Email không hợp lệ';
-                  return null;
-                },
-              ).animate(delay: 300.ms).fadeIn().slideX(begin: 0.2),
-              SizedBox(height: R.sp(context, 16)),
-
-              CustomTextField(
-                controller: _phoneController,
-                label: 'Số điện thoại',
-                hint: '09xxxxxx',
-                prefixIcon: Icons.phone_rounded,
-                keyboardType: TextInputType.phone,
-                validator: (v) {
-                  if (v == null || v.isEmpty) return 'Vui lòng nhập số điện thoại';
-                  final regex = RegExp(r'^(0[3|5|7|8|9])+([0-9]{8})$');
-                  if (!regex.hasMatch(v)) return 'Số điện thoại không hợp lệ';
-                  return null;
-                },
-              ).animate(delay: 400.ms).fadeIn().slideX(begin: -0.2),
-              SizedBox(height: R.sp(context, 16)),
-
-              CustomTextField(
-                controller: _passwordController,
-                label: 'Mật khẩu',
-                hint: '••••••••',
-                prefixIcon: Icons.lock_rounded,
-                obscureText: _obscurePassword,
-                suffixIcon: IconButton(
-                  icon: Icon(
-                    _obscurePassword ? Icons.visibility_off_rounded : Icons.visibility_rounded,
-                    color: AppTheme.textMuted,
-                  ),
-                  onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
-                ),
-                validator: (v) {
-                  if (v == null || v.isEmpty) return 'Vui lòng nhập mật khẩu';
-                  if (v.length < 6) return 'Mật khẩu ít nhất 6 ký tự';
-                  return null;
-                },
-              ).animate(delay: 500.ms).fadeIn().slideX(begin: 0.2),
-              SizedBox(height: R.sp(context, 16)),
-
-              CustomTextField(
-                controller: _confirmPasswordController,
-                label: 'Xác nhận mật khẩu',
-                hint: '••••••••',
-                prefixIcon: Icons.lock_outline_rounded,
-                obscureText: _obscureConfirm,
-                suffixIcon: IconButton(
-                  icon: Icon(
-                    _obscureConfirm ? Icons.visibility_off_rounded : Icons.visibility_rounded,
-                    color: AppTheme.textMuted,
-                  ),
-                  onPressed: () => setState(() => _obscureConfirm = !_obscureConfirm),
-                ),
-                validator: (v) {
-                  if (v == null || v.isEmpty) return 'Vui lòng xác nhận mật khẩu';
-                  if (v != _passwordController.text) return 'Mật khẩu không khớp';
-                  return null;
-                },
-              ).animate(delay: 600.ms).fadeIn().slideX(begin: -0.2),
-              SizedBox(height: R.sp(context, 28)),
-
-              Consumer<AuthProvider>(
-                builder: (_, auth, __) => GradientButton(
-                  onPressed: auth.status == AuthStatus.loading ? null : _handleRequestOtp,
-                  isLoading: auth.status == AuthStatus.loading,
-                  text: 'Tiếp tục',
-                  icon: Icons.arrow_forward_rounded,
-                  gradient: const LinearGradient(colors: [AppTheme.secondary, AppTheme.primary]),
-                ),
-              ).animate(delay: 700.ms).fadeIn().slideY(begin: 0.3),
-            ],
-          ),
-        ),
-        SizedBox(height: R.sp(context, 32)),
-      ],
-    );
-  }
-
-  Widget _buildOtpForm() {
-    return Column(
-      key: const ValueKey('otp'),
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: R.sp(context, 8)),
-        Text(
-          'Xác thực OTP',
-          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                color: AppTheme.textPrimary,
-                fontSize: R.fs(context, 28),
-              ),
-        ).animate().fadeIn().slideY(begin: 0.2),
-        SizedBox(height: R.sp(context, 8)),
-        Text(
-          'Mã OTP đã được gửi đến số điện thoại ${_phoneController.text}',
-          style: TextStyle(
-            color: AppTheme.textSecondary,
-            fontSize: R.fs(context, 14),
-            height: 1.5,
-          ),
-        ).animate(delay: 100.ms).fadeIn(),
-        SizedBox(height: R.sp(context, 32)),
-
-        Form(
-          key: _otpFormKey,
-          child: Column(
-            children: [
-              CustomTextField(
-                controller: _otpController,
-                label: 'Mã OTP (6 số)',
-                hint: 'Ví dụ: 123456',
-                prefixIcon: Icons.message_rounded,
-                keyboardType: TextInputType.number,
-                validator: (v) {
-                  if (v == null || v.isEmpty) return 'Vui lòng nhập mã OTP';
-                  if (v.length != 6) return 'Mã OTP phải có 6 chữ số';
-                  return null;
-                },
-              ).animate(delay: 200.ms).fadeIn().slideX(begin: 0.2),
-              SizedBox(height: R.sp(context, 28)),
-
-              Consumer<AuthProvider>(
-                builder: (_, auth, __) => GradientButton(
-                  onPressed: auth.status == AuthStatus.loading ? null : _handleRegister,
-                  isLoading: auth.status == AuthStatus.loading,
-                  text: 'Đăng Ký',
-                  icon: Icons.person_add_rounded,
-                  gradient: const LinearGradient(colors: [AppTheme.secondary, AppTheme.primary]),
-                ),
-              ).animate(delay: 300.ms).fadeIn().slideY(begin: 0.3),
-            ],
-          ),
-        ),
-      ],
     );
   }
 }
