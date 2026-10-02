@@ -117,8 +117,6 @@ class MqttService extends ChangeNotifier {
       'tele/123_door_livingroom1/status',
       'tele/123_gas_livingroom/status',
       'tele/123_fire_livingroom/status',
-      'tele/123_rain_livingroom/status',
-      'tele/123_dryer_livingroom/status',
     };
     
     for (var node in nodes) {
@@ -136,8 +134,6 @@ class MqttService extends ChangeNotifier {
           'tele/${cId}_door_livingroom1/status',
           'tele/${cId}_gas_livingroom/status',
           'tele/${cId}_fire_livingroom/status',
-          'tele/${cId}_rain_livingroom/status',
-          'tele/${cId}_dryer_livingroom/status',
         ]);
       } else if (node.templateType == 'bedroom') {
         topics.addAll([

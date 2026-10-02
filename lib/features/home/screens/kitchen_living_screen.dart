@@ -76,7 +76,7 @@ class KitchenLivingScreen extends StatelessWidget {
                           const SizedBox(height: 10),
 
                           // ── 1. CẢNH BÁO KHẨN CẤP (NẾU CÓ GAS HOẶC LỬA) ────────
-                          if (isBuzzerActive || node.rainDetector) ...[
+                          if (isBuzzerActive) ...[
                             _buildEmergencyBanner(node, isBuzzerActive),
                             const SizedBox(height: 18),
                           ],
@@ -310,10 +310,6 @@ class KitchenLivingScreen extends StatelessWidget {
       message = '⚠️ CẢNH BÁO: PHÁT HIỆN RÒ RỈ KHÍ GAS (MQ-2)! HÃY MỞ THOÁNG CỬA!';
       glowColor = const Color(0xFFFF9100);
       icon = Icons.gas_meter_rounded;
-    } else if (node.rainDetector) {
-      message = '🌧️ Ngoài trời đang có mưa (Cảm biến D18 kích hoạt).';
-      glowColor = const Color(0xFF00B0FF);
-      icon = Icons.water_drop_rounded;
     }
 
     final bool isCritical = isBuzzerActive;
@@ -369,11 +365,9 @@ class KitchenLivingScreen extends StatelessWidget {
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  //  3. BENTO CLIMATE CARD (Nhiệt độ & Độ ẩm & Mưa)
+  //  3. BENTO CLIMATE CARD (Nhiệt độ & Độ ẩm)
   // ═══════════════════════════════════════════════════════════════════════════
   Widget _buildClimateHeroCard(NodeModel node) {
-    final bool isRain = node.rainDetector;
-
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -541,56 +535,6 @@ class KitchenLivingScreen extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-
-          const SizedBox(height: 16),
-          // Dải thời tiết & cảm biến mưa
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-            decoration: BoxDecoration(
-              color: isRain 
-                  ? const Color(0xFF00B0FF).withValues(alpha: 0.15) 
-                  : Colors.white.withValues(alpha: 0.04),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(
-                color: isRain ? const Color(0xFF00B0FF) : Colors.white.withValues(alpha: 0.06),
-                width: 1,
-              ),
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  isRain ? Icons.thunderstorm_rounded : Icons.wb_sunny_rounded,
-                  size: 18,
-                  color: isRain ? const Color(0xFF40C4FF) : const Color(0xFFFFD54F),
-                ),
-                const SizedBox(width: 8),
-                Text(
-                  isRain ? 'Trời đang có mưa (Cảm biến D18)' : 'Thời tiết tạnh ráo • Không có mưa',
-                  style: TextStyle(
-                    color: isRain ? const Color(0xFFB3E5FC) : Colors.white.withValues(alpha: 0.75),
-                    fontSize: 12.5,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                  decoration: BoxDecoration(
-                    color: (isRain ? const Color(0xFF00B0FF) : Colors.white).withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Text(
-                    isRain ? 'MƯA' : 'KHÔ RÁO',
-                    style: TextStyle(
-                      color: isRain ? const Color(0xFF40C4FF) : const Color(0xFF81C784),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
-            ),
           ),
         ],
       ),

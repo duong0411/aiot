@@ -206,17 +206,6 @@ class DeviceProvider extends ChangeNotifier {
             }
             node.state['fireDetector'] = newFire;
             stateChanged = true;
-          } else if (topic.endsWith('_rain_livingroom/status')) {
-            final bool newRain = (value.toString().toUpperCase() == "ON" || value == 1 || value == true || value.toString() == "1");
-            if (newRain && node.state['rainDetector'] != true) {
-              NotificationService().showWarningNotification(
-                id: node.id.hashCode + 2,
-                title: '🌧️ Cảnh báo trời mưa',
-                body: 'Phát hiện có mưa tại ${node.name}! Dàn phơi đã tự động đóng.',
-              );
-            }
-            node.state['rainDetector'] = newRain;
-            stateChanged = true;
           }
 
           // Phòng Ngủ variables
