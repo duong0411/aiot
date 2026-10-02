@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 const mqttService = require('./mqtt.service');
 
 // XIAOZHI MCP ENDPOINT (Từ log của user)
-const XIAOZHI_URL = "wss://api.xiaozhi.me/mcp/?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjg4MzEwMiwiYWdlbnRJZCI6MTg5NTYzOCwiZW5kcG9pbnRJZCI6ImFnZW50XzE4OTU2MzgiLCJwdXJwb3NlIjoibWNwLWVuZHBvaW50IiwiaWF0IjoxNzc5NTkwMjE3LCJleHAiOjE4MTExNDc4MTd9.A6yTap5aCJ62dQW3K9KK6fdo7rfrBKlubnE4qIzgk00jEu1nDeOz1m0PrM0zRNH5hBwkMUGZ1BpQJGgrqOCqYg";
+const XIAOZHI_URL = process.env.XIAOZHI_URL || "wss://api.xiaozhi.me/mcp/?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjg4MzEwMiwiYWdlbnRJZCI6MjQzODkyNiwiZW5kcG9pbnRJZCI6ImFnZW50XzI0Mzg5MjYiLCJwdXJwb3NlIjoibWNwLWVuZHBvaW50IiwiaWF0IjoxNzkwOTUxMDY3LCJleHAiOjE4MjI1MDg2Njd9._ES4i4zCptXsd_sgGJr5JBqETn-vxLiMs4pbE5zCP9jXLDKem-9aUEILqRrP6ldYPw17FQATDjFYTpCNBURzFg";
 
 // ID Mặc định của các phòng
 const ID_LIVING = "123";

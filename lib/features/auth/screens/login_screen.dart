@@ -270,13 +270,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           children: [
                             CustomTextField(
                               controller: _emailController,
-                              label: 'Email / Số điện thoại',
-                              hint: 'nhap@email.com hoac 0987654321',
-                              prefixIcon: Icons.person_rounded,
+                              label: 'Email',
+                              hint: 'example@email.com',
+                              prefixIcon: Icons.email_rounded,
                               keyboardType: TextInputType.emailAddress,
                               validator: (v) {
                                 if (v == null || v.trim().isEmpty) {
-                                  return 'Vui lòng nhập Email hoặc SĐT';
+                                  return 'Vui lòng nhập Email';
+                                }
+                                if (!v.contains('@')) {
+                                  return 'Email không hợp lệ';
                                 }
                                 return null;
                               },

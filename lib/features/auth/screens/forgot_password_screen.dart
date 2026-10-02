@@ -161,11 +161,12 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       children: [
                         CustomTextField(
                           controller: _emailController,
-                          label: 'Email hoặc Số điện thoại',
-                          hint: 'nhap@email.com hoac 0987654321',
-                          prefixIcon: Icons.person_rounded,
+                          label: 'Email',
+                          hint: 'example@email.com',
+                          prefixIcon: Icons.email_rounded,
                           validator: (v) {
-                            if (v == null || v.trim().isEmpty) return 'Vui lòng nhập Email hoặc SĐT';
+                            if (v == null || v.trim().isEmpty) return 'Vui lòng nhập Email';
+                            if (!v.contains('@')) return 'Email không hợp lệ';
                             return null;
                           },
                         ),

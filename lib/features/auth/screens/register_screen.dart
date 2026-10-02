@@ -20,7 +20,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
-  final _phoneController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
 
@@ -31,7 +30,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   void dispose() {
     _nameController.dispose();
     _emailController.dispose();
-    _phoneController.dispose();
     _passwordController.dispose();
     _confirmPasswordController.dispose();
     super.dispose();
@@ -44,7 +42,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final success = await authProvider.register(
       _nameController.text.trim(),
       _emailController.text.trim(),
-      _phoneController.text.trim(),
+      '',
       _passwordController.text,
     );
 
@@ -206,14 +204,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         SizedBox(height: R.sp(context, 16)),
 
-                        CustomTextField(
-                          controller: _phoneController,
-                          label: 'Số điện thoại (Tùy chọn)',
-                          hint: '0987654321',
-                          prefixIcon: Icons.phone_rounded,
-                          keyboardType: TextInputType.phone,
-                        ),
-                        SizedBox(height: R.sp(context, 16)),
+
 
                         CustomTextField(
                           controller: _passwordController,

@@ -53,6 +53,6 @@ class NodeModel {
   bool get curtain => state['curtain'] == true;
   double get curtainAngle => (state['curtainAngle'] ?? 0.0).toDouble();
 
-  int get kitchenLivingActiveCount => [light, fan, door, clothesDryer].where((d) => d).length;
+  int get kitchenLivingActiveCount => [light, fan, door].where((d) => d).length;
   int get bedroomActiveCount => [bedroomLight, bedroomFan, curtain].where((d) => d).length;
 }

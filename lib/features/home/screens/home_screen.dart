@@ -76,96 +76,69 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   void _showAddNodeDialog() {
-    final nameController = TextEditingController();
-    final chipIdController = TextEditingController();
-    String selectedTemplate = 'kitchen_living';
+    final chipIdController = TextEditingController(text: '123');
 
     showDialog(
       context: context,
-      builder: (ctx) => StatefulBuilder(
-        builder: (context, setState) => AlertDialog(
-          backgroundColor: AppTheme.bgCard,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          title: const Text('Thêm Thiết Bị Mới', style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.bold)),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextField(
-                controller: nameController..text = nameController.text.isEmpty ? 'Phòng Khách' : nameController.text,
-                style: const TextStyle(color: AppTheme.textPrimary),
-                decoration: InputDecoration(
-                  hintText: 'Tên phòng (VD: Phòng Khách)',
-                  hintStyle: const TextStyle(color: AppTheme.textMuted),
-                  filled: true,
-                  fillColor: AppTheme.bgDark,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: chipIdController..text = chipIdController.text.isEmpty ? '123' : chipIdController.text,
-                style: const TextStyle(color: AppTheme.textPrimary),
-                decoration: InputDecoration(
-                  hintText: 'Mã Chip ID (VD: 123)',
-                  hintStyle: const TextStyle(color: AppTheme.textMuted),
-                  filled: true,
-                  fillColor: AppTheme.bgDark,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Text('Chọn mẫu:', style: TextStyle(color: AppTheme.textSecondary)),
-              const SizedBox(height: 8),
-              DropdownButtonFormField<String>(
-                value: selectedTemplate,
-                dropdownColor: AppTheme.bgDark,
-                style: const TextStyle(color: AppTheme.textPrimary),
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: AppTheme.bgDark,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
-                ),
-                items: const [
-                  DropdownMenuItem(value: 'kitchen_living', child: Text('Phòng Khách (Đèn, Quạt, Cửa, Gas, Lửa)')),
-                  DropdownMenuItem(value: 'bedroom', child: Text('Phòng Ngủ')),
-                ],
-                onChanged: (val) {
-                  setState(() {
-                    selectedTemplate = val!;
-                  });
-                },
-              ),
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(ctx),
-              child: const Text('Hủy', style: TextStyle(color: AppTheme.textMuted)),
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppTheme.bgCard,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: const Row(
+          children: [
+            Icon(Icons.add_circle_outline_rounded, color: AppTheme.primary, size: 24),
+            SizedBox(width: 10),
+            Text('Thêm Thiết Bị', style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.bold, fontSize: 18)),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Nhập mã Chip ID của mạch ESP32:',
+              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13),
             ),
-            ElevatedButton(
-              onPressed: () {
-                final name = nameController.text.trim();
-                final chipId = chipIdController.text.trim();
-                if (name.isNotEmpty && chipId.isNotEmpty) {
-                  context.read<DeviceProvider>().addNode(name, chipId, selectedTemplate);
-                  Navigator.pop(ctx);
-                }
-              },
-              style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primary),
-              child: const Text('Lưu'),
+            const SizedBox(height: 12),
+            TextField(
+              controller: chipIdController,
+              autofocus: true,
+              style: const TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.bold, fontSize: 16),
+              decoration: InputDecoration(
+                hintText: 'Mã Chip ID (VD: 123)',
+                hintStyle: const TextStyle(color: AppTheme.textMuted),
+                prefixIcon: const Icon(Icons.memory_rounded, color: AppTheme.primary),
+                filled: true,
+                fillColor: AppTheme.bgDark,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(14),
+                  borderSide: BorderSide.none,
+                ),
+              ),
             ),
           ],
         ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Hủy', style: TextStyle(color: AppTheme.textMuted)),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              final chipId = chipIdController.text.trim();
+              if (chipId.isNotEmpty) {
+                context.read<DeviceProvider>().addNode('Phòng Khách', chipId, 'kitchen_living');
+                Navigator.pop(ctx);
+              }
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppTheme.primary,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            ),
+            child: const Text('Thêm ngay', style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+        ],
       ),
     );
   }
