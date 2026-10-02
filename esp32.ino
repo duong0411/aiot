@@ -5,10 +5,9 @@
  * ║  ✅ WiFiManager Web Portal cấu hình AP tĩnh 192.168.4.1       ║
  * ║  ✅ Quét & tự động lưu 5 mạng WiFi vào EEPROM Flash          ║
  * ║  ✅ Double Reset Detector (Nhấn Reset 2 lần để xóa WiFi)    ║
- * ║  ✅ MQTT qua WebSockets SSL (WSS Port 443 Cloudflare Tunnel) ║
- * ║  ✅ Quản lý Cảm biến (Gas D34, Lửa D19, DHT11 D27, Mưa D18)  ║
+ * ║  ✅ Quản lý Cảm biến (Gas D34, Lửa D19, DHT11 D27)            ║
  * ║  ✅ Điều khiển Relay Đèn (D25), Relay Quạt (D26), Còi (D14)  ║
- * ║  ✅ Điều khiển Servo Cửa (D13), Servo Giàn phơi (D15)        ║
+ * ║  ✅ Điều khiển Duy nhất 1 Servo Cửa (D13: 0° - 90°)          ║
  * ╚══════════════════════════════════════════════════════════════╝
  * 
  * ⚠️ THƯ VIỆN CẦN CÓ TRÊN ARDUINO IDE:
@@ -72,10 +71,8 @@
 #define PIN_LED       25  // D25 (GPIO25) - Relay Đèn
 #define PIN_FIRE      19  // D19 (GPIO19) - Cảm biến Lửa (Flame)
 #define PIN_DHT       27  // D27 (GPIO27) - Cảm biến DHT11 (Nhiệt độ & Độ ẩm)
-#define PIN_DOOR      13  // D13 (GPIO13) - Động cơ Servo (Cửa)
+#define PIN_DOOR      13  // D13 (GPIO13) - Động cơ Servo (Cửa duy nhất)
 #define PIN_BUZZER    14  // D14 (GPIO14) - Còi báo động
-#define PIN_DRYER     15  // D15 (GPIO15) - Động cơ Servo (Giàn phơi)
-#define PIN_RAIN      18  // D18 (GPIO18) - Cảm biến Mưa
 
 #define DHTTYPE       DHT11
 #define RELAY_ON      HIGH
@@ -103,10 +100,8 @@ const byte DNS_PORT = 53;
 #define DEV_LED       "123_led1"
 #define DEV_FAN       "123_fan_livingroom"
 #define DEV_DOOR      "123_door_livingroom1"
-#define DEV_DRYER     "123_dryer_livingroom"
 #define DEV_GAS       "123_gas_livingroom"
 #define DEV_FIRE      "123_fire_livingroom"
-#define DEV_RAIN      "123_rain_livingroom"
 
 // ─────────────────────────────────────────────────────────────
 //  MULTI-WIFI (LƯU VÀO FLASH EEPROM)
@@ -134,7 +129,6 @@ int wifiCount = 0;
 // ─────────────────────────────────────────────────────────────
 DHT dht(PIN_DHT, DHTTYPE);
 Servo servoDoor;
-Servo servoDryer;
 WebServer webServer(80);
 DNSServer dnsServer;
 WebSocketsClient wsClient;
@@ -145,13 +139,11 @@ MQTTPubSubClient mqttClient;
 // ─────────────────────────────────────────────────────────────
 bool portalActive = false;
 int doorAngle = 0;
-int dryerAngle = 0;
 String ledState = "OFF";
 String fanState = "OFF";
 
 bool isGasAlert = false;
 bool isFireAlert = false;
-bool isRainAlert = false;
 
 unsigned long lastTelemetry = 0;
 unsigned long lastFastRead = 0;
@@ -171,11 +163,6 @@ String relayRead(uint8_t pin) {
 void adjustDoorAngle(int angle) {
   doorAngle = constrain(angle, 0, 90);
   servoDoor.write(doorAngle);
-}
-
-void adjustDryerAngle(int angle) {
-  dryerAngle = constrain(angle, 0, 180);
-  servoDryer.write(dryerAngle);
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -292,10 +279,8 @@ void pubHumi(float h){ mqttPub(DEV_HUMI, "{\"value\":" + String(h,1) + "}"); }
 void pubLed()   { ledState = relayRead(PIN_LED); mqttPub(DEV_LED, "{\"value\":\""+ledState+"\"}"); }
 void pubFan()   { fanState = relayRead(PIN_FAN); mqttPub(DEV_FAN, "{\"value\":\""+fanState+"\"}"); }
 void pubDoor()  { mqttPub(DEV_DOOR, "{\"value\":" + String(doorAngle) + "}"); }
-void pubDryer() { mqttPub(DEV_DRYER, "{\"value\":" + String(dryerAngle) + "}"); }
 void pubGas()   { mqttPub(DEV_GAS, isGasAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
 void pubFire()  { mqttPub(DEV_FIRE, isFireAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
-void pubRain()  { mqttPub(DEV_RAIN, isRainAlert ? "{\"value\":\"ON\"}" : "{\"value\":\"OFF\"}"); }
 
 void mqttCallback(const String& topicStr, const String& payload, const size_t size) {
   String topic = topicStr;
@@ -316,11 +301,6 @@ void mqttCallback(const String& topicStr, const String& payload, const size_t si
     int a = (cmd == "ON") ? 90 : (cmd == "OFF" ? 0 : cmd.toInt());
     adjustDoorAngle(a);
     pubDoor();
-  }
-  else if (topic.indexOf(DEV_DRYER) >= 0) {
-    int a = (cmd == "ON") ? 90 : (cmd == "OFF" ? 0 : cmd.toInt());
-    adjustDryerAngle(a);
-    pubDryer();
   }
 }
 
@@ -368,17 +348,10 @@ void reconnectMQTT() {
     });
     wsClient.loop(); delay(50);
 
-    mqttClient.subscribe("cmnd/" + String(DEV_DRYER) + "/POWER", [](const char* payload, unsigned int size) {
-      String cmd = ""; for(unsigned int i=0; i<size; i++) cmd += payload[i];
-      mqttCallback("cmnd/" + String(DEV_DRYER) + "/POWER", cmd, size);
-    });
-    wsClient.loop(); delay(50);
-
-    Serial.println("📥 [MQTT] Subscribed: LED/FAN/DOOR/DRYER");
+    Serial.println("📥 [MQTT] Subscribed: LED/FAN/DOOR");
     pubLed(); wsClient.loop(); delay(50);
     pubFan(); wsClient.loop(); delay(50);
-    pubDoor(); wsClient.loop(); delay(50);
-    pubDryer(); wsClient.loop();
+    pubDoor(); wsClient.loop();
   } else {
     mqttLoggedOk = false;
     Serial.println("❌ [MQTT] CONNECT FAIL (WSS OK nhưng broker từ chối / timeout CONNACK)");
@@ -549,19 +522,15 @@ void setup() {
   
   // Cấu hình Cảm biến Digital
   pinMode(PIN_FIRE, INPUT_PULLUP);
-  pinMode(PIN_RAIN, INPUT_PULLUP);
   
   // ESP32 ADC: Cấu hình độ phân giải 10-bit (0 - 1023) để khớp ngưỡng GAS 500 như ESP8266
   analogReadResolution(10);
 
   dht.begin();
   
-  // Khởi tạo Servo Cửa (D13) & Giàn phơi (D15)
+  // Khởi tạo Duy nhất 1 Servo Cửa (D13: 0 - 90 độ)
   servoDoor.attach(PIN_DOOR, 0);
   servoDoor.write(0);
-
-  servoDryer.attach(PIN_DRYER, 1);
-  servoDryer.write(0);
 
   // Cấu hình WebSocket SSL Port 443
   Serial.printf("🌐 [WSS] beginSSL %s:%d%s\n", MQTT_HOST, MQTT_PORT, MQTT_PATH);
@@ -689,17 +658,6 @@ void loop() {
     if (currentFireAlert != isFireAlert) {
       isFireAlert = currentFireAlert;
       pubFire();
-    }
-
-    // Đọc cảm biến Mưa (Chân D18: LOW là có mưa)
-    bool currentRainAlert = (digitalRead(PIN_RAIN) == LOW);
-    if (currentRainAlert != isRainAlert) {
-      isRainAlert = currentRainAlert;
-      pubRain();
-      if (isRainAlert) {
-        adjustDryerAngle(0); // Tự động thu giàn phơi khi trời mưa
-        pubDryer();
-      }
     }
 
     // Bật còi báo động ngay khi có Khí Gas HOẶC Lửa
