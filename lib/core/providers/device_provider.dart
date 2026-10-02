@@ -292,9 +292,10 @@ class DeviceProvider extends ChangeNotifier {
   void setKitchenDoorAngle(String nodeId, double angle) {
     final node = getNodeById(nodeId);
     if (node == null || !node.isOnline) return;
-    node.state['doorAngle'] = angle;
-    node.state['door'] = angle > 0;
-    _mqttService.publishCommand(node.chipId, 'door_livingroom1', angle.toStringAsFixed(0));
+    final clampedAngle = angle.clamp(0.0, 90.0);
+    node.state['doorAngle'] = clampedAngle;
+    node.state['door'] = clampedAngle > 0;
+    _mqttService.publishCommand(node.chipId, 'door_livingroom1', clampedAngle.toStringAsFixed(0));
     _nodeService.updateNodeState(node.id, node.state);
     notifyListeners();
   }

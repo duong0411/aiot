@@ -169,7 +169,7 @@ String relayRead(uint8_t pin) {
 }
 
 void adjustDoorAngle(int angle) {
-  doorAngle = constrain(angle, 0, 180);
+  doorAngle = constrain(angle, 0, 90);
   servoDoor.write(doorAngle);
 }
 

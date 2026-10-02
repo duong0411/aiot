@@ -998,10 +998,10 @@ class KitchenLivingScreen extends StatelessWidget {
               valueIndicatorTextStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             child: Slider(
-              value: angle.clamp(0.0, 180.0),
+              value: angle.clamp(0.0, 90.0),
               min: 0,
-              max: 180,
-              divisions: 180,
+              max: 90,
+              divisions: 90,
               label: '${angle.round()}°',
               onChanged: (val) {},
               onChangeEnd: (val) {
@@ -1010,27 +1010,27 @@ class KitchenLivingScreen extends StatelessWidget {
             ),
           ),
 
-          // 3 Nút Preset Góc Cửa
+          // 3 Nút Preset Góc Cửa (0° -> 90°)
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
             child: Row(
               children: [
                 _buildDoorPresetChip(
                   label: 'Đóng (0°)',
-                  isSelected: angle <= 5,
+                  isSelected: angle <= 3,
                   onTap: () => devices.setKitchenDoorAngle(node.id, 0),
                 ),
                 const SizedBox(width: 8),
                 _buildDoorPresetChip(
-                  label: 'Mở 90°',
-                  isSelected: (angle - 90).abs() <= 5,
-                  onTap: () => devices.setKitchenDoorAngle(node.id, 90),
+                  label: 'Mở vừa (45°)',
+                  isSelected: (angle - 45).abs() <= 5,
+                  onTap: () => devices.setKitchenDoorAngle(node.id, 45),
                 ),
                 const SizedBox(width: 8),
                 _buildDoorPresetChip(
-                  label: 'Mở hết (180°)',
-                  isSelected: angle >= 175,
-                  onTap: () => devices.setKitchenDoorAngle(node.id, 180),
+                  label: 'Mở hết (90°)',
+                  isSelected: angle >= 85,
+                  onTap: () => devices.setKitchenDoorAngle(node.id, 90),
                 ),
               ],
             ),
